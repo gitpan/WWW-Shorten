@@ -7,7 +7,7 @@ use warnings;
 
 use base qw( WWW::Shorten::generic );
 our @EXPORT = qw(makeashorterlink makealongerlink);
-our $VERSION = "1.84";
+our $VERSION = "1.85";
 
 use Carp;
 
@@ -62,6 +62,7 @@ WWW::Shorten - Abstract interface to URL shortening sites.
   use WWW::Shorten 'TinyClick';
   use WWW::Shorten 'TinyLink';
   use WWW::Shorten 'TinyURL';
+  use WWW::Shorten 'V3';
 
   # Individual modules have have their
   # own syntactic varations.
@@ -125,34 +126,11 @@ In alphabetical order:
   TinyClick           http://tinyclick.com/
   TinyLink            http://tinylink.com/
   TinyURL             http://tinyurl.com/
+  V3                  http://url.v3.net/
 
 See L<http://notlong.com/links/> for a comparison of most of them.
 
-=head1 THANKS
-
-Dave Cross for L<WWW::MakeAShorterLink>
-
-Alex Page for the original LWP hacking on which Dave based his code.
-
-Simon Batistoni for giving the C<makealongerlink> idea to Dave.
-
-Eric Hammond for writing the NotLong variant.
-
-Shashank Tripathi for providing both SnipURL.com and advice on the
-module.
-
-Kevin Gilbertson (Gilby) supplied information on the TinyURL API.
-
-Matt Felsen (mattf) wanted shorter function names.
-
-Ask Bjoern Hansen for providing both Metamark.net and advice on the
-module.
-
-Martin Thurn for helping me notice a bug and for a suggestion regarding
-F<MASL.pm>.
-
-
-And especial thanks to all providers of these services.
+If you know more, then please L<tell me about them|/"BUGS, REQUESTS, COMMENTS">.
 
 =head1 EXAMPLES
 
@@ -164,19 +142,65 @@ long URLs to short ones.
 There is also a F<bin> directory in this distribution which contains a
 sample program.
 
+=head1 THANKS
+
+Dave Cross for L<WWW::MakeAShorterLink>
+
+Alex Page for the original LWP hacking on which Dave based his code.
+
+Simon Batistoni for giving the C<makealongerlink> idea to Dave.
+
+Eric Hammond for writing the NotLong variant.
+
+Shashank Tripathi <shank@shank.com> for providing both SnipURL.com and
+advice on the module.
+
+Kevin Gilbertson (Gilby) supplied information on the TinyURL API.
+
+Matt Felsen (mattf) wanted shorter function names.
+
+Ask Bjoern Hansen for providing both Metamark.net and advice on the
+module.
+
+Martin Thurn for helping me notice a bug and for a suggestion regarding
+F<MASL.pm>.
+
+Jon and William (jon and wjr at smlnk.com respectively) for providing
+SmLnk.com.
+
+And especial thanks to all providers of these services.
+
 =head1 BUGS, REQUESTS, COMMENTS
 
-Please report any requests, suggestions or bugs via the system at
-L<http://rt.cpan.org/>, or email E<lt>bug-WWW-Shorten@rt.cpan.orgE<gt>.
+Support for this module is provided via the datetime@perl.org email
+list. See http://lists.perl.org/ for more details.
+
+Alternatively, log them via the CPAN RT system via the web or email:
+
+    http://rt.cpan.org/NoAuth/ReportBug.html?Queue=WWW-Shorten
+    ( shorter URL: http://xrl.us/rfb )
+
+    bug-www-shorten@rt.cpan.org
+
 This makes it much easier for me to track things and thus means
 your problem is less likely to be neglected.
 
 =head1 LICENSE AND COPYRIGHT
 
-Copyright E<copy> Iain Truskett, 2002-2003. All rights reserved.
+WWW::Shorten::NotLong copyright E<copy> Eric Hammond <ehammond@thinksom.com>.
+
+WWW::Shorten::MakeAShorterLink copyright E<copy> Dave Cross <dave@dave.org.uk>.
+
+Other modules copyright E<copy> Iain Truskett, 2002-2003. All rights
+reserved.
 
 This library is free software; you can redistribute it and/or modify
-it under the same terms as Perl itself.
+it under the same terms as Perl itself, either Perl version 5.000 or,
+at your option, any later version of Perl 5 you may have available.
+
+The full text of the licenses can be found in the F<Artistic> and
+F<COPYING> files included with this module, or in L<perlartistic> and
+L<perlgpl> as supplied with Perl 5.8.1 and later.
 
 =head1 AUTHOR
 

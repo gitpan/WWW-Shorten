@@ -10,7 +10,9 @@ For usage, see the doco. Either use perldoc or view it
 on the web at:
     <http://search.cpan.org/author/SPOON/WWW-Shorten/>
 
-Changes for 1.84 (29 Aug 2003)
+Changes for 1.85 (30 Aug 2003)
+   - Added v3.net
+   - Assorted documentation tidyups.
    - Changed URL for shorlfilter.
    - Fixed qURL documentation.
    - Added tinylink.com

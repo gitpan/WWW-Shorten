@@ -1,6 +1,13 @@
 # Change log for WWW::Shorten.
 
 ---
+version: 1.85
+date:    30 Aug 2003
+changes:
+    - Added v3.net
+    - Assorted documentation tidyups.
+
+---
 version: 1.84
 date:    29 Aug 2003
 changes:

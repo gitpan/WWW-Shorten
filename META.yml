@@ -2,9 +2,9 @@
 # http://module-build.sourceforge.net/META-spec.html
 distribution_type: module
 name: WWW-Shorten
-date: 29 Aug 2003
+date: 30 Aug 2003
 author: SPOON
-version: 1.84
+version: 1.85
 license: perl
 
 conflicts: {}
@@ -27,7 +27,7 @@ private:
 provides:
   WWW::Shorten:
     file: lib/WWW/Shorten.pm
-    version: 1.84
+    version: 1.85
   WWW::Shorten::EkDk:
     file: lib/WWW/Shorten/EkDk.pm
     version: 1.81
@@ -61,6 +61,9 @@ provides:
   WWW::Shorten::Tinylink:
     file: lib/WWW/Shorten/Tinylink.pm
     version: 1.84
+  WWW::Shorten::V3:
+    file: lib/WWW/Shorten/V3.pm
+    version: 1.85
   WWW::Shorten::generic:
     file: lib/WWW/Shorten/generic.pm
     version: 1.81

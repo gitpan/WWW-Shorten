@@ -54,7 +54,6 @@ sub makealongerlink ($)
 1;
 
 __END__
-# Below is stub documentation for your module. You better edit it!
 
 =head1 NAME
 
@@ -93,12 +92,9 @@ For more information, see L<WWW::Shorten>.
 
 makeashorterlink, makealongerlink
 
-=head1 BUGS, REQUESTS, COMMENTS
+=head1 SUPPORT, LICENSE, THANKS and SUCH
 
-Please report any requests, suggestions or bugs via the system at
-L<http://rt.cpan.org/>, or email E<lt>bug-WWW-Shorten@rt.cpan.orgE<gt>.
-This makes it much easier for me to track things and thus means
-your problem is less likely to be neglected.
+See the main L<WWW::Shorten> docs.
 
 =head1 AUTHOR
 

@@ -1,4 +1,26 @@
 ____________________________________________________________________________
+[   277] By: iain                                  on 2003/08/30  01:07:04
+        Log: - 1.85
+	   ! main/Changes
+____________________________________________________________________________
+[   276] By: iain                                  on 2003/08/30  01:06:53
+        Log: - Assorted documentation nit fixing.
+	   ! main/lib/WWW/Shorten.pm main/lib/WWW/Shorten/EkDk.pm
+	   ! main/lib/WWW/Shorten/MakeAShorterLink.pm
+	   ! main/lib/WWW/Shorten/Metamark.pm
+	   ! main/lib/WWW/Shorten/NotLong.pm main/lib/WWW/Shorten/Shorl.pm
+	   ! main/lib/WWW/Shorten/ShortLink.pm
+	   ! main/lib/WWW/Shorten/SmLnk.pm main/lib/WWW/Shorten/SnipURL.pm
+	   ! main/lib/WWW/Shorten/TinyClick.pm
+	   ! main/lib/WWW/Shorten/TinyURL.pm
+	   ! main/lib/WWW/Shorten/Tinylink.pm main/lib/WWW/Shorten/V3.pm
+	   ! main/lib/WWW/Shorten/generic.pm main/lib/WWW/Shorten/qURL.pm
+____________________________________________________________________________
+[   275] By: iain                                  on 2003/08/29  17:59:40
+        Log: - Added v3.net
+	   + main/lib/WWW/Shorten/V3.pm main/t/v3.t
+	   ! main/lib/WWW/Shorten.pm
+____________________________________________________________________________
 [   274] By: iain                                  on 2003/08/29  17:15:00
         Log: - Fixed qURL documentation.
 	   ! main/lib/WWW/Shorten/qURL.pm

@@ -88,18 +88,13 @@ If anything goes wrong, then either function will return C<undef>.
 
 makeashorterlink, makealongerlink
 
-=head1 BUGS, REQUESTS, COMMENTS
+=head1 SUPPORT, LICENSE, THANKS and SUCH
 
-Please report any requests, suggestions or bugs via the system at
-L<http://rt.cpan.org/>, or email E<lt>bug-WWW-Shorten@rt.cpan.orgE<gt>.
-This makes it much easier for me to track things and thus means
-your problem is less likely to be neglected.
+See the main L<WWW::Shorten> docs.
 
 =head1 AUTHOR
 
 Iain Truskett <spoon@cpan.org>
-
-Based on WWW::MakeAShorterLink by Dave Cross <dave@dave.org.uk>
 
 =head1 SEE ALSO
 
