@@ -1,0 +1,62 @@
+This file contains message digests of all files listed in MANIFEST,
+signed via the Module::Signature module, version 0.15.
+
+To verify the content in this distribution, first make sure you have
+Module::Signature installed, then type:
+
+    % cpansign -v
+
+It would check each file's integrity, as well as the signature's
+validity.  If "==> Signature verified OK! <==" is not displayed,
+the distribution may already have been compromised, and you should
+not run its Makefile.PL or Build.PL.
+
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+SHA1 e6b6d4078afba0d9594135d2dcdb2453b11ce20d Build.PL
+SHA1 25236ae2d1e483a627acc8c28c16caffa64d6251 CREDITS
+SHA1 3718a89f70b70d1db9bbeff75c4d60a3666c3dbf Changes
+SHA1 c1875879a3f40a39213d15a858a9868d92db4a27 INSTALL
+SHA1 f97f86f4f4789c967b0e8e1b32f7985264a9db1f LICENSE
+SHA1 faceaaa1231cf48e2250798d51075b3f0a46dcd0 MANIFEST
+SHA1 9ab7c6d684d8723f3f42045ff258bafe7871211e MANIFEST.SKIP
+SHA1 3fc032225c1773c0022e316c4ed7ab6069d94515 META.yaml
+SHA1 b42a665b5b51a19c37bc60259e5f322862a07c22 Makefile.PL
+SHA1 0a7af8a70f541f19621ffe71ddf958382d99fc34 README
+SHA1 132dff999a527d49ed0d55d065456264adfb56d7 TODO
+SHA1 8e48408c6b948565ae28300d0da6425a67b40bc1 lib/WWW/Shorten.pm
+SHA1 ac18a437bceb020ff59d262800bac39c24457ab7 lib/WWW/Shorten/EkDk.pm
+SHA1 0170558d9452c745944c7fc721fb3f8df5d0f62c lib/WWW/Shorten/Fcol.pm
+SHA1 876729532a669be7b9a79de838bd2d74f13041fe lib/WWW/Shorten/MakeAShorterLink.pm
+SHA1 d9c2640c0638799d0376fef4014d38a651903f4d lib/WWW/Shorten/NotLong.pm
+SHA1 d8a051e9e804aab3fec13f37070906cca914c8f8 lib/WWW/Shorten/QuickOnes.pm
+SHA1 5b3c37973c7449ccabad63a8e93632d6fce239d5 lib/WWW/Shorten/Shorl.pm
+SHA1 8e00e7951951182c999bce5ce4d4b53770cbc191 lib/WWW/Shorten/SnipURL.pm
+SHA1 e3ca2ff477ab81e6fbfcee9c56a1809f7b446fa2 lib/WWW/Shorten/TinyURL.pm
+SHA1 091a98c2b47565ba0b3031bf9694bbd26e393374 lib/WWW/Shorten/generic.pm
+SHA1 cedae6832fc869f8e013a33276e6ada0085f8fa9 t/00checkyaml.t
+SHA1 59b74ae663ef2744218387bd50d7ef6071a2a0c6 t/00load.t
+SHA1 cb5b1230a7834ed85bae22b5037c6fb4ac71ae30 t/00signature.t
+SHA1 2e63f02ea376b68c22027d933a2264e615360af7 t/01version.t
+SHA1 2fd8a1cffa65a368302c548a7d6813a9fb6345a5 t/ekdk.t
+SHA1 3b85a5ad239cac571785129855377c932dc46d3b t/fcol.t
+SHA1 5958a6dfcf71c65a1a9f9bd81b8e6f3540c1d867 t/masl.t
+SHA1 b2e783a4918832d6359033215b714e80d52bae2b t/notlong.t
+SHA1 522e97f33bd74d29cc756526422f3315728e2115 t/quickones.t
+SHA1 a31df21d843a3e2862b9f28300ff78a2aafcd769 t/shorl.t
+SHA1 8fe23eca220a0d413a563af4356bcf449f877df6 t/snipurl.t
+SHA1 e7654128e191b17ebff2e8bf13a09fe54a1dc35f t/tinyurl.t
+SHA1 168a231c6d43f097804c9c6506bebe24a31a0fa0 t/ws_masl.t
+SHA1 8952e194c54da270492474373d3feb5266574572 t/ws_notlong.t
+SHA1 4e8cf618ef8ba790832d32f55a2d1c050aca03bb t/ws_quickones.t
+SHA1 11e43a7137e075dc2acfc295b01504e92b8aab38 t/ws_shorl.t
+SHA1 088564df3312cd14d19b3961942772834e91abd3 t/ws_snipurl.t
+SHA1 e9cf967d094893d6749b8edfac05488799d15957 t/ws_tinyurl.t
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.0 (GNU/Linux)
+
+iD8DBQE9uKVpzL8gm6KQWMgRAgX3AJ9M69AbT7QuS9dmm7ZrU2ez4fw9RQCgvm/A
+/7HOyKATy3jc5TRNyw8yWcE=
+=iAGR
+-----END PGP SIGNATURE-----

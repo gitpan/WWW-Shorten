@@ -1,41 +1,27 @@
-WWW::Shorten version 1.4
-========================
+WWW::Shorten
 
-First there was MakeAShorterLink, which was renamed
-WWW::MakeAShorterLink. Then, there was WWW::TinyURL.
-Then, because there's these services all over the place, I
-decided to create a generic interface and class for them.
+   A Perl interface to URL shortening sites. These sites maintain
+   databases of long URLs, each of which has a unique identifier.
 
-WWW::Shorten is set of Perl modules which provide an API to
-sites on the Internet that provide redirection services that
-let you shorten URLs. Thus you can programmatically create
-shorter URLs for links.
+For installation details, see INSTALL.
 
-INSTALLATION
+For usage, see the doco. Either use perldoc or view it
+on the web at:
+    <http://search.cpan.org/author/SPOON/WWW-Shorten/>
 
-To install this module type the following:
+Changes for 1.5.0 (25 Oct 2002)
+   - Module::Build rather than ExtUtils::MakeMaker.
+   - SIGNATURE added.
+   - Default style is 'MakeAShorterLink'.
+   - THANKS section added.
+   - LICENSE AND COPYRIGHT section added.
+   - SnipURL.pm uses the API interface.
+   - Auxiliary files cleaned up.
+   - Basic tests added.
+   - Fcol.org and add.redir.ek.dk added.
+   - Tests for Fcol and EkDk added.
 
-   perl Makefile.PL
-   make
-   make test
-   make install
+For a complete list of changes, see the Changes file.
 
-DEPENDENCIES
 
-This module requires these other modules and libraries:
-
-   + LWP
-   + Test::More
-
-BUGS
-
-Please report bugs to <bug-www-shorten@rt.cpan.org>
-or via the web interface at <http://rt.cpan.org/>
-
-COPYRIGHT AND LICENCE
-
-This library is free software; you can redistribute it
-and/or modify it under the same terms as Perl itself.
-
-Copyright (C) 2002 Iain Truskett, <spoon@cpan.org>
-
+by Iain Truskett.

@@ -7,7 +7,7 @@ use warnings;
 
 use base qw( WWW::Shorten::generic );
 our @EXPORT = qw(makeashorterlink makealongerlink);
-our ($VERSION) = q$Revision: 1.5 $ =~ /^ Revision: \s+ (\S+) \s+ $/x;
+our ($VERSION) = q$Revision: 1.6 $ =~ /^ Revision: \s+ (\S+) \s+ $/x;
 
 use Carp;
 
@@ -17,6 +17,7 @@ sub import
 {
     my $class = shift;
     $style = shift;
+    $style ||= 'MakeAShorterLink';
     eval {
 	my $package = "${class}::${style}";
 	$package =~ s/::/\//g;
@@ -73,11 +74,12 @@ WWW::Shorten - Abstract interface to URL shortening sites.
 
   $long_url  = makealongerlink($short_url);
 
-
-=head1 DESCRIPTION
+=head1 ABSTRACT
 
 A Perl interface to URL shortening sites. These sites maintain
 databases of long URLs, each of which has a unique identifier.
+
+=head1 DESCRIPTION
 
 The function C<makeashorterlink> will call the relevant web site
 passing it your long URL and will return the shorter version.
@@ -92,21 +94,32 @@ If anything goes wrong, then either function will return C<undef>.
 
 makeashorterlink, makealongerlink
 
-=head1 TODO
+=head1 THANKS
 
-=over 4
+Dave Cross for L<WWW::MakeAShorterLink>
 
-=item *
+Alex Page for the original LWP hackig on which Dave based his code.
 
-Recognise the sub-modules' URLs and codes and use the appropriate
+Simon Batistoni for giving the C<makealongerlink> idea to Dave.
+
+Eric Hammond for writing the NotLong variant.
+
+Shashank Tripathi for providing both SnipURL.com and advice on the
 module.
 
-=back
+Kevin Gilbertson (Gilby) supplied information on the TinyURL API interface.
 
 =head1 BUGS
 
 Please report bugs at <bug-www-shorten@rt.cpan.org>
 or via the web interface at L<http://rt.cpan.org>
+
+=head1 LICENSE AND COPYRIGHT
+
+Copyright E<copy> Iain Truskett, 2002. All rights reserved.
+
+This library is free software; you can redistribute it and/or modify
+it under the same terms as Perl itself.
 
 =head1 AUTHOR
 

@@ -1,13 +1,15 @@
-use ExtUtils::MakeMaker;
-# See lib/ExtUtils/MakeMaker.pm for details of how to influence
-# the contents of the Makefile that is written.
-WriteMakefile(
-    'NAME'		=> 'WWW::Shorten',
-    'VERSION'	=> '1.4.2', # finds $VERSION
-    'PREREQ_PM'		=> {
-	'LWP::UserAgent' => 0,
-	'Test::More' => 0,
-    }, # e.g., Module::Name => 1.1
-    ($] >= 5.005 ?    ## Add these new keywords supported since 5.005
-      ( AUTHOR     => 'Iain Truskett <spoon@cpan.org>') : ()),
-);
+# This Makefile.PL creates a pass-through Makefile that simply calls
+# the equivalent Module::Build methods for each make target.  See the
+# documentation for Module::Build::Compat for more information.
+
+unless (eval { require Module::Build::Compat; 1 }) {
+  # Workaround with old CPAN.pm and CPANPLUS.pm
+  require ExtUtils::MakeMaker;
+  ExtUtils::MakeMaker::WriteMakefile(
+    PREREQ_PM => { 'Module::Build::Compat' => 0.01 }
+  );
+  warn "Warning: prerequisite Module::Build::Compat is not found.\n";
+  exit(0);
+}
+Module::Build::Compat->run_build_pl(args => \@ARGV);
+Module::Build::Compat->write_makefile();

@@ -1,0 +1,10 @@
+^Build$
+/CVS/
+^WWW-Shorten-
+\.bak$
+^diffs$
+^CVS/
+^Makefile$
+^_build/
+^blib/
+^.cvsignore$
