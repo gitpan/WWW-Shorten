@@ -7,7 +7,7 @@ use warnings;
 
 use base qw( WWW::Shorten::generic );
 our @EXPORT = qw(makeashorterlink makealongerlink);
-our $VERSION = '1.71';
+our $VERSION = '1.72';
 
 use Carp;
 
@@ -54,6 +54,7 @@ WWW::Shorten - Abstract interface to URL shortening sites.
   use WWW::Shorten 'EkDk';
   use WWW::Shorten 'Fcol';
   use WWW::Shorten 'MakeAShorterLink';
+  use WWW::Shorten 'Metamark';
   use WWW::Shorten 'NotLong';
   use WWW::Shorten 'QuickOnes';
   use WWW::Shorten 'Shorl';
@@ -101,6 +102,12 @@ Or, if you specify C<:short> on the import line, you instead
 get C<short_link> and C<long_link>. If you explicitly want the
 default set, use C<:default>.
 
+=head1 COMMAND LINE PROGRAM
+
+A very simple program called F<shorten> is supplied in the
+distribution's F<bin> folder. This program takes a URL and
+gives you a shortened version of it.
+
 =head1 THANKS
 
 Dave Cross for L<WWW::MakeAShorterLink>
@@ -125,7 +132,7 @@ or via the web interface at L<http://rt.cpan.org>
 
 =head1 LICENSE AND COPYRIGHT
 
-Copyright E<copy> Iain Truskett, 2002. All rights reserved.
+Copyright E<copy> Iain Truskett, 2002-03. All rights reserved.
 
 This library is free software; you can redistribute it and/or modify
 it under the same terms as Perl itself.

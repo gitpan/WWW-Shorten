@@ -4,11 +4,12 @@ BEGIN { use_ok WWW::Shorten::NotLong };
 
 my $re = qr!^ \Qhttp://\E ([\w]+) \Q.notlong.com\E/? $ !x;
 my $code;
+my $url = 'http://perl.dellah.org/WWW-Shorten-1.5.2.tar.gz';
 
 diag "WWW::Shorten::NotLong ".WWW::Shorten::NotLong->VERSION();
 
 {
-    my $notlong = makeashorterlink('http://dave.org.uk/scripts/webged-1.02.tar.gz');
+    my $notlong = makeashorterlink( $url );
 
     diag "notlong = $notlong";
 
@@ -20,20 +21,12 @@ diag "WWW::Shorten::NotLong ".WWW::Shorten::NotLong->VERSION();
 
     diag "\$code = $code";
 
-    is (
-	    makealongerlink($notlong),
-	    'http://dave.org.uk/scripts/webged-1.02.tar.gz',
-	    'make it longer'
-       );
+    is ( makealongerlink($notlong), $url, 'make it longer');
 
-    is (
-	    makealongerlink($code),
-	    'http://dave.org.uk/scripts/webged-1.02.tar.gz',
-	    'make it longer by Id',
-       );
+    is ( makealongerlink($code), $url, 'make it longer by Id');
 
 
-    my ($notlong, $password) = makeashorterlink('http://books.dellah.org/');
+    my ($notlong, $password) = makeashorterlink( $url );
 
     ok ( (defined $notlong and $notlong =~ $re
 		and defined $password and $password =~ m!^ [a-z]+ $ !x),
@@ -46,7 +39,7 @@ diag "WWW::Shorten::NotLong ".WWW::Shorten::NotLong->VERSION();
     #local $TODO = "Works, but need to generate unique code";
     $code = "spoon${code}x";
     $code = substr($code, -10);
-    my ($notlong, $password) = makeashorterlink('http://books.dellah.org/', nickname => $code);
+    my ($notlong, $password) = makeashorterlink( $url, nickname => $code);
 
     diag "[$code => $notlong, $password]";
     ok ( ( defined $notlong and $notlong =~ $re

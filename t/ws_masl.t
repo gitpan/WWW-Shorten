@@ -2,20 +2,10 @@ use Test::More tests => 4;
 
 BEGIN { use_ok WWW::Shorten, 'MakeAShorterLink' };
 
-is (
-    makeashorterlink('http://dave.org.uk/scripts/webged-1.02.tar.gz'),
-    'http://makeashorterlink.com/?M328231A1',
-    'make it shorter'
-);
+my $url = 'http://perl.dellah.org/WWW-Shorten-1.5.2.tar.gz';
+my $code = 'E24154552';
+my $prefix = 'http://makeashorterlink.com/?';
 
-is (
-    makealongerlink('http://makeashorterlink.com/?M328231A1'),
-    'http://dave.org.uk/scripts/webged-1.02.tar.gz',
-    'make it longer'
-);
-
-is (
-    makealongerlink('M328231A1'),
-    'http://dave.org.uk/scripts/webged-1.02.tar.gz',
-    'make it longer by Id',
-);
+is ( makeashorterlink($url), $prefix.$code, 'make it shorter');
+is ( makealongerlink($prefix.$code), $url, 'make it longer');
+is ( makealongerlink($code), $url, 'make it longer by Id',);

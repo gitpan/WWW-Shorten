@@ -1,10 +1,10 @@
 #!/usr/bin/perl -w
 use strict;
-use Module::Build 0.11;
+use Module::Build 0.14;
 
 my $m = Module::Build->new(
     dist_name => 'WWW-Shorten',
-    dist_version => '1.5.2',
+    dist_version => '1.5.4',
     license => 'perl',
 
     requires => {

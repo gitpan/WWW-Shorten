@@ -1,21 +1,15 @@
-use Test::More tests => 4;
+use Test::More tests => 5;
 
 BEGIN { use_ok WWW::Shorten, 'SnipURL' };
 
-is (
-    makeashorterlink('http://dave.org.uk/scripts/webged-1.02.tar.gz'),
-    'http://snipurl.com/3ww',
-    'make it shorter'
-);
 
-is (
-    makealongerlink('http://snipurl.com/3ww'),
-    'http://dave.org.uk/scripts/webged-1.02.tar.gz',
-    'make it longer'
-);
+my $url = 'http://perl.dellah.org/WWW-Shorten-1.5.2.tar.gz';
+my $code = 'a8f';
+my $prefix_RE = qr{http://sn(?:ip)?url\.com/};
+my $preifix = 'http://snipurl.com/';
+my $shortened = makeashorterlink($url);
 
-is (
-    makealongerlink('3ww'),
-    'http://dave.org.uk/scripts/webged-1.02.tar.gz',
-    'make it longer by Id',
-);
+like ( $shortened, qr/$prefix_RE$code/, 'make it shorter');
+is ( makealongerlink($prefix.$code), $url, 'make it longer');
+is ( makealongerlink($code), $url, 'make it longer by Id',);
+is ( makealongerlink($shortened), $url, 'make it long with what we were given');

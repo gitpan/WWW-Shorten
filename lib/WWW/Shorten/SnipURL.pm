@@ -6,16 +6,17 @@ use warnings;
 
 use base qw( WWW::Shorten::generic Exporter );
 our @EXPORT = qw(makeashorterlink makealongerlink);
-our $VERSION = '1.52';
+our $VERSION = '1.54';
 
 use Carp;
+use URI;
 
 sub makeashorterlink ($;%)
 {
     my $url = shift or croak 'No URL passed to makeashorterlink';
     my $ua = __PACKAGE__->ua();
     my ($nick,$pass) = @_;
-    my $snipurl = 'http://snipurl.com/';
+    my $snipurl = 'http://snipurl.com/teindex.php';
     my $resp = $ua->post($snipurl, [
 	link => $url,
 	alias => (defined $nick ? $nick : ''),
@@ -24,7 +25,7 @@ sub makeashorterlink ($;%)
     return unless $resp->is_success;
     if ($resp->content =~ m!
 	<a \s+ href=['"] ([^'"]+) ['"][^>]*>
-	(\Qhttp://snipurl.com/\E\w+)
+	(http://sn(?:ip)?url\.com/\w+)
 	</a>
 	!xm) {
 	return $1;
@@ -34,24 +35,23 @@ sub makeashorterlink ($;%)
 
 sub makealongerlink ($)
 {
-    my $snipurl_url = shift 
+    my $code = shift 
 	or croak 'No SnipURL key / URL passed to makealongerlink';
     my $ua = __PACKAGE__->ua();
 
-    $snipurl_url = "http://snipurl.com/$snipurl_url"
-    unless $snipurl_url =~ m!^http://!i;
+    $code =~ s{^ http:// .* / }{}x;
+    my $snipurl_url = URI->new('http://snipurl.com/resolveurl');
+    $snipurl_url->query_form(
+	id => $code,
+    );
 
     my $resp = $ua->get($snipurl_url);
+    return undef unless $resp->is_success;
 
-    return undef unless $resp->is_redirect;
-    my $url = $resp->header('Location');
-    {
-	$resp = $ua->get($url);
-	return $url unless $resp->is_redirect;
-	$url = $resp->header('Location');
-    }
-    return $url;
-
+    my $content = $resp->content;
+    return undef if $content eq 'ERROR';
+    my ($link) = $content =~ m! " ([^"]+) " !xi;
+    return $link;
 }
 
 1;

@@ -1,6 +1,26 @@
 # Change log for WWW::Shorten.
 
 ---
+version: 1.5.4
+date:    7 Jan 2003
+changes:
+    - Added Metamark and 'shorten' to the docs.
+    - Added 'shorten'. A useful little program.
+    - Makefile.PL updated with new recommended stub.
+    - SnipURL.com modified their API. Code updated.
+    - Smlnk test added to depot.
+    - Module::Build uses META.yml now rather than .yaml
+    - Added Ask's Metamark service.
+
+---
+version: 1.5.3
+date:    8 Nov 2002
+changes:
+    - Tests no longer use a dave.org URL.
+    - Uses one of mine instead ( perl.dellah.org ).
+    - AUTHORS and ChangeLog files added.
+
+---
 version: 1.5.2
 date:    1 Nov 2002
 changes:

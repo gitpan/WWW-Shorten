@@ -1,24 +1,29 @@
-use Test::More tests => 4;
+use Test::More tests => 5;
 
 BEGIN { use_ok WWW::Shorten, 'Shorl' };
 
-my $shorl = makeashorterlink('http://dave.org.uk/scripts/webged-1.02.tar.gz');
+my $url = 'http://perl.dellah.org/WWW-Shorten-1.5.2.tar.gz';
 
-ok ( (defined $shorl
-	    and $shorl =~ m!^ \Qhttp://shorl.com/\E ([a-z]+) $ !x),
-    'make it shorter'
-);
+{
+    my $shorl = makeashorterlink( $url );
 
-my $code = $1;
+    ok ( defined $shorl and $shorl =~ m!^ \Qhttp://shorl.com/\E ([a-z]+) $ !x,
+	    'make it shorter'
+       );
 
-is (
-    makealongerlink($shorl),
-    'http://dave.org.uk/scripts/webged-1.02.tar.gz',
-    'make it longer'
-);
+    my $code = $1;
 
-is (
-    makealongerlink($code),
-    'http://dave.org.uk/scripts/webged-1.02.tar.gz',
-    'make it longer by Id',
-);
+    is ( makealongerlink($shorl), $url, 'make it longer');
+
+    is ( makealongerlink($code), $url, 'make it longer by Id' );
+}
+
+
+{
+    my ($shorl, $password) = makeashorterlink( $url );
+
+    ok ( (defined $shorl and $shorl =~ m!^ \Qhttp://shorl.com/\E ([a-z]+) $ !x
+		and defined $password and $password =~ m!^ [a-z]+ $ !x),
+	    "make it shorter, get password [$shorl, $password]"
+       );
+}
