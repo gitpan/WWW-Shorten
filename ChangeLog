@@ -1,91 +1,107 @@
 ____________________________________________________________________________
+[   229] By: iain                                  on 2003/03/05  12:24:10
+        Log: - 1.5.6
+	   ! main/Build.PL main/Changes
+____________________________________________________________________________
+[   228] By: iain                                  on 2003/03/05  12:23:45
+        Log: - Added SERVICES section to pod, listing services' URLs.
+	   ! main/lib/WWW/Shorten.pm
+____________________________________________________________________________
+[   227] By: iain                                  on 2003/03/05  12:19:40
+        Log: - Not interested in urllog
+	   ! main/TODO
+____________________________________________________________________________
+[   226] By: iain                                  on 2003/03/05  11:59:24
+        Log: - Added Test::Pod
+	   + main/t/00pod.t
+	   ! main/MANIFEST
+____________________________________________________________________________
+[   225] By: iain                                  on 2003/03/05  11:18:50
+        Log: - Remove redundant tests.
+	   - main/t/ws_newnames.t main/t/ws_notlong.t main/t/ws_quickones.t
+	   - main/t/ws_shorl.t main/t/ws_smlnk.t main/t/ws_snipurl.t
+	   - main/t/ws_tinyurl.t
+	   ! main/MANIFEST
+____________________________________________________________________________
+[   224] By: iain                                  on 2003/03/05  11:17:14
+        Log: - Added TinyClick.com
+	   + main/lib/WWW/Shorten/TinyClick.pm main/t/tinyclick.t
+	   ! main/MANIFEST main/lib/WWW/Shorten.pm
+____________________________________________________________________________
+[   216] By: iain                                  on 2003/02/22  14:17:53
+        Log: - 1.5.6 changes
+	   ! main/Changes
+____________________________________________________________________________
+[   214] By: iain                                  on 2003/01/08  01:53:12
+        Log: - bin/shorten wasn't in the manifest, thus not in the dist.
+	   ! main/MANIFEST
+____________________________________________________________________________
 [   213] By: iain                                  on 2003/01/08  01:39:30
         Log: - 1.5.5
-     Branch: WWW-Shorten
 	   ! main/Build.PL main/Changes
 ____________________________________________________________________________
 [   212] By: iain                                  on 2003/01/08  01:39:10
         Log: - Corrected Metamark doco.
              - Metamark uses POST rather than GET now.
              - Ask mentioned in various bits.
-     Branch: WWW-Shorten
 	   ! main/AUTHORS main/lib/WWW/Shorten.pm
 	   ! main/lib/WWW/Shorten/Metamark.pm
 ____________________________________________________________________________
 [   211] By: iain                                  on 2003/01/07  14:47:14
         Log: - 1.5.4
-     Branch: WWW-Shorten
 	   ! main/Build.PL main/Changes
 ____________________________________________________________________________
 [   210] By: iain                                  on 2003/01/07  14:46:34
         Log: - Added Metamark and 'shorten' to the docs.
-     Branch: WWW-Shorten
 	   ! main/lib/WWW/Shorten.pm
 ____________________________________________________________________________
 [   209] By: iain                                  on 2003/01/07  14:39:36
         Log: - Added 'shorten'. A useful little program.
-     Branch: WWW-Shorten
 	   + main/bin/shorten
 ____________________________________________________________________________
 [   208] By: iain                                  on 2003/01/07  14:37:02
         Log: - Makefile.PL updated with new recommended stub.
-     Branch: WWW-Shorten
 	   ! main/Makefile.PL
 ____________________________________________________________________________
 [   207] By: iain                                  on 2003/01/07  14:27:10
         Log: - SnipURL.com modified their API. Code updated.
-     Branch: WWW-Shorten
 	   ! main/lib/WWW/Shorten/SnipURL.pm main/t/snipurl.t
 	   ! main/t/ws_snipurl.t
 ____________________________________________________________________________
 [   206] By: iain                                  on 2003/01/07  13:58:03
         Log: - Smlnk test added to depot.
-     Branch: WWW-Shorten
 	   + main/t/ws_smlnk.t
 ____________________________________________________________________________
 [   205] By: iain                                  on 2003/01/07  13:57:39
         Log: - Module::Build uses META.yml now rather than .yaml
-     Branch: WWW-Shorten
 	   ! main/MANIFEST main/t/00checkyaml.t
 ____________________________________________________________________________
 [   204] By: iain                                  on 2003/01/07  13:57:03
         Log: - Added Ask's Metamark service.
-     Branch: WWW-Shorten
 	   + main/lib/WWW/Shorten/Metamark.pm main/t/metamark.t
 	   ! main/MANIFEST
 ____________________________________________________________________________
 [   148] By: iain                                  on 2002/12/02  10:31:39
         Log: 1.5.3 changes.
-     Branch: WWW-Shorten
 	   ! main/Build.PL main/Changes
 ____________________________________________________________________________
 [   147] By: iain                                  on 2002/12/02  10:31:25
         Log: - Changes updated.
-     Branch: WWW-Shorten
 	   ! main/TODO
-____________________________________________________________________________
-[    50] By: iain                                  on 2002/11/08  10:21:46
-        Log: - Started Net::NTP
-     Branch: Net-NTP
-	   + main/Build.PL main/MANIFEST main/MANIFEST.SKIP
-	   + main/lib/Net/NTP.pm
 ____________________________________________________________________________
 [    48] By: iain                                  on 2002/11/05  12:18:06
         Log: - AUTHORS list added. Have to automate it at some point.
              - ChangeLog added (genlog of the p4 logs).
-     Branch: WWW-Shorten
 	   + main/AUTHORS
 	   ! main/MANIFEST
 ____________________________________________________________________________
 [    47] By: iain                                  on 2002/11/04  13:26:07
         Log: - Just reformatting.
-     Branch: WWW-Shorten
 	   ! main/TODO
 ____________________________________________________________________________
 [    46] By: iain                                  on 2002/11/04  13:06:47
         Log: - Tests no longer use a dave.org URL.
              - Uses one of mine instead ( perl.dellah.org ).
-     Branch: WWW-Shorten
 	   ! main/t/fcol.t main/t/masl.t main/t/notlong.t
 	   ! main/t/quickones.t main/t/shorl.t main/t/snipurl.t
 	   ! main/t/tinyurl.t main/t/ws_masl.t main/t/ws_notlong.t
@@ -96,26 +112,22 @@ ____________________________________________________________________________
         Log: - Continuing 1.5.2.
              - Added SmLnk.com
              - Updated Shorten.pm to mention the EdDk, Fcol and SmLnk.
-     Branch: WWW-Shorten
 	   + main/lib/WWW/Shorten/SmLnk.pm main/t/smlnk.t
 	   ! main/Changes main/MANIFEST main/lib/WWW/Shorten.pm
 ____________________________________________________________________________
 [    42] By: iain                                  on 2002/11/01  13:23:19
         Log: - Fixed to accomodate site change.
              - lynx.php doesn't appear to be doing as it used to.
-     Branch: WWW-Shorten
 	   ! main/lib/WWW/Shorten/SnipURL.pm main/t/snipurl.t
 	   ! main/t/ws_snipurl.t
 ____________________________________________________________________________
 [    40] By: iain                                  on 2002/10/30  16:33:54
         Log: - 1.5.2 changes.
-     Branch: WWW-Shorten
 	   ! main/Changes
 ____________________________________________________________________________
 [    39] By: iain                                  on 2002/10/30  16:33:28
         Log: - More name changing tests.
              - Inheritance tends to make symbol table futzing harder.
-     Branch: WWW-Shorten
 	   + main/t/00load_a.t main/t/00load_b.t
 	   ! main/MANIFEST main/lib/WWW/Shorten/generic.pm main/t/00load.t
 ____________________________________________________________________________
@@ -123,7 +135,6 @@ ____________________________________________________________________________
         Log: - Function name changing is possible.
              - newnames.t and ws_newnames.t test this.
              - import() for WWW::Shorten simplified by shunting stuff to the base class.
-     Branch: WWW-Shorten
 	   + main/t/ws_newnames.t
 	   ! main/MANIFEST main/lib/WWW/Shorten.pm
 	   ! main/lib/WWW/Shorten/generic.pm main/t/newnames.t
@@ -133,13 +144,11 @@ ____________________________________________________________________________
              - Have to think of something to with change logs now.
              - MANIFEST updated appropriately.
              - New tests added.
-     Branch: WWW-Shorten
 	   + main/t/newnames.t
 	   ! main/Build.PL main/Changes main/MANIFEST
 ____________________________________________________________________________
 [    35] By: iain                                  on 2002/10/30  15:23:36
         Log: Versions moved to x.yy, and aren't taken from CVS ids.
-     Branch: WWW-Shorten
 	   ! main/lib/WWW/Shorten/EkDk.pm main/lib/WWW/Shorten/Fcol.pm
 	   ! main/lib/WWW/Shorten/MakeAShorterLink.pm
 	   ! main/lib/WWW/Shorten/NotLong.pm
@@ -152,28 +161,24 @@ ____________________________________________________________________________
         Log: + $DEBUG mode.
              
              [imported from CVS by cvs2p4 at 2002/10/30 01:14:15]
-     Branch: WWW-Shorten
 	   ! main/lib/WWW/Shorten/SnipURL.pm
 ____________________________________________________________________________
 [    33] By: iain                                  on 2002/10/29  12:22:09
         Log: + 1.5.1
              
              [imported from CVS by cvs2p4 at 2002/10/30 01:14:15]
-     Branch: WWW-Shorten
 	   ! main/Build.PL main/Changes
 ____________________________________________________________________________
 [    32] By: iain                                  on 2002/10/25  12:06:18
         Log: + The new edition.
              
              [imported from CVS by cvs2p4 at 2002/10/30 01:14:15]
-     Branch: WWW-Shorten
 	   ! main/t/00checkyaml.t
 ____________________________________________________________________________
 [    31] By: iain                                  on 2002/10/25  12:06:06
         Log: + ABSTRACT added.
              
              [imported from CVS by cvs2p4 at 2002/10/30 01:14:15]
-     Branch: WWW-Shorten
 	   ! main/lib/WWW/Shorten.pm
 ____________________________________________________________________________
 [    30] By: iain                                  on 2002/10/25  12:05:59
@@ -181,7 +186,6 @@ ____________________________________________________________________________
              + MANIFEST updated.
              
              [imported from CVS by cvs2p4 at 2002/10/30 01:14:15]
-     Branch: WWW-Shorten
 	   ! main/MANIFEST
 ____________________________________________________________________________
 [    29] By: iain                                  on 2002/10/25  12:05:59
@@ -189,14 +193,12 @@ ____________________________________________________________________________
              + MANIFEST updated.
              
              [imported from CVS by cvs2p4 at 2002/10/30 01:14:15]
-     Branch: WWW-Shorten
 	   - main/README
 ____________________________________________________________________________
 [    28] By: iain                                  on 2002/10/25  11:54:32
         Log: + redir.ek.dk tests.
              
              [imported from CVS by cvs2p4 at 2002/10/30 01:14:15]
-     Branch: WWW-Shorten
 	   + main/t/ekdk.t
 ____________________________________________________________________________
 [    27] By: iain                                  on 2002/10/25  11:51:55
@@ -212,7 +214,6 @@ ____________________________________________________________________________
              - Tests for Fcol and EkDk added.
              
              [imported from CVS by cvs2p4 at 2002/10/30 01:14:15]
-     Branch: WWW-Shorten
 	   + main/.cvsignore main/Build.PL main/MANIFEST.SKIP
 	   + main/lib/WWW/Shorten/EkDk.pm main/t/00checkyaml.t
 	   + main/t/00load.t main/t/00signature.t main/t/fcol.t
@@ -223,21 +224,18 @@ ____________________________________________________________________________
         Log: + SnipURL.pm now uses the API interface.
              
              [imported from CVS by cvs2p4 at 2002/10/30 01:14:15]
-     Branch: WWW-Shorten
 	   ! main/lib/WWW/Shorten/SnipURL.pm
 ____________________________________________________________________________
 [    25] By: iain                                  on 2002/10/25  11:05:52
         Log: + fcol.org support.
              
              [imported from CVS by cvs2p4 at 2002/10/30 01:14:15]
-     Branch: WWW-Shorten
 	   + main/lib/WWW/Shorten/Fcol.pm
 ____________________________________________________________________________
 [    24] By: iain                                  on 2002/09/21  14:14:02
         Log: + 1.4.2
              
              [imported from CVS by cvs2p4 at 2002/10/30 01:14:15]
-     Branch: WWW-Shorten
 	   ! main/Changes main/Makefile.PL
 ____________________________________________________________________________
 [    23] By: iain                                  on 2002/09/21  14:11:46
@@ -245,21 +243,18 @@ ____________________________________________________________________________
              + credited shank.
              
              [imported from CVS by cvs2p4 at 2002/10/30 01:14:15]
-     Branch: WWW-Shorten
 	   ! main/lib/WWW/Shorten/SnipURL.pm
 ____________________________________________________________________________
 [    22] By: iain                                  on 2002/09/21  13:37:31
         Log: + Fixed scope of $code.
              
              [imported from CVS by cvs2p4 at 2002/10/30 01:14:15]
-     Branch: WWW-Shorten
 	   ! main/t/notlong.t main/t/ws_notlong.t
 ____________________________________________________________________________
 [    21] By: iain                                  on 2002/09/21  13:30:23
         Log: + Correct scopes for variables.
              
              [imported from CVS by cvs2p4 at 2002/10/30 01:14:15]
-     Branch: WWW-Shorten
 	   ! main/t/notlong.t main/t/shorl.t
 ____________________________________________________________________________
 [    20] By: iain                                  on 2002/09/21  13:30:13
@@ -267,28 +262,24 @@ ____________________________________________________________________________
              have that.
              
              [imported from CVS by cvs2p4 at 2002/10/30 01:14:15]
-     Branch: WWW-Shorten
 	   ! main/lib/WWW/Shorten/SnipURL.pm
 ____________________________________________________________________________
 [    19] By: iain                                  on 2002/09/21  13:29:45
         Log: + Mention the newer modules rather than just the original three.
              
              [imported from CVS by cvs2p4 at 2002/10/30 01:14:15]
-     Branch: WWW-Shorten
 	   ! main/lib/WWW/Shorten.pm
 ____________________________________________________________________________
 [    18] By: iain                                  on 2002/09/21  13:29:33
         Log: + Version updated.
              
              [imported from CVS by cvs2p4 at 2002/10/30 01:14:15]
-     Branch: WWW-Shorten
 	   ! main/Makefile.PL
 ____________________________________________________________________________
 [    17] By: iain                                  on 2002/09/20  11:32:18
         Log: + Typo.
              
              [imported from CVS by cvs2p4 at 2002/10/30 01:14:15]
-     Branch: WWW-Shorten
 	   ! main/t/01version.t
 ____________________________________________________________________________
 [    16] By: iain                                  on 2002/09/20  11:32:01
@@ -296,7 +287,6 @@ ____________________________________________________________________________
              + THANKS section added to TinyURL
              
              [imported from CVS by cvs2p4 at 2002/10/30 01:14:15]
-     Branch: WWW-Shorten
 	   ! main/lib/WWW/Shorten/NotLong.pm
 	   ! main/lib/WWW/Shorten/TinyURL.pm
 ____________________________________________________________________________
@@ -305,7 +295,6 @@ ____________________________________________________________________________
              + List versions (good for test reports)
              
              [imported from CVS by cvs2p4 at 2002/10/30 01:14:15]
-     Branch: WWW-Shorten
 	   + main/t/01version.t main/t/notlong.t main/t/quickones.t
 	   + main/t/snipurl.t main/t/ws_notlong.t main/t/ws_quickones.t
 	   + main/t/ws_snipurl.t
@@ -316,7 +305,6 @@ ____________________________________________________________________________
              + TinyURL uses the generic interface.
              
              [imported from CVS by cvs2p4 at 2002/10/30 01:14:15]
-     Branch: WWW-Shorten
 	   + main/lib/WWW/Shorten/NotLong.pm
 	   + main/lib/WWW/Shorten/QuickOnes.pm
 	   + main/lib/WWW/Shorten/SnipURL.pm
@@ -329,7 +317,6 @@ ____________________________________________________________________________
              + Allow parameters to generic masl()
              
              [imported from CVS by cvs2p4 at 2002/10/30 01:14:15]
-     Branch: WWW-Shorten
 	   ! main/lib/WWW/Shorten.pm
 ____________________________________________________________________________
 [    12] By: iain                                  on 2002/09/20  11:27:06
@@ -338,7 +325,6 @@ ____________________________________________________________________________
              + TODO Added.
              
              [imported from CVS by cvs2p4 at 2002/10/30 01:14:15]
-     Branch: WWW-Shorten
 	   + main/TODO
 	   ! main/MANIFEST main/Makefile.PL main/README
 ____________________________________________________________________________
@@ -346,21 +332,18 @@ ____________________________________________________________________________
         Log: + 1.3.2 emendments.
              
              [imported from CVS by cvs2p4 at 2002/10/30 01:14:15]
-     Branch: WWW-Shorten
 	   ! main/Changes
 ____________________________________________________________________________
 [    10] By: iain                                  on 2002/09/16  13:52:37
         Log: + Bump it up.
              
              [imported from CVS by cvs2p4 at 2002/10/30 01:14:15]
-     Branch: WWW-Shorten
 	   ! main/Makefile.PL
 ____________________________________________________________________________
 [     9] By: iain                                  on 2002/09/16  13:41:17
         Log: + Mention where to report bugs.
              
              [imported from CVS by cvs2p4 at 2002/10/30 01:14:15]
-     Branch: WWW-Shorten
 	   ! main/README main/lib/WWW/Shorten.pm
 	   ! main/lib/WWW/Shorten/MakeAShorterLink.pm
 	   ! main/lib/WWW/Shorten/Shorl.pm main/lib/WWW/Shorten/TinyURL.pm
@@ -369,56 +352,48 @@ ____________________________________________________________________________
         Log: + Version update.
              
              [imported from CVS by cvs2p4 at 2002/10/30 01:14:15]
-     Branch: WWW-Shorten
 	   ! main/README
 ____________________________________________________________________________
 [     7] By: iain                                  on 2002/09/04  20:32:29
         Log: + Documentation nits.
              
              [imported from CVS by cvs2p4 at 2002/10/30 01:14:15]
-     Branch: WWW-Shorten
 	   ! main/lib/WWW/Shorten/Shorl.pm main/lib/WWW/Shorten/TinyURL.pm
 ____________________________________________________________________________
 [     6] By: iain                                  on 2002/09/04  20:32:19
         Log: + Updated.
              
              [imported from CVS by cvs2p4 at 2002/10/30 01:14:15]
-     Branch: WWW-Shorten
 	   ! main/Changes
 ____________________________________________________________________________
 [     5] By: iain                                  on 2002/09/04  20:26:14
         Log: + Document behaviour.
              
              [imported from CVS by cvs2p4 at 2002/10/30 01:14:15]
-     Branch: WWW-Shorten
 	   ! main/lib/WWW/Shorten/Shorl.pm
 ____________________________________________________________________________
 [     4] By: iain                                  on 2002/09/04  20:26:01
         Log: + Hardwire package version.
              
              [imported from CVS by cvs2p4 at 2002/10/30 01:14:15]
-     Branch: WWW-Shorten
 	   ! main/Makefile.PL
 ____________________________________________________________________________
 [     3] By: iain                                  on 2002/09/04  20:20:46
         Log: + Returns password in list context.
              
              [imported from CVS by cvs2p4 at 2002/10/30 01:14:15]
-     Branch: WWW-Shorten
 	   ! main/lib/WWW/Shorten/Shorl.pm main/t/shorl.t
 ____________________________________________________________________________
 [     2] By: iain                                  on 2002/08/29  18:24:43
         Log: + Corrected apostrophe.
              
              [imported from CVS by cvs2p4 at 2002/10/30 01:14:15]
-     Branch: WWW-Shorten
 	   ! main/lib/WWW/Shorten.pm
 ____________________________________________________________________________
 [     1] By: iain                                  on 2002/08/29  17:55:54
         Log: + 1.1
              
              [imported from CVS by cvs2p4 at 2002/10/30 01:14:15]
-     Branch: WWW-Shorten
 	   + main/Changes main/MANIFEST main/Makefile.PL main/README
 	   + main/lib/WWW/Shorten.pm
 	   + main/lib/WWW/Shorten/MakeAShorterLink.pm

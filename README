@@ -9,10 +9,11 @@ For usage, see the doco. Either use perldoc or view it
 on the web at:
     <http://search.cpan.org/author/SPOON/WWW-Shorten/>
 
-Changes for 1.5.5 (8 Jan 2003)
-   - Corrected Metamark doco.
-   - Metamark uses POST rather than GET now.
-   - Ask mentioned in various bits.
+Changes for 1.5.6 (5 Mar 2003)
+   - bin/shorten wasn't in the manifest, thus not in the dist.
+   - Added TinyClick.com
+   - Added Test::Pod tests.
+   - Added SERVICES section to pod.
 
 For a complete list of changes, see the Changes file.
 

@@ -60,6 +60,7 @@ WWW::Shorten - Abstract interface to URL shortening sites.
   use WWW::Shorten 'Shorl';
   use WWW::Shorten 'SmLnk';
   use WWW::Shorten 'SnipURL';
+  use WWW::Shorten 'TinyClick';
   use WWW::Shorten 'TinyURL';
 
   # Individual modules have have their
@@ -108,6 +109,20 @@ A very simple program called F<shorten> is supplied in the
 distribution's F<bin> folder. This program takes a URL and
 gives you a shortened version of it.
 
+=head1 SERVICES
+
+  EkDk                http://add.redir.ek.dk/
+  Fcol                http://fcol.org
+  MakeAShorterLink    http://makeashorterlink.com/
+  Metamark            http://xrl.us/
+  NotLong             http://notlong.com/
+  QuickOnes           http://quickones.org/
+  Shorl               http://shorl.com/
+  SmLnk               http://smlnk.org/
+  SnipURL             http://snipurl.com/
+  TinyClick           http://tinyclick.com/
+  TinyURL             http://tinyurl.com/
+
 =head1 THANKS
 
 Dave Cross for L<WWW::MakeAShorterLink>
@@ -128,6 +143,10 @@ Matt Felsen (mattf) wanted shorter function names.
 Ask Bjoern Hansen for providing both Metamark.net and
 advice on the module.
 
+
+And particularly thanks to all providers of these services.
+
+
 =head1 BUGS
 
 Please report bugs at <bug-www-shorten@rt.cpan.org>
@@ -135,7 +154,7 @@ or via the web interface at L<http://rt.cpan.org>
 
 =head1 LICENSE AND COPYRIGHT
 
-Copyright E<copy> Iain Truskett, 2002-03. All rights reserved.
+Copyright E<copy> Iain Truskett, 2002. All rights reserved.
 
 This library is free software; you can redistribute it and/or modify
 it under the same terms as Perl itself.
