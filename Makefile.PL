@@ -1,32 +1,16 @@
-# This Makefile.PL creates a pass-through Makefile that simply calls
-# the equivalent Module::Build methods for each make target.  See the
-# documentation for Module::Build::Compat for more information.
-
-unless (eval "use Module::Build::Compat 0.02; use Module::Build 0.14; 1" )
-{
-    print "This module requires Module::Build to install itself.\n";
-
-    require ExtUtils::MakeMaker;
-    my $yn = ExtUtils::MakeMaker::prompt
-    ('  Install Module::Build from CPAN?', 'y');
-
-    if ($yn =~ /^y/i) {
-	require Cwd;
-	require File::Spec;
-	require CPAN;
-
-	# Save this 'cause CPAN will chdir all over the place.
-	my $cwd = Cwd::cwd();
-	my $makefile = File::Spec->rel2abs($0);
-
-	CPAN::Shell->install('Module::Build::Compat');
-
-	chdir $cwd or die "Cannot chdir() back to $cwd: $!";
-	exec $^X, $makefile, @ARGV;  # Redo now that we have Module::Build
-    } else {
-	warn " *** Cannot install without Module::Build.  Exiting ...\n";
-	exit 1;
-    }
-}
-Module::Build::Compat->run_build_pl(args => \@ARGV);
-Module::Build::Compat->write_makefile();
+use ExtUtils::MakeMaker;
+WriteMakefile(
+    NAME		=> 'WWW::Shorten',
+    VERSION_FROM	=> 'lib/WWW/Shorten.pm',
+    PREREQ_PM => {
+		'URI' => '1.23',
+		'LWP::UserAgent' => '2.003',
+		'LWP' => '5.69',
+		'Test::More' => '0.47',
+	    },
+    ($] >= 5.005 ?
+      (ABSTRACT_FROM => 'lib/WWW/Shorten.pm',
+      AUTHOR     => 'Iain Truskett <spoon@cpan.org>') : ()),
+    ( eval($ExtUtils::MakeMaker::VERSION) >= 6.10 ?
+	( NO_META => 1, ) : ()),
+);

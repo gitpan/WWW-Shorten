@@ -24,8 +24,9 @@ diag "WWW::Shorten::NotLong ".WWW::Shorten::NotLong->VERSION();
     is ( makealongerlink($notlong), $url, 'make it longer');
 
     is ( makealongerlink($code), $url, 'make it longer by Id');
+}
 
-
+{
     my ($notlong, $password) = makeashorterlink( $url );
 
     ok ( (defined $notlong and $notlong =~ $re

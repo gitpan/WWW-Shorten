@@ -1,6 +1,15 @@
 # Change log for WWW::Shorten.
 
 ---
+version: 1.91
+date:    23 Jul 2003
+changes:
+    - Unified version numbers.
+    - Minor test nits fixed.
+    - Removed Fcol.org as it's no longer a shortener.
+    - Removed QuickOnes.org as it doesn't exist any more.
+
+---
 version: 1.5.8
 date:    11 Mar 2003
 changes:

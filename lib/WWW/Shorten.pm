@@ -7,7 +7,7 @@ use warnings;
 
 use base qw( WWW::Shorten::generic );
 our @EXPORT = qw(makeashorterlink makealongerlink);
-our $VERSION = '1.75';
+our $VERSION = "1.81";
 
 use Carp;
 
@@ -52,11 +52,9 @@ WWW::Shorten - Abstract interface to URL shortening sites.
 =head1 SYNOPSIS
 
   use WWW::Shorten 'EkDk';
-  use WWW::Shorten 'Fcol';
   use WWW::Shorten 'MakeAShorterLink';
   use WWW::Shorten 'Metamark';
   use WWW::Shorten 'NotLong';
-  use WWW::Shorten 'QuickOnes';
   use WWW::Shorten 'Shorl';
   use WWW::Shorten 'SmLnk';
   use WWW::Shorten 'SnipURL';
@@ -112,11 +110,9 @@ gives you a shortened version of it.
 =head1 SERVICES
 
   EkDk                http://add.redir.ek.dk/
-  Fcol                http://fcol.org
   MakeAShorterLink    http://makeashorterlink.com/
   Metamark            http://xrl.us/
   NotLong             http://notlong.com/
-  QuickOnes           http://quickones.org/
   Shorl               http://shorl.com/
   SmLnk               http://smlnk.org/
   SnipURL             http://snipurl.com/

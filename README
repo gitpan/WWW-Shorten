@@ -1,7 +1,6 @@
 WWW::Shorten
 
-   A Perl interface to URL shortening sites. These sites maintain
-   databases of long URLs, each of which has a unique identifier.
+   Abstract interface to URL shortening sites.
 
 For installation details, see INSTALL.
 
@@ -9,11 +8,11 @@ For usage, see the doco. Either use perldoc or view it
 on the web at:
     <http://search.cpan.org/author/SPOON/WWW-Shorten/>
 
-Changes for 1.5.8 (11 Mar 2003)
-   - Updated all BUGS section.
-   - Fixed incorrect rt.cpan.org email address.
-   - shorten script souped up. Can now be configured.
-   - Sample configuration file for shorten script added.
+Changes for 1.91 (23 Jul 2003)
+   - Unified version numbers.
+   - Minor test nits fixed.
+   - Removed Fcol.org as it's no longer a shortener.
+   - Removed QuickOnes.org as it doesn't exist any more.
 
 For a complete list of changes, see the Changes file.
 

@@ -5,7 +5,7 @@ BEGIN { use_ok WWW::Shorten::SnipURL };
 my $url = 'http://perl.dellah.org/WWW-Shorten-1.5.2.tar.gz';
 my $code = 'a8f';
 my $prefix_RE = qr{http://sn(?:ip)?url\.com/};
-my $preifix = 'http://snipurl.com/';
+my $prefix = 'http://snipurl.com/';
 my $shortened = makeashorterlink($url);
 
 like ( $shortened, qr/$prefix_RE$code/, 'make it shorter');

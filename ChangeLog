@@ -1,4 +1,48 @@
 ____________________________________________________________________________
+[   264] By: iain                                  on 2003/07/23  11:36:59
+        Log: - Unified version numbers
+	   ! main/Changes main/lib/WWW/Shorten.pm
+	   ! main/lib/WWW/Shorten/EkDk.pm
+	   ! main/lib/WWW/Shorten/MakeAShorterLink.pm
+	   ! main/lib/WWW/Shorten/Metamark.pm
+	   ! main/lib/WWW/Shorten/NotLong.pm main/lib/WWW/Shorten/Shorl.pm
+	   ! main/lib/WWW/Shorten/SmLnk.pm main/lib/WWW/Shorten/SnipURL.pm
+	   ! main/lib/WWW/Shorten/TinyClick.pm
+	   ! main/lib/WWW/Shorten/TinyURL.pm
+	   ! main/lib/WWW/Shorten/generic.pm
+____________________________________________________________________________
+[   263] By: iain                                  on 2003/07/23  11:31:02
+        Log: - Redundant.
+	   - main/t/00checkyaml.t
+____________________________________________________________________________
+[   262] By: iain                                  on 2003/07/23  11:30:34
+        Log: - Autogen
+	   - main/t/00signature.t
+____________________________________________________________________________
+[   261] By: iain                                  on 2003/07/23  11:19:36
+        Log: - Autogen.
+	   - main/AUTHORS main/MANIFEST main/MANIFEST.SKIP main/Makefile.PL
+	   - main/t/00pod.t
+____________________________________________________________________________
+[   260] By: iain                                  on 2003/07/23  11:19:24
+        Log: - Now in RT.cpan.org
+	   - main/TODO
+____________________________________________________________________________
+[   258] By: iain                                  on 2003/07/23  11:12:01
+        Log: - Minor test nits fixed.
+	   ! main/Changes main/t/notlong.t main/t/snipurl.t
+____________________________________________________________________________
+[   257] By: iain                                  on 2003/07/23  11:10:44
+        Log: - QuickOnes.org doesn't exist any more.
+	   - main/lib/WWW/Shorten/QuickOnes.pm main/t/quickones.t
+	   ! main/Changes main/lib/WWW/Shorten.pm
+____________________________________________________________________________
+[   256] By: iain                                  on 2003/07/17  10:18:31
+        Log: - Removing Fcol.org support.
+	   - main/lib/WWW/Shorten/Fcol.pm main/t/fcol.t
+	   ! main/Changes main/MANIFEST main/lib/WWW/Shorten.pm
+	   ! main/t/00pod.t
+____________________________________________________________________________
 [   246] By: iain                                  on 2003/03/11  19:16:03
         Log: - 1.5.8
 	   ! main/Build.PL main/Changes
