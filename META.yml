@@ -1,6 +1,6 @@
 --- #YAML:1.0
 name: WWW-Shorten
-version: 1.5.7
+version: 1.5.8
 license: perl
 distribution_type: module
 requires:

@@ -6,7 +6,7 @@ use warnings;
 
 use base qw( WWW::Shorten::generic Exporter );
 our @EXPORT = qw(makeashorterlink makealongerlink);
-our $VERSION = '1.13';
+our $VERSION = '1.14';
 
 use Carp;
 use URI;
@@ -88,10 +88,12 @@ If anything goes wrong, then either function will return C<undef>.
 
 makeashorterlink, makealongerlink
 
-=head1 BUGS
+=head1 BUGS, REQUESTS, COMMENTS
 
-Please report bugs at <bug-www-shorten@rt.cpan.org>
-or via the web interface at L<http://rt.cpan.org>
+Please report any requests, suggestions or bugs via the system at
+L<http://rt.cpan.org/>, or email E<lt>bug-WWW-Shorten@rt.cpan.orgE<gt>.
+This makes it much easier for me to track things and thus means
+your problem is less likely to be neglected.
 
 =head1 AUTHOR
 

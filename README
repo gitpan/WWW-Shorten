@@ -9,12 +9,11 @@ For usage, see the doco. Either use perldoc or view it
 on the web at:
     <http://search.cpan.org/author/SPOON/WWW-Shorten/>
 
-Changes for 1.5.7 (10 Mar 2003)
-   - Modules return undef when unable to shorten.
-   - Added link to NotLong's comparison page.
-   - Revised some BUGS sections.
-   - MASL returns URL if too short, else undef.
-   - MASL tests extended.
+Changes for 1.5.8 (11 Mar 2003)
+   - Updated all BUGS section.
+   - Fixed incorrect rt.cpan.org email address.
+   - shorten script souped up. Can now be configured.
+   - Sample configuration file for shorten script added.
 
 For a complete list of changes, see the Changes file.
 

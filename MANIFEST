@@ -10,11 +10,12 @@ CREDITS                         Those who have helped this module get where it i
 AUTHORS                         A plainer list of the people.
 MANIFEST                        This list of files.
 MANIFEST.SKIP                   Which files to never put in here.
-META.yml a                      Package metadata. 
+META.yml a                      Package metadata.
 LICENSE                         License and copyright
 Artistic                        The Artistic Licence
 COPYING                         The GNU Public License
 bin/shorten                     Example program
+bin/shortenrc                   Example config for example program.
 lib/WWW/Shorten/EkDk.pm
 lib/WWW/Shorten/Fcol.pm
 lib/WWW/Shorten/generic.pm

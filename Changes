@@ -1,6 +1,15 @@
 # Change log for WWW::Shorten.
 
 ---
+version: 1.5.8
+date:    11 Mar 2003
+changes:
+    - Updated all BUGS section.
+    - Fixed incorrect rt.cpan.org email address.
+    - shorten script souped up. Can now be configured.
+    - Sample configuration file for shorten script added.
+
+---
 version: 1.5.7
 date:    10 Mar 2003
 changes:

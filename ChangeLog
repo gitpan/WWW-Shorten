@@ -1,4 +1,34 @@
 ____________________________________________________________________________
+[   246] By: iain                                  on 2003/03/11  19:16:03
+        Log: - 1.5.8
+	   ! main/Build.PL main/Changes
+____________________________________________________________________________
+[   245] By: iain                                  on 2003/03/11  19:06:15
+        Log: - MANIFEST update.
+	   ! main/MANIFEST
+____________________________________________________________________________
+[   244] By: iain                                  on 2003/03/11  19:04:34
+        Log: - Sample configuration file for shorten script added.
+	   + main/bin/shortenrc
+____________________________________________________________________________
+[   243] By: iain                                  on 2003/03/11  19:03:06
+        Log: - shorten script souped up. Can now be configured.
+	   ! main/bin/shorten
+____________________________________________________________________________
+[   242] By: iain                                  on 2003/03/11  18:40:29
+        Log: - Updated all BUG sections.
+	   ! main/lib/WWW/Shorten.pm main/lib/WWW/Shorten/EkDk.pm
+	   ! main/lib/WWW/Shorten/Fcol.pm
+	   ! main/lib/WWW/Shorten/MakeAShorterLink.pm
+	   ! main/lib/WWW/Shorten/Metamark.pm
+	   ! main/lib/WWW/Shorten/NotLong.pm
+	   ! main/lib/WWW/Shorten/QuickOnes.pm
+	   ! main/lib/WWW/Shorten/Shorl.pm main/lib/WWW/Shorten/SmLnk.pm
+	   ! main/lib/WWW/Shorten/SnipURL.pm
+	   ! main/lib/WWW/Shorten/TinyClick.pm
+	   ! main/lib/WWW/Shorten/TinyURL.pm
+	   ! main/lib/WWW/Shorten/generic.pm
+____________________________________________________________________________
 [   236] By: iain                                  on 2003/03/10  00:48:52
         Log: - 1.5.7
 	   ! main/Build.PL main/Changes
