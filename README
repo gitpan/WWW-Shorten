@@ -9,11 +9,12 @@ For usage, see the doco. Either use perldoc or view it
 on the web at:
     <http://search.cpan.org/author/SPOON/WWW-Shorten/>
 
-Changes for 1.5.6 (5 Mar 2003)
-   - bin/shorten wasn't in the manifest, thus not in the dist.
-   - Added TinyClick.com
-   - Added Test::Pod tests.
-   - Added SERVICES section to pod.
+Changes for 1.5.7 (10 Mar 2003)
+   - Modules return undef when unable to shorten.
+   - Added link to NotLong's comparison page.
+   - Revised some BUGS sections.
+   - MASL returns URL if too short, else undef.
+   - MASL tests extended.
 
 For a complete list of changes, see the Changes file.
 

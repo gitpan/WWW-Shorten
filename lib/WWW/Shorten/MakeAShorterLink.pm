@@ -6,7 +6,7 @@ use warnings;
 
 use base qw( WWW::Shorten::generic Exporter );
 our @EXPORT = qw(makeashorterlink makealongerlink);
-our $VERSION = '1.31';
+our $VERSION = '1.32';
 
 use Carp;
 
@@ -23,8 +23,11 @@ sub makeashorterlink ($)
   return unless $resp->is_success;
 
   if ($resp->content =~ m!Your shorter link is: <a href="(.*)">!) {
-    return $1;
+      return $1;
+  } elsif ($resp->content =~ m!<h2>URL already short:</h2>!) {
+      return $url;
   }
+  return;
 }
 
 sub makealongerlink ($)
@@ -80,19 +83,22 @@ The function C<makealongerlink> does the reverse. C<makealongerlink>
 will accept as an argument either the full MASL URL or just the MASL
 identifier.
 
-If anything goes wrong, then either function will return C<undef>.
+If the URL to be shortened is already as short, or shorter, than how
+MASL would make it, then the URL you gave is returned. If anything else
+goes wrong, then either function will return C<undef>.
 
 For more information, see L<WWW::Shorten>.
-
 
 =head2 EXPORT
 
 makeashorterlink, makealongerlink
 
-=head1 BUGS
+=head1 BUGS, REQUESTS, COMMENTS
 
-Please report bugs at <bug-www-shorten@rt.cpan.org>
-or via the web interface at L<http://rt.cpan.org>
+Please report any requests, suggestions or bugs via the system at
+L<http://rt.cpan.org/>, or email E<lt>bug-WWW-Mechanize@rt.cpan.orgE<gt>.
+This makes it much easier for me to track things and thus means
+your problem is less likely to be neglected.
 
 =head1 AUTHOR
 

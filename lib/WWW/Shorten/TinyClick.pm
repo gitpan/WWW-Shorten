@@ -6,7 +6,7 @@ use warnings;
 
 use base qw( WWW::Shorten::generic Exporter );
 our @EXPORT = qw(makeashorterlink makealongerlink);
-our $VERSION = '1.05';
+our $VERSION = '1.06';
 
 use Carp;
 use URI;
@@ -27,6 +27,7 @@ sub makeashorterlink ($)
 	!x) {
 	return $1;
     }
+    return;
 }
 
 sub makealongerlink ($)

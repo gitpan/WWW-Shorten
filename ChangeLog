@@ -1,4 +1,33 @@
 ____________________________________________________________________________
+[   236] By: iain                                  on 2003/03/10  00:48:52
+        Log: - 1.5.7
+	   ! main/Build.PL main/Changes
+____________________________________________________________________________
+[   235] By: iain                                  on 2003/03/10  00:45:35
+        Log: - Improved MASL tests.
+	   ! main/t/masl.t
+____________________________________________________________________________
+[   232] By: iain                                  on 2003/03/07  13:35:14
+        Log: - Added link to NotLong's comparison page to WWW::Shorten.
+             - Revised BUGS section of WWW::Shorten. Others will be done.
+	   ! main/lib/WWW/Shorten.pm
+____________________________________________________________________________
+[   231] By: iain                                  on 2003/03/07  13:25:40
+        Log: - MakeAShorterLink.pm has minor POD fixups.
+             - MASL now returns the original URL if it was too short.
+	   ! main/lib/WWW/Shorten/MakeAShorterLink.pm
+____________________________________________________________________________
+[   230] By: iain                                  on 2003/03/07  13:24:43
+        Log: - |>
+             Modules return undef with any error.
+             Previously they'd returned an empty string for some errors.
+	   ! main/lib/WWW/Shorten/EkDk.pm main/lib/WWW/Shorten/Fcol.pm
+	   ! main/lib/WWW/Shorten/NotLong.pm
+	   ! main/lib/WWW/Shorten/QuickOnes.pm
+	   ! main/lib/WWW/Shorten/Shorl.pm main/lib/WWW/Shorten/SmLnk.pm
+	   ! main/lib/WWW/Shorten/TinyClick.pm
+	   ! main/lib/WWW/Shorten/TinyURL.pm
+____________________________________________________________________________
 [   229] By: iain                                  on 2003/03/05  12:24:10
         Log: - 1.5.6
 	   ! main/Build.PL main/Changes

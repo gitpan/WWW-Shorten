@@ -7,7 +7,7 @@ use warnings;
 
 use base qw( WWW::Shorten::generic );
 our @EXPORT = qw(makeashorterlink makealongerlink);
-our $VERSION = '1.72';
+our $VERSION = '1.74';
 
 use Carp;
 
@@ -123,6 +123,8 @@ gives you a shortened version of it.
   TinyClick           http://tinyclick.com/
   TinyURL             http://tinyurl.com/
 
+See L<http://notlong.com/links/> for a comparison of most of them.
+
 =head1 THANKS
 
 Dave Cross for L<WWW::MakeAShorterLink>
@@ -136,21 +138,27 @@ Eric Hammond for writing the NotLong variant.
 Shashank Tripathi for providing both SnipURL.com and advice on the
 module.
 
-Kevin Gilbertson (Gilby) supplied information on the TinyURL API interface.
+Kevin Gilbertson (Gilby) supplied information on the TinyURL API
+interface.
 
 Matt Felsen (mattf) wanted shorter function names.
 
-Ask Bjoern Hansen for providing both Metamark.net and
-advice on the module.
+Ask Bjoern Hansen for providing both Metamark.net and advice on the
+module.
+
+Martin Thurn for helping me notice a bug and for a suggestion regarding
+F<MASL.pm>.
 
 
 And particularly thanks to all providers of these services.
 
 
-=head1 BUGS
+=head1 BUGS, REQUESTS, COMMENTS
 
-Please report bugs at <bug-www-shorten@rt.cpan.org>
-or via the web interface at L<http://rt.cpan.org>
+Please report any requests, suggestions or bugs via the system at
+L<http://rt.cpan.org/>, or email E<lt>bug-WWW-Mechanize@rt.cpan.orgE<gt>.
+This makes it much easier for me to track things and thus means
+your problem is less likely to be neglected.
 
 =head1 LICENSE AND COPYRIGHT
 

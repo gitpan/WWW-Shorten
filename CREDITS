@@ -1,4 +1,4 @@
-CREDITS FOR WWW::Shorten 1.5.6
+CREDITS FOR WWW::Shorten 1.5.7
 
 Dave Cross for WWW::MakeAShorterLink
 
@@ -11,12 +11,16 @@ Eric Hammond for writing the NotLong variant.
 Shashank Tripathi for providing both SnipURL.com and advice on the
 module.
 
-Kevin Gilbertson (Gilby) supplied information on the TinyURL API interface.
+Kevin Gilbertson (Gilby) supplied information on the TinyURL API
+interface.
 
 Matt Felsen (mattf) wanted shorter function names.
 
-Ask Bjoern Hansen for providing both Metamark.net and
-advice on the module.
+Ask Bjoern Hansen for providing both Metamark.net and advice on the
+module.
+
+Martin Thurn for helping me notice a bug and for a suggestion regarding
+MASL.pm.
 
 
 And particularly thanks to all providers of these services.

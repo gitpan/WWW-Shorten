@@ -1,6 +1,16 @@
 # Change log for WWW::Shorten.
 
 ---
+version: 1.5.7
+date:    10 Mar 2003
+changes:
+    - Modules return undef when unable to shorten.
+    - Added link to NotLong's comparison page.
+    - Revised some BUGS sections.
+    - MASL returns URL if too short, else undef.
+    - MASL tests extended.
+
+---
 version: 1.5.6
 date:    5 Mar 2003
 changes:

@@ -6,7 +6,7 @@ use warnings;
 
 use base qw( WWW::Shorten::generic Exporter );
 our @EXPORT = qw( makeashorterlink makealongerlink );
-our $VERSION = '1.51';
+our $VERSION = '1.52';
 
 use Carp;
 
@@ -25,6 +25,7 @@ sub makeashorterlink ($)
     if ($resp->content =~ m!(\Qhttp://tinyurl.com/\E\w+)!x) {
 	return $1;
     }
+    return;
 }
 
 sub makealongerlink ($)
