@@ -1,3 +1,5 @@
+#$Id: Shorten.pm,v 1.91 2004/10/24 16:31:16 dave Exp $
+
 package WWW::Shorten;
 
 use 5.006;
@@ -7,7 +9,7 @@ use warnings;
 
 use base qw( WWW::Shorten::generic );
 our @EXPORT = qw(makeashorterlink makealongerlink);
-our $VERSION = "1.88";
+our $VERSION = sprintf "%d.%02d", '$Revision: 1.91 $ ' =~ /(\d+)\.(\d+)/;
 
 use Carp;
 
@@ -215,8 +217,22 @@ Iain Truskett <spoon@cpan.org>
 
 Based on WWW::MakeAShorterLink by Dave Cross <dave@dave.org.uk>
 
+In 2004 Dave Cross took over the maintenance of this distribution
+following the death of Iain Truskett.
+
 =head1 SEE ALSO
 
 L<perl>, L<CGI::Shorten>.
 
 =cut
+
+#
+# $Log: Shorten.pm,v $
+# Revision 1.91  2004/10/24 16:31:16  dave
+# Changed author in Makefile.PL.
+# Get $VERSION from CVS tag.
+#
+# Revision 1.90  2004/10/24 16:27:45  dave
+# Add some CVS tags
+#
+#
