@@ -6,7 +6,7 @@ use warnings;
 
 use base qw( WWW::Shorten::generic Exporter );
 our @EXPORT = qw(makeashorterlink makealongerlink);
-our ($VERSION) = q$Revision: 1.2 $ =~ /^ Revision: \s+ (\S+) \s+ $/x;
+our ($VERSION) = q$Revision: 1.3 $ =~ /^ Revision: \s+ (\S+) \s+ $/x;
 
 use Carp;
 
@@ -74,8 +74,9 @@ WWW::Shorten::SnipURL - Perl interface to SnipURL.com
 
 =head1 DESCRIPTION
 
-A Perl interface to the web site snipurl.com.  SnipURL simply maintains
-a database of long URLs, each of which has a unique identifier.
+A Perl interface to the web service SnipURL.com. SnipURL maintains a
+database of long URLs, each of which has a unique identifier or
+nickname. For more features, please visit http://snipurl.com/features
 
 The function C<makeashorterlink> will call the SnipURL web site passing it
 your long URL and will return the shorter SnipURL version. If used in a
@@ -95,6 +96,11 @@ makeashorterlink, makealongerlink
 
 Please report bugs at <bug-www-shorten@rt.cpan.org>
 or via the web interface at L<http://rt.cpan.org>
+
+=head1 THANKS
+
+Shashank Tripathi <shank@shank.com> for providing both
+SnipURL.com and advice on the module.
 
 =head1 AUTHOR
 

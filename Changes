@@ -1,5 +1,13 @@
 Revision history for Perl extension WWW::Shorten.
 
+1.4.2   - SnipURL.pm description modified.
+
+1.4.1   - SnipURL synopsis corrected.
+        - Tests for Shorl and NotLong fixed.
+
+1.4     - Redid internals.
+        - Added QuickOnes, NotLong and SnipURL.
+
 1.3.2	- Added rt.cpan.org notes.
 
 1.3.1	- Fnarged upload.
