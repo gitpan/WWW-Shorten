@@ -6,7 +6,7 @@ use warnings;
 
 use base qw( WWW::Shorten::generic Exporter );
 our @EXPORT = qw(makeashorterlink makealongerlink);
-our ($VERSION) = q$Revision: 1.1 $ =~ /^ Revision: \s+ (\S+) \s+ $/x;
+our ($VERSION) = q$Revision: 1.2 $ =~ /^ Revision: \s+ (\S+) \s+ $/x;
 
 use Carp;
 
@@ -69,7 +69,6 @@ WWW::Shorten::SnipURL - Perl interface to SnipURL.com
   use WWW::Shorten 'SnipURL';
 
   $short_url = makeashorterlink($long_url);
-  ($short_url,$password) = makeashorterlink($long_url);
 
   $long_url  = makealongerlink($short_url);
 

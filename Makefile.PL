@@ -3,7 +3,7 @@ use ExtUtils::MakeMaker;
 # the contents of the Makefile that is written.
 WriteMakefile(
     'NAME'		=> 'WWW::Shorten',
-    'VERSION'	=> '1.4', # finds $VERSION
+    'VERSION'	=> '1.4.1', # finds $VERSION
     'PREREQ_PM'		=> {
 	'LWP::UserAgent' => 0,
 	'Test::More' => 0,

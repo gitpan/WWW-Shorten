@@ -2,40 +2,44 @@ use Test::More tests => 6;
 
 BEGIN { use_ok WWW::Shorten, 'NotLong' };
 
-my $notlong = makeashorterlink('http://dave.org.uk/scripts/webged-1.02.tar.gz');
 my $re = qr!^ \Qhttp://\E ([\w]+) \Q.notlong.com\E/? $ !x;
+my $code;
 
 diag "WWW::Shorten::NotLong ".WWW::Shorten::NotLong->VERSION();
 
-diag "notlong = $notlong";
+{
+    my $notlong = makeashorterlink('http://dave.org.uk/scripts/webged-1.02.tar.gz');
 
-ok ((defined $notlong and $notlong =~ $re),
-    'make it shorter'
-);
+    diag "notlong = $notlong";
 
-my $code = $1;
+    ok ((defined $notlong and $notlong =~ $re),
+	    'make it shorter'
+       );
 
-diag "\$code = $code";
+    $code = $1;
 
-is (
-    makealongerlink($notlong),
-    'http://dave.org.uk/scripts/webged-1.02.tar.gz',
-    'make it longer'
-);
+    diag "\$code = $code";
 
-is (
-    makealongerlink($code),
-    'http://dave.org.uk/scripts/webged-1.02.tar.gz',
-    'make it longer by Id',
-);
+    is (
+	    makealongerlink($notlong),
+	    'http://dave.org.uk/scripts/webged-1.02.tar.gz',
+	    'make it longer'
+       );
+
+    is (
+	    makealongerlink($code),
+	    'http://dave.org.uk/scripts/webged-1.02.tar.gz',
+	    'make it longer by Id',
+       );
 
 
-my ($notlong, $password) = makeashorterlink('http://books.dellah.org/');
+    my ($notlong, $password) = makeashorterlink('http://books.dellah.org/');
 
-ok ( (defined $notlong and $notlong =~ $re
-	and defined $password and $password =~ m!^ [a-z]+ $ !x),
-    "make it shorter, get password [$notlong, $password]"
-);
+    ok ( (defined $notlong and $notlong =~ $re
+		and defined $password and $password =~ m!^ [a-z]+ $ !x),
+	    "make it shorter, get password [$notlong, $password]"
+       );
+}
 
 #TODO: {
 {

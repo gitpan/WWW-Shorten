@@ -7,7 +7,7 @@ use warnings;
 
 use base qw( WWW::Shorten::generic );
 our @EXPORT = qw(makeashorterlink makealongerlink);
-our ($VERSION) = q$Revision: 1.4 $ =~ /^ Revision: \s+ (\S+) \s+ $/x;
+our ($VERSION) = q$Revision: 1.5 $ =~ /^ Revision: \s+ (\S+) \s+ $/x;
 
 use Carp;
 
@@ -56,12 +56,23 @@ WWW::Shorten - Abstract interface to URL shortening sites.
 =head1 SYNOPSIS
 
   use WWW::Shorten 'MakeAShorterLink';
+  use WWW::Shorten 'NotLong';
+  use WWW::Shorten 'QuickOnes';
   use WWW::Shorten 'Shorl';
+  use WWW::Shorten 'SnipURL';
   use WWW::Shorten 'TinyURL';
+
+  # Individual modules have have their
+  # own syntactic varations.
+
+  # See the documentation for the particular
+  # module you intend to use for details, trips
+  # and traps.
 
   $short_url = makeashorterlink($long_url);
 
   $long_url  = makealongerlink($short_url);
+
 
 =head1 DESCRIPTION
 
