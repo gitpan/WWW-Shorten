@@ -1,4 +1,4 @@
-use Test::More tests => 4;
+use Test::More tests => 5;
 
 BEGIN { use_ok WWW::Shorten::Shorl };
 
@@ -21,3 +21,12 @@ is (
     'http://dave.org.uk/scripts/webged-1.02.tar.gz',
     'make it longer by Id',
 );
+
+
+my ($shorl, $password) = makeashorterlink('http://ouroboros.anu.edu.au/books/');
+
+ok ( (defined $shorl and $shorl =~ m!^ \Qhttp://shorl.com/\E ([a-z]+) $ !x
+	and defined $password and $password =~ m!^ [a-z]+ $ !x),
+    "make it shorter, get password [$shorl, $password]"
+);
+

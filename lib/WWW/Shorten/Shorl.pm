@@ -8,7 +8,7 @@ require Exporter;
 
 our @ISA = qw(Exporter);
 our @EXPORT = qw(makeashorterlink makealongerlink);
-our ($VERSION) = q$Revision: 1.1 $ =~ /^ Revision: \s+ (\S+) \s+ $/x;
+our ($VERSION) = q$Revision: 1.4 $ =~ /^ Revision: \s+ (\S+) \s+ $/x;
 
 use LWP;
 use Carp;
@@ -27,8 +27,12 @@ sub makeashorterlink
 	(\Qhttp://shorl.com/\E\w+)
 	</a>
 	<br>
+	[\r\n\s]*
+	\QPassword:\E
+	\s+
+	(\w+)
 	!x) {
-	return $1;
+	return wantarray ? ($1, $2) : $1;
     }
 }
 
@@ -65,6 +69,7 @@ WWW::Shorten::Shorl - Perl interface to shorl.com
   use WWW::Shorten 'Shorl';
 
   $short_url = makeashorterlink($long_url);
+  ($short_url,$password) = makeashorterlink($long_url);
 
   $long_url  = makealongerlink($short_url);
 
@@ -73,8 +78,9 @@ WWW::Shorten::Shorl - Perl interface to shorl.com
 A Perl interface to the web site shorl.com.  Shorl simply maintains
 a database of long URLs, each of which has a unique identifier.
 
-The function C<makeashorterlink> will call the Shorl web site passing
-it your long URL and will return the shorter Shorl version.
+The function C<makeashorterlink> will call the Shorl web site passing it
+your long URL and will return the shorter Shorl version. If used in a
+list context, then it will return both the Shorl URL and the password.
 
 The function C<makealongerlink> does the reverse. C<makealongerlink>
 will accept as an argument either the full Shorl URL or just the
@@ -88,22 +94,11 @@ Note that Shorl, unlike TinyURL and MakeAShorterLink, returns a unique code for 
 
 makeashorterlink, makealongerlink
 
-=head1 TODO
-
-=over 4
-
-=item *
-
-Return the password somehow.
-
-=back
-
-
 =head1 AUTHOR
 
 Iain Truskett <spoon@cpan.org>
 
-Based on WWW::MakeAShorteRLink by Dave Cross <dave@dave.org.uk>
+Based on WWW::MakeAShorterLink by Dave Cross <dave@dave.org.uk>
 
 =head1 SEE ALSO
 
