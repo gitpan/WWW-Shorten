@@ -10,9 +10,11 @@ For usage, see the doco. Either use perldoc or view it
 on the web at:
     <http://search.cpan.org/author/SPOON/WWW-Shorten/>
 
-Changes for 1.83 (26 Aug 2003)
-   - Added qurl.net
-   - Mentioned shorlfilter.
+Changes for 1.84 (29 Aug 2003)
+   - Changed URL for shorlfilter.
+   - Fixed qURL documentation.
+   - Added tinylink.com
+   - SmLnk.pm now uses the SmLnk API.
 
 
 For a complete list of changes, see the Changes file.

@@ -1,6 +1,15 @@
 # Change log for WWW::Shorten.
 
 ---
+version: 1.84
+date:    29 Aug 2003
+changes:
+    - Changed URL for shorlfilter.
+    - Fixed qURL documentation.
+    - Added tinylink.com
+    - SmLnk.pm now uses the SmLnk API.
+
+---
 version: 1.83
 date:    26 Aug 2003
 changes:

@@ -2,9 +2,9 @@
 # http://module-build.sourceforge.net/META-spec.html
 distribution_type: module
 name: WWW-Shorten
-date: 26 Aug 2003
+date: 29 Aug 2003
 author: SPOON
-version: 1.83
+version: 1.84
 license: perl
 
 conflicts: {}
@@ -27,7 +27,7 @@ private:
 provides:
   WWW::Shorten:
     file: lib/WWW/Shorten.pm
-    version: 1.83
+    version: 1.84
   WWW::Shorten::EkDk:
     file: lib/WWW/Shorten/EkDk.pm
     version: 1.81
@@ -48,7 +48,7 @@ provides:
     version: 1.82
   WWW::Shorten::SmLnk:
     file: lib/WWW/Shorten/SmLnk.pm
-    version: 1.81
+    version: 1.84
   WWW::Shorten::SnipURL:
     file: lib/WWW/Shorten/SnipURL.pm
     version: 1.81
@@ -58,12 +58,15 @@ provides:
   WWW::Shorten::TinyURL:
     file: lib/WWW/Shorten/TinyURL.pm
     version: 1.81
+  WWW::Shorten::Tinylink:
+    file: lib/WWW/Shorten/Tinylink.pm
+    version: 1.84
   WWW::Shorten::generic:
     file: lib/WWW/Shorten/generic.pm
     version: 1.81
   WWW::Shorten::qURL:
     file: lib/WWW/Shorten/qURL.pm
-    version: 1.83
+    version: 1.84
 
 dynamic_config: 0
 generated_by: docmaker version 0.91

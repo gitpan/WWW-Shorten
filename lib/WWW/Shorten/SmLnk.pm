@@ -6,47 +6,34 @@ use warnings;
 
 use base qw( WWW::Shorten::generic Exporter );
 our @EXPORT = qw(makeashorterlink makealongerlink);
-our $VERSION = "1.81";
+our $VERSION = "1.84";
 
 use Carp;
 
-sub makeashorterlink ($;%)
+sub _call
 {
-    my $url = shift or croak 'No URL passed to makeashorterlink';
+    my ($key, $value) = @_;
     my $ua = __PACKAGE__->ua();
-    my ($nick,$pass) = @_;
-    my $smlnk = 'http://www.smlnk.com/index.php';
-    my $resp = $ua->post($smlnk, [
-	'url000' => $url,
+    my $resp = $ua->post( 'http://smlnk.com/client.php', [
+	$key, $value
 	]);
     return unless $resp->is_success;
-    if ($resp->content =~ m!
-	<a \s+ href=['"] ([^'"]+)  ['"][^>]*>
-	(\Qhttp://smlnk.com/?\E\w+)
-	</a>
-	!x) {
-	return $1;
-    }
-    return;
+    chomp( my $link = $resp->content );
+    return unless defined $link;
+    return $link;
+}
+
+sub makeashorterlink ($)
+{
+    my $url = shift or croak 'No URL passed to makeashorterlink';
+    return _call( 'url' => $url );
 }
 
 sub makealongerlink ($)
 {
-    my $smlnk_url = shift 
-	or croak 'No SmLnk key / URL passed to makealongerlink';
-    my $ua = __PACKAGE__->ua();
-
-    $smlnk_url = "http://smlnk.com/?$smlnk_url"
-    unless $smlnk_url =~ m!^http://!i;
-
-    my $resp = $ua->get($smlnk_url);
-
-    if ( my $refresh = $resp->header('Refresh') )
-    {
-	return $1 if $refresh =~ m/; URL=(.*)$/;
-    }
-    return undef;
-
+    my $url = shift or croak 'No SmLnk key / URL passed to makealongerlink';
+    $url =~ s{^http://(www\.)?smlnk\.com/}{};
+    return _call( 'key' => $url );
 }
 
 1;
@@ -102,8 +89,6 @@ SmLnk.com.
 =head1 AUTHOR
 
 Iain Truskett <spoon@cpan.org>
-
-Based on WWW::MakeAShorterLink by Dave Cross <dave@dave.org.uk>
 
 =head1 SEE ALSO
 

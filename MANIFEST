@@ -2,6 +2,7 @@ Artistic
 AUTHORS
 bin/shorten
 bin/shortenrc
+ChangeLog
 Changes
 COPYING
 CREDITS
@@ -18,6 +19,7 @@ lib/WWW/Shorten/ShortLink.pm
 lib/WWW/Shorten/SmLnk.pm
 lib/WWW/Shorten/SnipURL.pm
 lib/WWW/Shorten/TinyClick.pm
+lib/WWW/Shorten/Tinylink.pm
 lib/WWW/Shorten/TinyURL.pm
 LICENSE
 Makefile.PL
@@ -42,5 +44,6 @@ t/shortlink.t
 t/smlnk.t
 t/snipurl.t
 t/tinyclick.t
+t/tinylink.t
 t/tinyurl.t
 t/ws_masl.t

@@ -7,7 +7,7 @@ use warnings;
 
 use base qw( WWW::Shorten::generic );
 our @EXPORT = qw(makeashorterlink makealongerlink);
-our $VERSION = "1.83";
+our $VERSION = "1.84";
 
 use Carp;
 
@@ -43,7 +43,6 @@ sub makealongerlink ($) {
 1;
 
 __END__
-# Below is stub documentation for your module. You better edit it!
 
 =head1 NAME
 
@@ -61,6 +60,7 @@ WWW::Shorten - Abstract interface to URL shortening sites.
   use WWW::Shorten 'SmLnk';
   use WWW::Shorten 'SnipURL';
   use WWW::Shorten 'TinyClick';
+  use WWW::Shorten 'TinyLink';
   use WWW::Shorten 'TinyURL';
 
   # Individual modules have have their
@@ -123,6 +123,7 @@ In alphabetical order:
   SmLnk               http://smlnk.org/
   SnipURL             http://snipurl.com/
   TinyClick           http://tinyclick.com/
+  TinyLink            http://tinylink.com/
   TinyURL             http://tinyurl.com/
 
 See L<http://notlong.com/links/> for a comparison of most of them.
@@ -140,8 +141,7 @@ Eric Hammond for writing the NotLong variant.
 Shashank Tripathi for providing both SnipURL.com and advice on the
 module.
 
-Kevin Gilbertson (Gilby) supplied information on the TinyURL API
-interface.
+Kevin Gilbertson (Gilby) supplied information on the TinyURL API.
 
 Matt Felsen (mattf) wanted shorter function names.
 
@@ -159,7 +159,7 @@ And especial thanks to all providers of these services.
 Adam Kessel wrote F<shorlfilter>, a program to filter a file, converting
 long URLs to short ones.
 
-    http://bostoncoop.net/adam/weblog?rightframe=shorlfilter
+    http://bostoncoop.net/adam/shorlfilter
 
 There is also a F<bin> directory in this distribution which contains a
 sample program.
