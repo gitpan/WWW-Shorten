@@ -4,7 +4,6 @@ WriteMakefile(
     VERSION_FROM	=> 'lib/WWW/Shorten.pm',
     PREREQ_PM => {
 		'URI' => '1.23',
-		'LWP::UserAgent' => '2.003',
 		'LWP' => '5.69',
 		'Test::More' => '0.47',
 	    },

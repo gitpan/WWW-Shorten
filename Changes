@@ -1,7 +1,13 @@
 # Change log for WWW::Shorten.
 
 ---
-version: 1.91
+version: 1.82
+date:    23 Jul 2003
+changes:
+    - Added shortlink.us
+
+---
+version: 1.81
 date:    23 Jul 2003
 changes:
     - Unified version numbers.

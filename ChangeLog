@@ -1,4 +1,9 @@
 ____________________________________________________________________________
+[   265] By: iain                                  on 2003/07/23  12:13:49
+        Log: - Added ShortLink.us
+	   + main/lib/WWW/Shorten/ShortLink.pm main/t/shortlink.t
+	   ! main/Changes main/lib/WWW/Shorten.pm
+____________________________________________________________________________
 [   264] By: iain                                  on 2003/07/23  11:36:59
         Log: - Unified version numbers
 	   ! main/Changes main/lib/WWW/Shorten.pm

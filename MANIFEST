@@ -14,6 +14,7 @@ lib/WWW/Shorten/MakeAShorterLink.pm
 lib/WWW/Shorten/Metamark.pm
 lib/WWW/Shorten/NotLong.pm
 lib/WWW/Shorten/Shorl.pm
+lib/WWW/Shorten/ShortLink.pm
 lib/WWW/Shorten/SmLnk.pm
 lib/WWW/Shorten/SnipURL.pm
 lib/WWW/Shorten/TinyClick.pm
@@ -36,6 +37,7 @@ t/metamark.t
 t/newnames.t
 t/notlong.t
 t/shorl.t
+t/shortlink.t
 t/smlnk.t
 t/snipurl.t
 t/tinyclick.t

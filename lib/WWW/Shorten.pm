@@ -7,7 +7,7 @@ use warnings;
 
 use base qw( WWW::Shorten::generic );
 our @EXPORT = qw(makeashorterlink makealongerlink);
-our $VERSION = "1.81";
+our $VERSION = "1.82";
 
 use Carp;
 
@@ -56,6 +56,7 @@ WWW::Shorten - Abstract interface to URL shortening sites.
   use WWW::Shorten 'Metamark';
   use WWW::Shorten 'NotLong';
   use WWW::Shorten 'Shorl';
+  use WWW::Shorten 'ShortLink';
   use WWW::Shorten 'SmLnk';
   use WWW::Shorten 'SnipURL';
   use WWW::Shorten 'TinyClick';
@@ -114,6 +115,7 @@ gives you a shortened version of it.
   Metamark            http://xrl.us/
   NotLong             http://notlong.com/
   Shorl               http://shorl.com/
+  ShortLink           http://shortlink.us/
   SmLnk               http://smlnk.org/
   SnipURL             http://snipurl.com/
   TinyClick           http://tinyclick.com/
@@ -158,7 +160,7 @@ your problem is less likely to be neglected.
 
 =head1 LICENSE AND COPYRIGHT
 
-Copyright E<copy> Iain Truskett, 2002. All rights reserved.
+Copyright E<copy> Iain Truskett, 2002-2003. All rights reserved.
 
 This library is free software; you can redistribute it and/or modify
 it under the same terms as Perl itself.
