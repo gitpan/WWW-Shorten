@@ -8,7 +8,7 @@ require Exporter;
 
 our @ISA = qw(Exporter);
 our @EXPORT = qw(makeashorterlink makealongerlink);
-our ($VERSION) = q$Revision: 1.4 $ =~ /^ Revision: \s+ (\S+) \s+ $/x;
+our ($VERSION) = q$Revision: 1.5 $ =~ /^ Revision: \s+ (\S+) \s+ $/x;
 
 use LWP;
 use Carp;
@@ -93,6 +93,11 @@ Note that Shorl, unlike TinyURL and MakeAShorterLink, returns a unique code for 
 =head2 EXPORT
 
 makeashorterlink, makealongerlink
+
+=head1 BUGS
+
+Please report bugs at <bug-www-shorten@rt.cpan.org>
+or via the web interface at L<http://rt.cpan.org>
 
 =head1 AUTHOR
 

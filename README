@@ -27,6 +27,11 @@ This module requires these other modules and libraries:
    + LWP
    + Test::More
 
+BUGS
+
+Please report bugs to <bug-www-shorten@rt.cpan.org>
+or via the web interface at <http://rt.cpan.org/>
+
 COPYRIGHT AND LICENCE
 
 This library is free software; you can redistribute it

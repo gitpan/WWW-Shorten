@@ -8,7 +8,7 @@ require Exporter;
 
 our @ISA = qw(Exporter);
 our @EXPORT = qw(makeashorterlink makealongerlink);
-our $VERSION = sprintf "%d.%02d", '$Revision: 1.1 $ ' =~ /(\d+)\.(\d+)/;
+our $VERSION = sprintf "%d.%02d", '$Revision: 1.2 $ ' =~ /(\d+)\.(\d+)/;
 
 use LWP;
 use Carp;
@@ -89,6 +89,11 @@ For more information, see L<WWW::Shorten>.
 =head2 EXPORT
 
 makeashorterlink, makealongerlink
+
+=head1 BUGS
+
+Please report bugs at <bug-www-shorten@rt.cpan.org>
+or via the web interface at L<http://rt.cpan.org>
 
 =head1 AUTHOR
 

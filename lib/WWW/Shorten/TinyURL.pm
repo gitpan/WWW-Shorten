@@ -8,7 +8,7 @@ require Exporter;
 
 our @ISA = qw(Exporter);
 our @EXPORT = qw(makeashorterlink makealongerlink);
-our ($VERSION) = q$Revision: 1.2 $ =~ /^ Revision: \s+ (\S+) \s+ $/x;
+our ($VERSION) = q$Revision: 1.3 $ =~ /^ Revision: \s+ (\S+) \s+ $/x;
 
 use LWP;
 use Carp;
@@ -77,6 +77,11 @@ If anything goes wrong, then either function will return C<undef>.
 =head2 EXPORT
 
 makeashorterlink, makealongerlink
+
+=head1 BUGS
+
+Please report bugs at <bug-www-shorten@rt.cpan.org>
+or via the web interface at L<http://rt.cpan.org>
 
 =head1 AUTHOR
 
