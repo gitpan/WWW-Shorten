@@ -7,7 +7,7 @@ use warnings;
 
 use base qw( WWW::Shorten::generic );
 our @EXPORT = qw(makeashorterlink makealongerlink);
-our $VERSION = "1.85";
+our $VERSION = "1.86";
 
 use Carp;
 
@@ -50,6 +50,7 @@ WWW::Shorten - Abstract interface to URL shortening sites.
 
 =head1 SYNOPSIS
 
+  use WWW::Shorten 'BabyURL';
   use WWW::Shorten 'EkDk';
   use WWW::Shorten 'MakeAShorterLink';
   use WWW::Shorten 'Metamark';
@@ -62,6 +63,7 @@ WWW::Shorten - Abstract interface to URL shortening sites.
   use WWW::Shorten 'TinyClick';
   use WWW::Shorten 'TinyLink';
   use WWW::Shorten 'TinyURL';
+  use WWW::Shorten 'URLjr';
   use WWW::Shorten 'V3';
 
   # Individual modules have have their
@@ -114,6 +116,7 @@ gives you a shortened version of it.
 
 In alphabetical order:
 
+  BabyURL             http://babyurl.com/
   EkDk                http://add.redir.ek.dk/
   MakeAShorterLink    http://makeashorterlink.com/
   Metamark            http://xrl.us/
@@ -126,6 +129,7 @@ In alphabetical order:
   TinyClick           http://tinyclick.com/
   TinyLink            http://tinylink.com/
   TinyURL             http://tinyurl.com/
+  URLjr               http://urljr.com/
   V3                  http://url.v3.net/
 
 See L<http://notlong.com/links/> for a comparison of most of them.
@@ -185,9 +189,9 @@ Alternatively, log them via the CPAN RT system via the web or email:
 This makes it much easier for me to track things and thus means
 your problem is less likely to be neglected.
 
-=head1 LICENSE AND COPYRIGHT
+=head1 LICENCE AND COPYRIGHT
 
-WWW::Shorten::NotLong copyright E<copy> Eric Hammond <ehammond@thinksom.com>.
+WWW::Shorten::NotLong copyright E<copy> Eric Hammond <ehammond@thinksome.com>.
 
 WWW::Shorten::MakeAShorterLink copyright E<copy> Dave Cross <dave@dave.org.uk>.
 
@@ -198,7 +202,7 @@ This library is free software; you can redistribute it and/or modify
 it under the same terms as Perl itself, either Perl version 5.000 or,
 at your option, any later version of Perl 5 you may have available.
 
-The full text of the licenses can be found in the F<Artistic> and
+The full text of the licences can be found in the F<Artistic> and
 F<COPYING> files included with this module, or in L<perlartistic> and
 L<perlgpl> as supplied with Perl 5.8.1 and later.
 

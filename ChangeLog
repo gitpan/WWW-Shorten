@@ -1,4 +1,40 @@
 ____________________________________________________________________________
+[   283] By: iain                                  on 2003/09/02  16:29:05
+        Log: - Added URLjr.com
+	   + main/lib/WWW/Shorten/URLjr.pm main/t/urljr.t
+	   ! main/lib/WWW/Shorten.pm
+____________________________________________________________________________
+[   282] By: iain                                  on 2003/09/02  16:28:16
+        Log: - Fixed wrong URL in docs.
+             - Removed trailing slash in deparse URL.
+	   ! main/lib/WWW/Shorten/BabyURL.pm
+____________________________________________________________________________
+[   281] By: iain                                  on 2003/09/02  16:19:07
+        Log: - Added BabyURL.com
+	   + main/lib/WWW/Shorten/BabyURL.pm main/t/babyurl.t
+	   ! main/lib/WWW/Shorten.pm
+____________________________________________________________________________
+[   280] By: iain                                  on 2003/09/02  15:53:48
+        Log: - Fixed Eric's email.
+	   ! main/lib/WWW/Shorten.pm
+____________________________________________________________________________
+[   279] By: iain                                  on 2003/08/31  01:31:54
+        Log: - Licence = noun. License = verb.
+	   ! main/lib/WWW/Shorten.pm main/lib/WWW/Shorten/EkDk.pm
+	   ! main/lib/WWW/Shorten/MakeAShorterLink.pm
+	   ! main/lib/WWW/Shorten/Metamark.pm
+	   ! main/lib/WWW/Shorten/NotLong.pm main/lib/WWW/Shorten/Shorl.pm
+	   ! main/lib/WWW/Shorten/ShortLink.pm
+	   ! main/lib/WWW/Shorten/SmLnk.pm main/lib/WWW/Shorten/SnipURL.pm
+	   ! main/lib/WWW/Shorten/TinyClick.pm
+	   ! main/lib/WWW/Shorten/TinyURL.pm
+	   ! main/lib/WWW/Shorten/Tinylink.pm main/lib/WWW/Shorten/V3.pm
+	   ! main/lib/WWW/Shorten/generic.pm main/lib/WWW/Shorten/qURL.pm
+____________________________________________________________________________
+[   278] By: iain                                  on 2003/08/31  01:28:42
+        Log: - Licence = noun. License = verb.
+	   ! main/lib/WWW/Shorten.pm
+____________________________________________________________________________
 [   277] By: iain                                  on 2003/08/30  01:07:04
         Log: - 1.85
 	   ! main/Changes

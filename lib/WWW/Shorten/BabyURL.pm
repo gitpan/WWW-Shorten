@@ -1,4 +1,4 @@
-package WWW::Shorten::qURL;
+package WWW::Shorten::BabyURL;
 
 use 5.006;
 use strict;
@@ -6,26 +6,29 @@ use warnings;
 
 use base qw( WWW::Shorten::generic Exporter );
 our @EXPORT = qw(makeashorterlink makealongerlink);
-our $VERSION = "1.84";
+our $VERSION = "1.86";
 
 use Carp;
+
+# POST http://babyurl.com/index.php?bu_op=createurl
+#   bu_url=                         (textarea)
+#   Submit=Make BabyURL             (submit)
 
 sub makeashorterlink ($)
 {
     my $url = shift or croak 'No URL passed to makeashorterlink';
     my $ua = __PACKAGE__->ua();
-    my $resp = $ua->post( 'http://qurl.net/' , [
-        url => $url,
-        action => 'Create qURL',
+    my $resp = $ua->post( 'http://babyurl.com/index.php?bu_op=createurl' , [
+        bu_url => $url,
+        Submit => 'Make BabyURL',
         ],
     );
     return unless $resp->is_success;
     if ($resp->content =~ m!
-	qURL: \s+
-        \Q<a href="\E
-        ( \Qhttp://qurl.net/\E \w+ )
-        \Q">http://qurl.net/\E\w+\Q</a>\E
-	!xs) {
+        \Q<input type="hidden" name="babyurl" value="\E
+        (http://babyurl\.com/\w+)
+        \Q">\E
+	!x) {
 	return $1;
     }
     return;
@@ -34,17 +37,14 @@ sub makeashorterlink ($)
 sub makealongerlink ($)
 {
     my $code = shift
-	or croak 'No qURL nickname/URL passed to makealongerlink';
+	or croak 'No BabyURL nickname/URL passed to makealongerlink';
     my $ua = __PACKAGE__->ua();
 
-    $code = "http://qurl.net/$code/" unless $code =~ m!^http://!i;
+    $code = "http://babyurl.com/$code" unless $code =~ m!^http://!i;
 
     my $resp = $ua->get($code);
-
-    if ( my $refresh = $resp->header('Refresh') )
-    {
-	return $1 if $refresh =~ m/; URL=(.*)$/;
-    }
+    my $location = $resp->header('Location');
+    return $location if defined $location;
     return;
 }
 
@@ -54,11 +54,11 @@ __END__
 
 =head1 NAME
 
-WWW::Shorten::qURL - Perl interface to qURL.net
+WWW::Shorten::BabyURL - Perl interface to BabyURL.com
 
 =head1 SYNOPSIS
 
-  use WWW::Shorten 'qURL';
+  use WWW::Shorten 'BabyURL';
 
   $short_url = makeashorterlink($long_url);
 
@@ -67,15 +67,15 @@ WWW::Shorten::qURL - Perl interface to qURL.net
 
 =head1 DESCRIPTION
 
-A Perl interface to the web site qURL.net.  qURL.net simply maintains
+A Perl interface to the web site BabyURL.com.  BabyURL.com simply maintains
 a database of long URLs, each of which has a unique identifier.
 
-The function C<makeashorterlink> will call the qURL.net web site passing it
-your long URL and will return the shorter (qURL) version.
+The function C<makeashorterlink> will call the BabyURL.com web site passing it
+your long URL and will return the shorter (BabyURL) version.
 
 The function C<makealongerlink> does the reverse. C<makealongerlink>
-will accept as an argument either the full qURL URL or just the
-qURL identifier/nickname.
+will accept as an argument either the full BabyURL URL or just the
+BabyURL identifier/nickname.
 
 If anything goes wrong, then either function will return C<undef>.
 
@@ -96,6 +96,6 @@ Iain Truskett <spoon@cpan.org>
 
 =head1 SEE ALSO
 
-L<WWW::Shorten>, L<perl>, L<http://qurl.net/>
+L<WWW::Shorten>, L<perl>, L<http://BabyURL.com/>
 
 =cut

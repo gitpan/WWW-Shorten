@@ -10,13 +10,10 @@ For usage, see the doco. Either use perldoc or view it
 on the web at:
     <http://search.cpan.org/author/SPOON/WWW-Shorten/>
 
-Changes for 1.85 (30 Aug 2003)
-   - Added v3.net
-   - Assorted documentation tidyups.
-   - Changed URL for shorlfilter.
-   - Fixed qURL documentation.
-   - Added tinylink.com
-   - SmLnk.pm now uses the SmLnk API.
+Changes for 1.86 (2 Sep 2003)
+   - Fixed Eric's email address.
+   - Added BabyURL.com
+   - Added URLjr.com
 
 
 For a complete list of changes, see the Changes file.

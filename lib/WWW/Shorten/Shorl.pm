@@ -91,7 +91,7 @@ Note that Shorl, unlike TinyURL and MakeAShorterLink, returns a unique code for 
 
 makeashorterlink, makealongerlink
 
-=head1 SUPPORT, LICENSE, THANKS and SUCH
+=head1 SUPPORT, LICENCE, THANKS and SUCH
 
 See the main L<WWW::Shorten> docs.
 

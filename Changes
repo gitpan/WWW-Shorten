@@ -1,6 +1,14 @@
 # Change log for WWW::Shorten.
 
 ---
+version: 1.86
+date:    2 Sep 2003
+changes:
+    - Fixed Eric's email address.
+    - Added BabyURL.com
+    - Added URLjr.com
+
+---
 version: 1.85
 date:    30 Aug 2003
 changes:
