@@ -12,3 +12,15 @@ t/tinyurl.t
 t/ws_masl.t
 t/ws_shorl.t
 t/ws_tinyurl.t
+TODO
+lib/WWW/Shorten/QuickOnes.pm
+lib/WWW/Shorten/SnipURL.pm
+lib/WWW/Shorten/generic.pm
+t/quickones.t
+t/snipurl.t
+lib/WWW/Shorten/NotLong.pm
+t/notlong.t
+t/01version.t
+t/ws_notlong.t
+t/ws_quickones.t
+t/ws_snipurl.t

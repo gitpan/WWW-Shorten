@@ -5,10 +5,10 @@ use strict;
 no strict 'refs';
 use warnings;
 
+use base qw( WWW::Shorten::generic );
 our @EXPORT = qw(makeashorterlink makealongerlink);
-our ($VERSION) = q$Revision: 1.3 $ =~ /^ Revision: \s+ (\S+) \s+ $/x;
+our ($VERSION) = q$Revision: 1.4 $ =~ /^ Revision: \s+ (\S+) \s+ $/x;
 
-use LWP;
 use Carp;
 
 my $style;
@@ -32,20 +32,16 @@ sub import
 }
 
 # Preloaded methods go here.
-sub makeashorterlink ($)
+sub makeashorterlink ($;@)
 {
     my $url = shift or croak 'No URL passed to makeashorterlink';
-    my $ua = LWP::UserAgent->new;
-    return "WWW::Shorten::${style}::makeashorterlink"->($url, $ua);
+    return "WWW::Shorten::${style}::makeashorterlink"->($url, @_);
 }
 
 sub makealongerlink ($) {
     my $code = shift 
 	or croak 'No key / URL passed to makealongerlink';
-    my $ua = LWP::UserAgent->new(
-	requests_redirectable => [],
-    );
-    return "WWW::Shorten::${style}::makealongerlink"->($code, $ua);
+    return "WWW::Shorten::${style}::makealongerlink"->($code);
 }
 
 1;

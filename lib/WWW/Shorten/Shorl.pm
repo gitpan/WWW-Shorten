@@ -4,19 +4,16 @@ use 5.006;
 use strict;
 use warnings;
 
-require Exporter;
-
-our @ISA = qw(Exporter);
+use base qw( WWW::Shorten::generic Exporter );
 our @EXPORT = qw(makeashorterlink makealongerlink);
-our ($VERSION) = q$Revision: 1.5 $ =~ /^ Revision: \s+ (\S+) \s+ $/x;
+our ($VERSION) = q$Revision: 1.6 $ =~ /^ Revision: \s+ (\S+) \s+ $/x;
 
-use LWP;
 use Carp;
 
-sub makeashorterlink
+sub makeashorterlink ($)
 {
     my $url = shift or croak 'No URL passed to makeashorterlink';
-    my $ua = shift || LWP::UserAgent->new();;
+    my $ua = __PACKAGE__->ua();
     my $shorl = 'http://shorl.com/create.php';
     my $resp = $ua->post($shorl, [ url => $url ]);
     return unless $resp->is_success;
@@ -36,11 +33,11 @@ sub makeashorterlink
     }
 }
 
-sub makealongerlink
+sub makealongerlink ($)
 {
     my $shorl_url = shift 
 	or croak 'No Shorl key / URL passed to makealongerlink';
-    my $ua = shift || LWP::UserAgent->new(requests_redirectable => []);
+    my $ua = __PACKAGE__->ua();
 
     $shorl_url = "http://shorl.com/$shorl_url"
     unless $shorl_url =~ m!^http://!i;

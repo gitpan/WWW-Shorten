@@ -4,32 +4,34 @@ use 5.006;
 use strict;
 use warnings;
 
-require Exporter;
+use base qw( WWW::Shorten::generic Exporter );
+our @EXPORT = qw( makeashorterlink makealongerlink );
+our ($VERSION) = q$Revision: 1.5 $ =~ /^ Revision: \s+ (\S+) \s+ $/x;
 
-our @ISA = qw(Exporter);
-our @EXPORT = qw(makeashorterlink makealongerlink);
-our ($VERSION) = q$Revision: 1.3 $ =~ /^ Revision: \s+ (\S+) \s+ $/x;
-
-use LWP;
 use Carp;
 
-sub makeashorterlink
+sub makeashorterlink ($)
 {
     my $url = shift or croak 'No URL passed to makeashorterlink';
-    my $ua = shift || LWP::UserAgent->new();
-    my $tinyurl = 'http://tinyurl.com/create.php';
-    my $resp = $ua->post($tinyurl, [ url => $url ]);
-    return unless $resp->is_success;
-    if ($resp->content =~ m!> (\Qhttp://tinyurl.com/\E\w+) <!x) {
+    my $ua = __PACKAGE__->ua();
+    my $tinyurl = 'http://tinyurl.com/api-create.php';
+    my $resp = $ua->post($tinyurl, [
+	url => $url,
+	source => "PerlAPI-$VERSION",
+	]);
+    return undef unless $resp->is_success;
+    my $content = $resp->content;
+    return undef if $content =~ /Error/;
+    if ($resp->content =~ m!(\Qhttp://tinyurl.com/\E\w+)!x) {
 	return $1;
     }
 }
 
-sub makealongerlink
+sub makealongerlink ($)
 {
     my $tinyurl_url = shift 
 	or croak 'No TinyURL key / URL passed to makealongerlink';
-    my $ua = shift || LWP::UserAgent->new(requests_redirectable => []);
+    my $ua = __PACKAGE__->ua();
 
     $tinyurl_url = "http://tinyurl.com/$tinyurl_url"
     unless $tinyurl_url =~ m!^http://!i;
@@ -82,6 +84,11 @@ makeashorterlink, makealongerlink
 
 Please report bugs at <bug-www-shorten@rt.cpan.org>
 or via the web interface at L<http://rt.cpan.org>
+
+=head1 THANKS
+
+Thanks to Kevin Gilbertson (Gilby) for information on the TinyURL API
+interface.
 
 =head1 AUTHOR
 

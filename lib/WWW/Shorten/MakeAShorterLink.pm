@@ -4,20 +4,18 @@ use 5.006;
 use strict;
 use warnings;
 
-require Exporter;
-
-our @ISA = qw(Exporter);
+use base qw( WWW::Shorten::generic Exporter );
 our @EXPORT = qw(makeashorterlink makealongerlink);
-our $VERSION = sprintf "%d.%02d", '$Revision: 1.2 $ ' =~ /(\d+)\.(\d+)/;
+our $VERSION = sprintf "%d.%02d", '$Revision: 1.3 $ ' =~ /(\d+)\.(\d+)/;
 
-use LWP;
 use Carp;
 
 # Preloaded methods go here.
-sub makeashorterlink {
+sub makeashorterlink ($)
+{
   my $masl = 'http://www.makeashorterlink.com/index.php';
   my $url = shift or croak 'No URL passed to makeashorterlink';
-  my $ua = shift || LWP::UserAgent->new();
+  my $ua = __PACKAGE__->ua();
 
   my $resp = $ua->post($masl,
                        [ url => $url ]);
@@ -29,10 +27,11 @@ sub makeashorterlink {
   }
 }
 
-sub makealongerlink {
+sub makealongerlink ($)
+{
   my $masl_url = shift 
     or croak 'No MASL key / URL passed to makealongerlink';
-  my $ua = shift || LWP::UserAgent->new(requests_redirectable => []);
+  my $ua = __PACKAGE__->ua();
 
   $masl_url = "http://www.makeashorterlink.com/?$masl_url"
     unless $masl_url =~ m!^http://!i;
