@@ -1,5 +1,61 @@
-2004-10-24 17:19  dave
+2004-10-30 21:52  dave
 
+	* MANIFEST (1.89): Added new test files
+
+2004-10-30 13:52  dave
+
+	* lib/WWW/Shorten.pm (1.93), lib/WWW/Shorten/BabyURL.pm (1.89),
+	  lib/WWW/Shorten/EkDk.pm (1.89), lib/WWW/Shorten/Linkz.pm (1.89),
+	  lib/WWW/Shorten/MakeAShorterLink.pm (1.89),
+	  lib/WWW/Shorten/Metamark.pm (1.89), lib/WWW/Shorten/NotLong.pm
+	  (1.89), lib/WWW/Shorten/OneShortLink.pm (1.89),
+	  lib/WWW/Shorten/Shorl.pm (1.89), lib/WWW/Shorten/ShortLink.pm
+	  (1.89), lib/WWW/Shorten/SmLnk.pm (1.89),
+	  lib/WWW/Shorten/SnipURL.pm (1.89), lib/WWW/Shorten/TinyClick.pm
+	  (1.89), lib/WWW/Shorten/TinyURL.pm (1.89),
+	  lib/WWW/Shorten/Tinylink.pm (1.89), lib/WWW/Shorten/URLjr.pm
+	  (1.89), lib/WWW/Shorten/V3.pm (1.90), lib/WWW/Shorten/_dead.pm
+	  (1.89), lib/WWW/Shorten/generic.pm (1.89),
+	  lib/WWW/Shorten/qURL.pm (1.89), t/babyurl.t (1.2), t/linkz.t
+	  (1.2), t/masl.t (1.2), t/metamark.t (1.2), t/newnames.t (1.2),
+	  t/notlong.t (1.3), t/oneshort.t (1.2), t/shorl.t (1.2), t/smlnk.t
+	  (1.3), t/snipurl.t (1.2), t/tinyclick.t (1.3), t/tinylink.t
+	  (1.2), t/tinyurl.t (1.3), t/urljr.t (1.3), t/v3.t (1.2),
+	  t/ws_masl.t (1.2): Work on improving test coverage
+
+2004-10-25 22:03  dave
+
+	* lib/WWW/Shorten.pm (1.92): Removed unnecessary "no strict 'refs'"
+	* SIGNATURE (1.90): SIGNATURE is generated - therefore not in CVS
+	* t/: notlong.t (1.2), smlnk.t (1.2), tinyclick.t (1.2), tinyurl.t
+	  (1.2), urljr.t (1.2): Various test fixes
+	* lib/WWW/Shorten/V3.pm (1.89): Fixed response regex
+
+2004-10-24 23:08  dave
+
+	* MANIFEST.SKIP (1.89), Makefile.PL (1.89), SIGNATURE (1.89): New
+	  version with fixed SIGNATURE
+
+2004-10-24 18:35  dave
+
+	* AUTHORS (1.88), Artistic (1.88), COPYING (1.88), CREDITS (1.88),
+	  ChangeLog.SPOON (1.88), INSTALL (1.88), LICENCE (1.88), MANIFEST
+	  (1.88), MANIFEST.SKIP (1.88), META.yml (1.88), Makefile.PL
+	  (1.88), README (1.88), SIGNATURE (1.88): Correct CVS versions
+	* lib/WWW/Shorten/: BabyURL.pm (1.88), Linkz.pm (1.88),
+	  MakeAShorterLink.pm (1.88), Metamark.pm (1.88), NotLong.pm
+	  (1.88), Shorl.pm (1.88), ShortLink.pm (1.88), SmLnk.pm (1.88),
+	  SnipURL.pm (1.88), TinyClick.pm (1.88), TinyURL.pm (1.88),
+	  Tinylink.pm (1.88), URLjr.pm (1.88), V3.pm (1.88), _dead.pm
+	  (1.88), generic.pm (1.88), qURL.pm (1.88): Correct CVS versions
+	* lib/WWW/Shorten/EkDk.pm (1.88): Correct CVS Version
+	* lib/WWW/Shorten/OneShortLink.pm (1.88): Correct CVS version
+
+2004-10-24 17:31  dave
+
+	* Makefile.PL (1.2), lib/WWW/Shorten.pm (1.91): Changed author in
+	  Makefile.PL.	Get $VERSION from CVS tag.
+	* MANIFEST (1.2), lib/WWW/Shorten.pm (1.90): Add some CVS tags
 	* Changes (1.2): Removed Changes from CVS
 	* ChangeLog (1.2), ChangeLog.SPOON (1.1): Replaced ChangeLog with
 	  ChangeLog.SPOON
