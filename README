@@ -9,10 +9,10 @@ For usage, see the doco. Either use perldoc or view it
 on the web at:
     <http://search.cpan.org/author/SPOON/WWW-Shorten/>
 
-Changes for 1.5.3 (8 Nov 2002)
-   - Tests no longer use a dave.org URL.
-   - Uses one of mine instead ( perl.dellah.org ).
-   - AUTHORS and ChangeLog files added.
+Changes for 1.5.5 (8 Jan 2003)
+   - Corrected Metamark doco.
+   - Metamark uses POST rather than GET now.
+   - Ask mentioned in various bits.
 
 For a complete list of changes, see the Changes file.
 

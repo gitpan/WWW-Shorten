@@ -1,4 +1,17 @@
 ____________________________________________________________________________
+[   213] By: iain                                  on 2003/01/08  01:39:30
+        Log: - 1.5.5
+     Branch: WWW-Shorten
+	   ! main/Build.PL main/Changes
+____________________________________________________________________________
+[   212] By: iain                                  on 2003/01/08  01:39:10
+        Log: - Corrected Metamark doco.
+             - Metamark uses POST rather than GET now.
+             - Ask mentioned in various bits.
+     Branch: WWW-Shorten
+	   ! main/AUTHORS main/lib/WWW/Shorten.pm
+	   ! main/lib/WWW/Shorten/Metamark.pm
+____________________________________________________________________________
 [   211] By: iain                                  on 2003/01/07  14:47:14
         Log: - 1.5.4
      Branch: WWW-Shorten

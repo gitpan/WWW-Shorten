@@ -6,20 +6,17 @@ use warnings;
 
 use base qw( WWW::Shorten::generic Exporter );
 our @EXPORT = qw(makeashorterlink makealongerlink);
-our $VERSION = '1.00';
+our $VERSION = '1.01';
 
 use Carp;
-use URI;
 
 sub makeashorterlink ($)
 {
     my $url = shift or croak 'No URL passed to makeashorterlink';
     my $ua = __PACKAGE__->ua();
-    my $uri = URI->new('http://metamark.net/api/rest/simple');
-    $uri->query_form(
-	long_url => $url,
-    );
-    my $resp  = $ua->get( $uri );
+    my $resp  = $ua->post( 'http://metamark.net/api/rest/simple', [
+        long_url => $url,
+    ] );
     return unless $resp->is_success;
     return if $resp->content =~ /^ERROR:/;
     # I love REST. It's so simple when done properly.
@@ -33,8 +30,7 @@ sub makealongerlink ($)
     my $ua = __PACKAGE__->ua();
 
     $short_url =~ s{ ^\Qhttp://xrl.us/\E }{}x;
-    $short_url = "http://xrl.us/$short_url"
-    unless $short_url =~ m!^http://!i;
+    $short_url = "http://xrl.us/$short_url" unless $short_url =~ m!^http://!i;
     $ua->cookie_jar({});
     $ua->cookie_jar->set_cookie(
 	0,
@@ -70,10 +66,8 @@ WWW::Shorten::Metamark - Perl interface to metamark.net
 
 =head1 DESCRIPTION
 
-A Perl interface to the web site metamark.net.  Metamark simply maintains
+A Perl interface to the web site metamark.net. Metamark simply maintains
 a database of long URLs, each of which has a unique identifier.
-Metamark will expire unused URLs after a configurable period. This module
-just sets the expiry to 7 days.
 
 The function C<makeashorterlink> will call the Metamark web site passing it
 your long URL and will return the shorter Metamark version.
@@ -92,6 +86,11 @@ makeashorterlink, makealongerlink
 
 Please report bugs at <bug-www-shorten@rt.cpan.org>
 or via the web interface at L<http://rt.cpan.org>
+
+=head1 THANKS
+
+Ask Bjoern Hansen for providing both Metamark.net
+and advice on the module.
 
 =head1 AUTHOR
 

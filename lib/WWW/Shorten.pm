@@ -125,6 +125,9 @@ Kevin Gilbertson (Gilby) supplied information on the TinyURL API interface.
 
 Matt Felsen (mattf) wanted shorter function names.
 
+Ask Bjoern Hansen for providing both Metamark.net and
+advice on the module.
+
 =head1 BUGS
 
 Please report bugs at <bug-www-shorten@rt.cpan.org>

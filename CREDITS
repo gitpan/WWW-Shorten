@@ -1,4 +1,4 @@
-CREDITS FOR WWW::Shorten 1.5.3
+CREDITS FOR WWW::Shorten 1.5.5
 
 Dave Cross for WWW::MakeAShorterLink
 
@@ -14,6 +14,9 @@ module.
 Kevin Gilbertson (Gilby) supplied information on the TinyURL API interface.
 
 Matt Felsen (mattf) wanted shorter function names.
+
+Ask Bjoern Hansen for providing both Metamark.net and
+advice on the module.
 
 
 
