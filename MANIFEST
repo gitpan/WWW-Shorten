@@ -1,0 +1,14 @@
+Changes
+MANIFEST
+Makefile.PL
+README
+lib/WWW/Shorten.pm
+lib/WWW/Shorten/MakeAShorterLink.pm
+lib/WWW/Shorten/Shorl.pm
+lib/WWW/Shorten/TinyURL.pm
+t/masl.t
+t/shorl.t
+t/tinyurl.t
+t/ws_masl.t
+t/ws_shorl.t
+t/ws_tinyurl.t
