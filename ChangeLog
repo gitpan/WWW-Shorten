@@ -1,4 +1,17 @@
 ____________________________________________________________________________
+[   286] By: iain                                  on 2003/09/08  00:05:34
+        Log: - Better abstract.
+	   ! main/lib/WWW/Shorten.pm
+____________________________________________________________________________
+[   285] By: iain                                  on 2003/09/08  00:01:07
+        Log: - Added lin.kz
+	   + main/lib/WWW/Shorten/Linkz.pm main/t/linkz.t
+	   ! main/Changes main/lib/WWW/Shorten.pm
+____________________________________________________________________________
+[   284] By: iain                                  on 2003/09/02  16:40:57
+        Log: - 1.86
+	   ! main/Changes
+____________________________________________________________________________
 [   283] By: iain                                  on 2003/09/02  16:29:05
         Log: - Added URLjr.com
 	   + main/lib/WWW/Shorten/URLjr.pm main/t/urljr.t

@@ -1,4 +1,4 @@
-CREDITS FOR WWW::Shorten 1.82
+CREDITS FOR WWW::Shorten 1.87
 
 Dave Cross for WWW::MakeAShorterLink
 
@@ -8,11 +8,10 @@ Simon Batistoni for giving the makealongerlink idea to Dave.
 
 Eric Hammond for writing the NotLong variant.
 
-Shashank Tripathi for providing both SnipURL.com and advice on the
-module.
+Shashank Tripathi <shank@shank.com> for providing both SnipURL.com and
+advice on the module.
 
-Kevin Gilbertson (Gilby) supplied information on the TinyURL API
-interface.
+Kevin Gilbertson (Gilby) supplied information on the TinyURL API.
 
 Matt Felsen (mattf) wanted shorter function names.
 
@@ -22,7 +21,8 @@ module.
 Martin Thurn for helping me notice a bug and for a suggestion regarding
 MASL.pm.
 
+Jon and William (jon and wjr at smlnk.com respectively) for providing
+SmLnk.com.
 
-And particularly thanks to all providers of these services.
-
+And especial thanks to all providers of these services.
 

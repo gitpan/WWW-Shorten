@@ -7,7 +7,7 @@ use warnings;
 
 use base qw( WWW::Shorten::generic );
 our @EXPORT = qw(makeashorterlink makealongerlink);
-our $VERSION = "1.86";
+our $VERSION = "1.87";
 
 use Carp;
 
@@ -46,12 +46,13 @@ __END__
 
 =head1 NAME
 
-WWW::Shorten - Abstract interface to URL shortening sites.
+WWW::Shorten - Interface to URL shortening sites.
 
 =head1 SYNOPSIS
 
   use WWW::Shorten 'BabyURL';
   use WWW::Shorten 'EkDk';
+  use WWW::Shorten 'Linkz';
   use WWW::Shorten 'MakeAShorterLink';
   use WWW::Shorten 'Metamark';
   use WWW::Shorten 'NotLong';
@@ -118,6 +119,7 @@ In alphabetical order:
 
   BabyURL             http://babyurl.com/
   EkDk                http://add.redir.ek.dk/
+  Linkz               http://lin.kz/
   MakeAShorterLink    http://makeashorterlink.com/
   Metamark            http://xrl.us/
   NotLong             http://notlong.com/

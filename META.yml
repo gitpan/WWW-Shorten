@@ -2,9 +2,9 @@
 # http://module-build.sourceforge.net/META-spec.html
 distribution_type: module
 name: WWW-Shorten
-date: 2 Sep 2003
+date: 8 Sep 2003
 author: SPOON
-version: 1.86
+version: 1.87
 license: perl
 
 conflicts: {}
@@ -15,67 +15,16 @@ recommends:
   File::Find::Rule: 0.11
   Test::Pod: 0.95
 requires:
-  LWP::Protocol::http: 0
-  URI: 1.25
-  LWP::UserAgent: 2.003
   LWP: 5.69
+  LWP::Protocol::http: 0
+  LWP::UserAgent: 2.003
+  URI: 1.25
 
 private:
   directory:
     - t
 
 provides:
-  WWW::Shorten:
-    file: lib/WWW/Shorten.pm
-    version: 1.86
-  WWW::Shorten::BabyURL:
-    file: lib/WWW/Shorten/BabyURL.pm
-    version: 1.86
-  WWW::Shorten::EkDk:
-    file: lib/WWW/Shorten/EkDk.pm
-    version: 1.81
-  WWW::Shorten::MakeAShorterLink:
-    file: lib/WWW/Shorten/MakeAShorterLink.pm
-    version: 1.81
-  WWW::Shorten::Metamark:
-    file: lib/WWW/Shorten/Metamark.pm
-    version: 1.81
-  WWW::Shorten::NotLong:
-    file: lib/WWW/Shorten/NotLong.pm
-    version: 1.81
-  WWW::Shorten::Shorl:
-    file: lib/WWW/Shorten/Shorl.pm
-    version: 1.81
-  WWW::Shorten::ShortLink:
-    file: lib/WWW/Shorten/ShortLink.pm
-    version: 1.82
-  WWW::Shorten::SmLnk:
-    file: lib/WWW/Shorten/SmLnk.pm
-    version: 1.84
-  WWW::Shorten::SnipURL:
-    file: lib/WWW/Shorten/SnipURL.pm
-    version: 1.81
-  WWW::Shorten::TinyClick:
-    file: lib/WWW/Shorten/TinyClick.pm
-    version: 1.81
-  WWW::Shorten::TinyURL:
-    file: lib/WWW/Shorten/TinyURL.pm
-    version: 1.81
-  WWW::Shorten::Tinylink:
-    file: lib/WWW/Shorten/Tinylink.pm
-    version: 1.84
-  WWW::Shorten::URLjr:
-    file: lib/WWW/Shorten/URLjr.pm
-    version: 1.86
-  WWW::Shorten::V3:
-    file: lib/WWW/Shorten/V3.pm
-    version: 1.85
-  WWW::Shorten::generic:
-    file: lib/WWW/Shorten/generic.pm
-    version: 1.81
-  WWW::Shorten::qURL:
-    file: lib/WWW/Shorten/qURL.pm
-    version: 1.84
 
 dynamic_config: 0
-generated_by: docmaker version 0.91
+generated_by: docmaker version 1.01

@@ -1,6 +1,12 @@
 # Change log for WWW::Shorten.
 
 ---
+version: 1.87
+date:    8 Sep 2003
+changes:
+    - Added lin.kz
+
+---
 version: 1.86
 date:    2 Sep 2003
 changes:
