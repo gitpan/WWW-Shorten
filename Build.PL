@@ -4,7 +4,7 @@ use Module::Build 0.11;
 
 my $m = Module::Build->new(
     dist_name => 'WWW-Shorten',
-    dist_version => '1.5.0',
+    dist_version => '1.5.1',
     license => 'perl',
 
     requires => {

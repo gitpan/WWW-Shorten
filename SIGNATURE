@@ -1,5 +1,5 @@
 This file contains message digests of all files listed in MANIFEST,
-signed via the Module::Signature module, version 0.15.
+signed via the Module::Signature module, version 0.16.
 
 To verify the content in this distribution, first make sure you have
 Module::Signature installed, then type:
@@ -14,25 +14,25 @@ not run its Makefile.PL or Build.PL.
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-SHA1 e6b6d4078afba0d9594135d2dcdb2453b11ce20d Build.PL
-SHA1 25236ae2d1e483a627acc8c28c16caffa64d6251 CREDITS
-SHA1 3718a89f70b70d1db9bbeff75c4d60a3666c3dbf Changes
-SHA1 c1875879a3f40a39213d15a858a9868d92db4a27 INSTALL
-SHA1 f97f86f4f4789c967b0e8e1b32f7985264a9db1f LICENSE
+SHA1 b89ae9a2b5391b8986de9d8e8415875e1cf07362 Build.PL
+SHA1 ca1bfcd51938baab420ca130cf34ff5679f0540e CREDITS
+SHA1 df8bb001ff05cb644c8570f7e1d61b96bae62d4b Changes
+SHA1 e05e6ac2557ac31d574820a7c6d7f704f4e4524e INSTALL
+SHA1 2b66c3b09b0a810317913af114f3cfd7ac48c710 LICENSE
 SHA1 faceaaa1231cf48e2250798d51075b3f0a46dcd0 MANIFEST
 SHA1 9ab7c6d684d8723f3f42045ff258bafe7871211e MANIFEST.SKIP
-SHA1 3fc032225c1773c0022e316c4ed7ab6069d94515 META.yaml
+SHA1 4e0c9fccedba40c0d75b3569ea77cb0926ba0f02 META.yaml
 SHA1 b42a665b5b51a19c37bc60259e5f322862a07c22 Makefile.PL
-SHA1 0a7af8a70f541f19621ffe71ddf958382d99fc34 README
+SHA1 d67e650379c6b0aefbd6f06177601795c9a3c773 README
 SHA1 132dff999a527d49ed0d55d065456264adfb56d7 TODO
-SHA1 8e48408c6b948565ae28300d0da6425a67b40bc1 lib/WWW/Shorten.pm
+SHA1 18a61c947176610bda61dd5f5676ae0644fe7059 lib/WWW/Shorten.pm
 SHA1 ac18a437bceb020ff59d262800bac39c24457ab7 lib/WWW/Shorten/EkDk.pm
 SHA1 0170558d9452c745944c7fc721fb3f8df5d0f62c lib/WWW/Shorten/Fcol.pm
 SHA1 876729532a669be7b9a79de838bd2d74f13041fe lib/WWW/Shorten/MakeAShorterLink.pm
 SHA1 d9c2640c0638799d0376fef4014d38a651903f4d lib/WWW/Shorten/NotLong.pm
 SHA1 d8a051e9e804aab3fec13f37070906cca914c8f8 lib/WWW/Shorten/QuickOnes.pm
 SHA1 5b3c37973c7449ccabad63a8e93632d6fce239d5 lib/WWW/Shorten/Shorl.pm
-SHA1 8e00e7951951182c999bce5ce4d4b53770cbc191 lib/WWW/Shorten/SnipURL.pm
+SHA1 1312dbb8598908f05a6b8d1512e8c730dc10d2ea lib/WWW/Shorten/SnipURL.pm
 SHA1 e3ca2ff477ab81e6fbfcee9c56a1809f7b446fa2 lib/WWW/Shorten/TinyURL.pm
 SHA1 091a98c2b47565ba0b3031bf9694bbd26e393374 lib/WWW/Shorten/generic.pm
 SHA1 cedae6832fc869f8e013a33276e6ada0085f8fa9 t/00checkyaml.t
@@ -56,7 +56,7 @@ SHA1 e9cf967d094893d6749b8edfac05488799d15957 t/ws_tinyurl.t
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.0 (GNU/Linux)
 
-iD8DBQE9uKVpzL8gm6KQWMgRAgX3AJ9M69AbT7QuS9dmm7ZrU2ez4fw9RQCgvm/A
-/7HOyKATy3jc5TRNyw8yWcE=
-=iAGR
+iD8DBQE9veD5zL8gm6KQWMgRAttRAJ9lkEFS1xpdC4ZwcFcFE4gKzm0fcQCeP8Xa
+bbnwI9n+taUwQ4j6bkUBUQU=
+=u94S
 -----END PGP SIGNATURE-----

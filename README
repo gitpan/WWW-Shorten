@@ -9,17 +9,8 @@ For usage, see the doco. Either use perldoc or view it
 on the web at:
     <http://search.cpan.org/author/SPOON/WWW-Shorten/>
 
-Changes for 1.5.0 (25 Oct 2002)
-   - Module::Build rather than ExtUtils::MakeMaker.
-   - SIGNATURE added.
-   - Default style is 'MakeAShorterLink'.
-   - THANKS section added.
-   - LICENSE AND COPYRIGHT section added.
-   - SnipURL.pm uses the API interface.
-   - Auxiliary files cleaned up.
-   - Basic tests added.
-   - Fcol.org and add.redir.ek.dk added.
-   - Tests for Fcol and EkDk added.
+Changes for 1.5.1 (29 Oct 2002)
+   - Had accidentally left some debugging code in SnipURL.pm
 
 For a complete list of changes, see the Changes file.
 

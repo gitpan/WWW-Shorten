@@ -1,6 +1,12 @@
 # Change log for WWW::Shorten.
 
 ---
+version: 1.5.1
+date:    29 Oct 2002
+changes:
+    - Had accidentally left some debugging code in SnipURL.pm 
+
+---
 version: 1.5.0
 date:    25 Oct 2002
 changes:

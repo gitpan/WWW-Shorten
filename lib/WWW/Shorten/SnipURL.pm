@@ -7,6 +7,7 @@ use warnings;
 use base qw( WWW::Shorten::generic Exporter );
 our @EXPORT = qw(makeashorterlink makealongerlink);
 our ($VERSION) = q$Revision: 1.4 $ =~ /^ Revision: \s+ (\S+) \s+ $/x;
+our $DEBUG = $ENV{DEBUG} || 0;
 
 use Carp;
 
@@ -22,7 +23,7 @@ sub makeashorterlink ($;%)
 	protected_key => (defined $pass ? $pass : ''),
 	]);
     return unless $resp->is_success;
-    {
+    if ($DEBUG) {
 	open my $fh => '>' => 'resp' or die $!;
 	print $fh $resp->as_string;
     }
