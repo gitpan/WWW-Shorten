@@ -7,7 +7,7 @@ use warnings;
 
 use base qw( WWW::Shorten::generic );
 our @EXPORT = qw(makeashorterlink makealongerlink);
-our $VERSION = "1.87";
+our $VERSION = "1.88";
 
 use Carp;
 
@@ -17,7 +17,7 @@ sub import
 {
     my $class = shift;
     $style = shift;
-    $style ||= 'MakeAShorterLink';
+    $style = 'Metamark' unless defined $style;
     my $package = "${class}::${style}";
     eval {
 	my $file = $package;
@@ -51,14 +51,12 @@ WWW::Shorten - Interface to URL shortening sites.
 =head1 SYNOPSIS
 
   use WWW::Shorten 'BabyURL';
-  use WWW::Shorten 'EkDk';
   use WWW::Shorten 'Linkz';
   use WWW::Shorten 'MakeAShorterLink';
   use WWW::Shorten 'Metamark';
   use WWW::Shorten 'NotLong';
-  use WWW::Shorten 'qURL';
+  use WWW::Shorten 'OneShortLink';
   use WWW::Shorten 'Shorl';
-  use WWW::Shorten 'ShortLink';
   use WWW::Shorten 'SmLnk';
   use WWW::Shorten 'SnipURL';
   use WWW::Shorten 'TinyClick';
@@ -66,6 +64,12 @@ WWW::Shorten - Interface to URL shortening sites.
   use WWW::Shorten 'TinyURL';
   use WWW::Shorten 'URLjr';
   use WWW::Shorten 'V3';
+
+  # These 3 are now inactive and will give an
+  # error if you try to use them.
+  use WWW::Shorten 'EkDk';
+  use WWW::Shorten 'qURL';
+  use WWW::Shorten 'ShortLink';
 
   # Individual modules have have their
   # own syntactic varations.
@@ -113,40 +117,35 @@ A very simple program called F<shorten> is supplied in the
 distribution's F<bin> folder. This program takes a URL and
 gives you a shortened version of it.
 
-=head1 SERVICES
+=head1 EXAMPLES and PROGRAMS
 
-In alphabetical order:
-
-  BabyURL             http://babyurl.com/
-  EkDk                http://add.redir.ek.dk/
-  Linkz               http://lin.kz/
-  MakeAShorterLink    http://makeashorterlink.com/
-  Metamark            http://xrl.us/
-  NotLong             http://notlong.com/
-  qURL                http://qurl.net/
-  Shorl               http://shorl.com/
-  ShortLink           http://shortlink.us/
-  SmLnk               http://smlnk.org/
-  SnipURL             http://snipurl.com/
-  TinyClick           http://tinyclick.com/
-  TinyLink            http://tinylink.com/
-  TinyURL             http://tinyurl.com/
-  URLjr               http://urljr.com/
-  V3                  http://url.v3.net/
-
-See L<http://notlong.com/links/> for a comparison of most of them.
-
-If you know more, then please L<tell me about them|/"BUGS, REQUESTS, COMMENTS">.
-
-=head1 EXAMPLES
-
-Adam Kessel wrote F<shorlfilter>, a program to filter a file, converting
-long URLs to short ones.
+Adam Kessel wrote F<shorlfilter>, a program that uses C<WWW::Shorten>
+to filter a file, converting long URLs to short ones.
 
     http://bostoncoop.net/adam/shorlfilter
 
 There is also a F<bin> directory in this distribution which contains a
 sample program.
+
+=head1 FURTHER INFORMATION
+
+http://dellah.org/shorten/ has a collection of related
+resources: articles, services, programs (both to use services
+and to run services). It's a Wiki --- feel free to edit it.
+
+=head1 RELATED MODULES
+
+=head2 Similar Aim
+
+L<WWW::MakeAShorterLink> is what this module was originally based upon.
+That module is obsoleted by L<WWW::Shorten::MakeAShorterLink>, one of
+the many subclasses of L<WWW::Shorten>.
+
+=head2 Same Area, Different Purpose
+
+L<CGI::Shorten> provides building blocks for you to create your own URL
+shortening service. It provides routines to shoretn a URL, lengthen one,
+and it keeps a store. Nice and easy.
 
 =head1 THANKS
 
@@ -173,6 +172,8 @@ F<MASL.pm>.
 
 Jon and William (jon and wjr at smlnk.com respectively) for providing
 SmLnk.com.
+
+P J Goodwin for providing the code for L<WWW::Shorten::OneShortLink>.
 
 And especial thanks to all providers of these services.
 
@@ -216,6 +217,6 @@ Based on WWW::MakeAShorterLink by Dave Cross <dave@dave.org.uk>
 
 =head1 SEE ALSO
 
-L<perl>
+L<perl>, L<CGI::Shorten>.
 
 =cut

@@ -11,15 +11,11 @@ diag "WWW::Shorten::NotLong ".WWW::Shorten::NotLong->VERSION();
 {
     my $notlong = makeashorterlink( $url );
 
-    diag "notlong = $notlong";
-
     ok ((defined $notlong and $notlong =~ $re),
 	    'make it shorter'
        );
 
     $code = $1;
-
-    diag "\$code = $code";
 
     is ( makealongerlink($notlong), $url, 'make it longer');
 
@@ -35,14 +31,11 @@ diag "WWW::Shorten::NotLong ".WWW::Shorten::NotLong->VERSION();
        );
 }
 
-#TODO: {
 {
-    #local $TODO = "Works, but need to generate unique code";
     $code = "spoon${code}x";
     $code = substr($code, -10);
     my ($notlong, $password) = makeashorterlink( $url, nickname => $code);
 
-    diag "[$code => $notlong, $password]";
     ok ( ( defined $notlong and $notlong =~ $re
 		and $1 eq $code
 		and defined $password and $password =~ m!^ [a-z]+ $ !x),

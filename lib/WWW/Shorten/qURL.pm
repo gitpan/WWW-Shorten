@@ -1,54 +1,8 @@
 package WWW::Shorten::qURL;
+$VERSION = "1.88";
+require WWW::Shorten::_dead;
 
-use 5.006;
-use strict;
-use warnings;
-
-use base qw( WWW::Shorten::generic Exporter );
-our @EXPORT = qw(makeashorterlink makealongerlink);
-our $VERSION = "1.84";
-
-use Carp;
-
-sub makeashorterlink ($)
-{
-    my $url = shift or croak 'No URL passed to makeashorterlink';
-    my $ua = __PACKAGE__->ua();
-    my $resp = $ua->post( 'http://qurl.net/' , [
-        url => $url,
-        action => 'Create qURL',
-        ],
-    );
-    return unless $resp->is_success;
-    if ($resp->content =~ m!
-	qURL: \s+
-        \Q<a href="\E
-        ( \Qhttp://qurl.net/\E \w+ )
-        \Q">http://qurl.net/\E\w+\Q</a>\E
-	!xs) {
-	return $1;
-    }
-    return;
-}
-
-sub makealongerlink ($)
-{
-    my $code = shift
-	or croak 'No qURL nickname/URL passed to makealongerlink';
-    my $ua = __PACKAGE__->ua();
-
-    $code = "http://qurl.net/$code/" unless $code =~ m!^http://!i;
-
-    my $resp = $ua->get($code);
-
-    if ( my $refresh = $resp->header('Refresh') )
-    {
-	return $1 if $refresh =~ m/; URL=(.*)$/;
-    }
-    return;
-}
-
-1;
+0;
 
 __END__
 
@@ -58,33 +12,15 @@ WWW::Shorten::qURL - Perl interface to qURL.net
 
 =head1 SYNOPSIS
 
-  use WWW::Shorten 'qURL';
-
-  $short_url = makeashorterlink($long_url);
-
-  $long_url  = makealongerlink($short_url);
-  $long_url  = makealongerlink($nickname);
+    # No appropriate synopsis.
 
 =head1 DESCRIPTION
 
-A Perl interface to the web site qURL.net.  qURL.net simply maintains
-a database of long URLs, each of which has a unique identifier.
+A Perl interface to the web site qURL.net.
 
-The function C<makeashorterlink> will call the qURL.net web site passing it
-your long URL and will return the shorter (qURL) version.
-
-The function C<makealongerlink> does the reverse. C<makealongerlink>
-will accept as an argument either the full qURL URL or just the
-qURL identifier/nickname.
-
-If anything goes wrong, then either function will return C<undef>.
-
-Multiple submissions of the same URL will result in the same code being
-returned.
-
-=head2 EXPORT
-
-makeashorterlink, makealongerlink
+Unfortunately, this service became inactive at some point between 1.87
+and 1.88, so this module will merely give you an error if you try to use
+it. Feel free to pick a different L<service|WWW::Shorten>.
 
 =head1 SUPPORT, LICENCE, THANKS and SUCH
 

@@ -6,7 +6,7 @@ use warnings;
 
 use base qw( WWW::Shorten::generic Exporter );
 our @EXPORT = qw(makeashorterlink makealongerlink);
-our $VERSION = "1.81";
+our $VERSION = "1.88";
 
 use Carp;
 use URI;
@@ -43,7 +43,8 @@ sub makealongerlink ($)
     my $resp = $ua->get($tiny_url);
     return undef unless $resp->is_redirect;
     my $url = $resp->header('Location');
-    return $url;
+    return $1 if $url =~ m[(http://.*$)];
+    return;
 
 }
 

@@ -1,4 +1,4 @@
-CREDITS FOR WWW::Shorten 1.87
+CREDITS FOR WWW::Shorten 1.88
 
 Dave Cross for WWW::MakeAShorterLink
 
@@ -23,6 +23,8 @@ MASL.pm.
 
 Jon and William (jon and wjr at smlnk.com respectively) for providing
 SmLnk.com.
+
+P J Goodwin for providing the code for WWW::Shorten::OneShortLink.
 
 And especial thanks to all providers of these services.
 

@@ -7,7 +7,7 @@ my $url = 'http://perl.dellah.org/WWW-Shorten-1.5.2.tar.gz';
 {
     my $shorl = makeashorterlink( $url );
 
-    ok ( defined $shorl and $shorl =~ m!^ \Qhttp://shorl.com/\E ([a-z]+) $ !x,
+    ok ( (defined $shorl and $shorl =~ m!^ \Qhttp://shorl.com/\E ([a-z]+) $ !x),
 	    'make it shorter'
        );
 

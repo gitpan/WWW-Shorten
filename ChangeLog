@@ -1,4 +1,69 @@
 ____________________________________________________________________________
+[   301] By: iain                                  on 2003/11/13  10:02:23
+        Log: - 1.88
+	   ! main/Changes main/lib/WWW/Shorten.pm
+____________________________________________________________________________
+[   300] By: iain                                  on 2003/11/13  10:02:08
+        Log: - Tidied up return values and authorship.
+	   ! main/lib/WWW/Shorten/OneShortLink.pm
+____________________________________________________________________________
+[   299] By: iain                                  on 2003/11/13  09:47:04
+        Log: - EkDk service removed.
+             - ShortLink service removed.
+             - qURL service removed.
+	   ! main/lib/WWW/Shorten/EkDk.pm main/lib/WWW/Shorten/ShortLink.pm
+	   ! main/lib/WWW/Shorten/qURL.pm main/t/ekdk.t main/t/qurl.t
+	   ! main/t/shortlink.t
+____________________________________________________________________________
+[   298] By: iain                                  on 2003/11/12  23:01:01
+        Log: - Upped TinyClick.pm's version.
+	   ! main/lib/WWW/Shorten/TinyClick.pm
+____________________________________________________________________________
+[   297] By: iain                                  on 2003/11/12  23:00:13
+        Log: - TinyClick made their URLs slightly harder to find.
+	   ! main/lib/WWW/Shorten/TinyClick.pm
+____________________________________________________________________________
+[   296] By: iain                                  on 2003/11/12  22:59:05
+        Log: - Metamark tests tidied.
+	   ! main/t/metamark.t
+____________________________________________________________________________
+[   295] By: iain                                  on 2003/11/12  22:58:37
+        Log: - Notlong tests tidied.
+	   ! main/t/notlong.t
+____________________________________________________________________________
+[   294] By: iain                                  on 2003/11/12  22:58:00
+        Log: - Added OneShortLink, http://1sl.net/
+	   + main/lib/WWW/Shorten/OneShortLink.pm main/t/oneshort.t
+____________________________________________________________________________
+[   293] By: iain                                  on 2003/11/12  22:56:52
+        Log: - Shorl test precedence fixed.
+	   ! main/t/shorl.t
+____________________________________________________________________________
+[   292] By: iain                                  on 2003/11/12  22:55:48
+        Log: - SmLnk ID scheme has changed.
+	   ! main/t/smlnk.t
+____________________________________________________________________________
+[   291] By: iain                                  on 2003/09/10  11:51:30
+        Log: - Mention CGI::Shorten
+	   ! main/Changes
+____________________________________________________________________________
+[   290] By: iain                                  on 2003/09/10  11:50:20
+        Log: - Mention CGI::Shorten
+	   ! main/lib/WWW/Shorten.pm
+____________________________________________________________________________
+[   289] By: iain                                  on 2003/09/08  11:03:28
+        Log: - Skip the right modules in the subclass list.
+	   ! main/lib/WWW/Shorten.pm
+____________________________________________________________________________
+[   288] By: iain                                  on 2003/09/08  00:43:04
+        Log: - Added links to search.cpan.org and backpan.
+             - Add 1.88
+	   ! main/Changes
+____________________________________________________________________________
+[   287] By: iain                                  on 2003/09/08  00:42:31
+        Log: - Use Class::Factory::Util to provide randomised selection.
+	   ! main/lib/WWW/Shorten.pm
+____________________________________________________________________________
 [   286] By: iain                                  on 2003/09/08  00:05:34
         Log: - Better abstract.
 	   ! main/lib/WWW/Shorten.pm

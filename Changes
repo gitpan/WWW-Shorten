@@ -1,5 +1,28 @@
 # Change log for WWW::Shorten.
 
+# Below here available on CPAN
+#    http://search.cpan.org/dist/WWW-Shorten/
+
+---
+version: 1.88
+date:    13 Nov 2003
+changes:
+
+    - Added OneShortLink, http://1sl.net/
+    - EkDk service removed.
+    - ShortLink service removed.
+    - qURL service removed.
+
+    - TinyClick made their URLs slightly harder to find.
+    - SmLnk ID scheme has changed.
+
+    - Metamark tests tidied.
+    - Notlong tests tidied.
+    - Shorl test precedence fixed.
+
+    - Mention CGI::Shorten.
+    - Mention http://dellah.org/shorten/
+
 ---
 version: 1.87
 date:    8 Sep 2003
@@ -51,6 +74,9 @@ changes:
     - Minor test nits fixed.
     - Removed Fcol.org as it's no longer a shortener.
     - Removed QuickOnes.org as it doesn't exist any more.
+
+# Below here available on BackPAN
+#    http://backpan.cpan.org/authors/id/S/SP/SPOON/
 
 ---
 version: 1.5.8

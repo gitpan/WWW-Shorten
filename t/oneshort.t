@@ -1,11 +1,11 @@
 use Test::More tests => 5;
 
-BEGIN { use_ok WWW::Shorten::Metamark };
+BEGIN { use_ok WWW::Shorten::OneShortLink };
 
 my $url = 'http://dellah.org/';
 my $short = makeashorterlink( $url );
 ok((defined $short), 'Reasonable response');
-like ( $short => qr{^http://xrl\.us/\w+$}, 'make it shorter' );
+like ( $short => qr{^http://1sl\.net/\w+$}, 'make it shorter' );
 
 is ( makealongerlink( $short ) => $url, 'make it longer' );
 
