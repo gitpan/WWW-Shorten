@@ -1,7 +1,10 @@
 --- #YAML:1.0
+# http://module-build.sourceforge.net/META-spec.html
 distribution_type: module
 name: WWW-Shorten
-version: 1.82
+date: 26 Aug 2003
+author: SPOON
+version: 1.83
 license: perl
 
 conflicts: {}
@@ -9,10 +12,12 @@ conflicts: {}
 build_requires:
   Test::More: 0.47
 recommends:
-  File::Find::Rule: 0.10
+  File::Find::Rule: 0.11
   Test::Pod: 0.95
 requires:
-  URI: 1.23
+  LWP::Protocol::http: 0
+  URI: 1.25
+  LWP::UserAgent: 2.003
   LWP: 5.69
 
 private:
@@ -22,7 +27,7 @@ private:
 provides:
   WWW::Shorten:
     file: lib/WWW/Shorten.pm
-    version: 1.82
+    version: 1.83
   WWW::Shorten::EkDk:
     file: lib/WWW/Shorten/EkDk.pm
     version: 1.81
@@ -56,5 +61,9 @@ provides:
   WWW::Shorten::generic:
     file: lib/WWW/Shorten/generic.pm
     version: 1.81
+  WWW::Shorten::qURL:
+    file: lib/WWW/Shorten/qURL.pm
+    version: 1.83
 
-generated_by: docmaker version 0.89
+dynamic_config: 0
+generated_by: docmaker version 0.91

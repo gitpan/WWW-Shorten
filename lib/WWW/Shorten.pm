@@ -7,7 +7,7 @@ use warnings;
 
 use base qw( WWW::Shorten::generic );
 our @EXPORT = qw(makeashorterlink makealongerlink);
-our $VERSION = "1.82";
+our $VERSION = "1.83";
 
 use Carp;
 
@@ -55,6 +55,7 @@ WWW::Shorten - Abstract interface to URL shortening sites.
   use WWW::Shorten 'MakeAShorterLink';
   use WWW::Shorten 'Metamark';
   use WWW::Shorten 'NotLong';
+  use WWW::Shorten 'qURL';
   use WWW::Shorten 'Shorl';
   use WWW::Shorten 'ShortLink';
   use WWW::Shorten 'SmLnk';
@@ -110,10 +111,13 @@ gives you a shortened version of it.
 
 =head1 SERVICES
 
+In alphabetical order:
+
   EkDk                http://add.redir.ek.dk/
   MakeAShorterLink    http://makeashorterlink.com/
   Metamark            http://xrl.us/
   NotLong             http://notlong.com/
+  qURL                http://qurl.net/
   Shorl               http://shorl.com/
   ShortLink           http://shortlink.us/
   SmLnk               http://smlnk.org/
@@ -148,8 +152,17 @@ Martin Thurn for helping me notice a bug and for a suggestion regarding
 F<MASL.pm>.
 
 
-And particularly thanks to all providers of these services.
+And especial thanks to all providers of these services.
 
+=head1 EXAMPLES
+
+Adam Kessel wrote F<shorlfilter>, a program to filter a file, converting
+long URLs to short ones.
+
+    http://bostoncoop.net/adam/weblog?rightframe=shorlfilter
+
+There is also a F<bin> directory in this distribution which contains a
+sample program.
 
 =head1 BUGS, REQUESTS, COMMENTS
 

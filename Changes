@@ -1,6 +1,13 @@
 # Change log for WWW::Shorten.
 
 ---
+version: 1.83
+date:    26 Aug 2003
+changes:
+    - Added qurl.net
+    - Mentioned shorlfilter.
+
+---
 version: 1.82
 date:    23 Jul 2003
 changes:

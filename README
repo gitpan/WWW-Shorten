@@ -1,6 +1,8 @@
 WWW::Shorten
 
+
    Abstract interface to URL shortening sites.
+
 
 For installation details, see INSTALL.
 
@@ -8,12 +10,10 @@ For usage, see the doco. Either use perldoc or view it
 on the web at:
     <http://search.cpan.org/author/SPOON/WWW-Shorten/>
 
-Changes for 1.82 (23 Jul 2003)
-   - Added shortlink.us
-   - Unified version numbers.
-   - Minor test nits fixed.
-   - Removed Fcol.org as it's no longer a shortener.
-   - Removed QuickOnes.org as it doesn't exist any more.
+Changes for 1.83 (26 Aug 2003)
+   - Added qurl.net
+   - Mentioned shorlfilter.
+
 
 For a complete list of changes, see the Changes file.
 
