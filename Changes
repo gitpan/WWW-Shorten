@@ -1,6 +1,19 @@
 # Change log for WWW::Shorten.
 
 ---
+version: 1.5.2
+date:    1 Nov 2002
+changes:
+    - It's usually a good idea to include license files when you mention them.
+    - New tests for name changing added.
+    - Versions of modules moved to x.yy and are not taken from CVS tags.
+    - Why? I'm now using perforce.
+    - Function name changing possible.
+    - Minor typo corrected.
+    - Added SmLnk.com
+    - Fixed SnipURL.pm - SnipURL.com had some changes done.
+
+---
 version: 1.5.1
 date:    29 Oct 2002
 changes:

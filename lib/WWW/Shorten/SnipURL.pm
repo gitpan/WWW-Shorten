@@ -6,8 +6,7 @@ use warnings;
 
 use base qw( WWW::Shorten::generic Exporter );
 our @EXPORT = qw(makeashorterlink makealongerlink);
-our ($VERSION) = q$Revision: 1.4 $ =~ /^ Revision: \s+ (\S+) \s+ $/x;
-our $DEBUG = $ENV{DEBUG} || 0;
+our $VERSION = '1.52';
 
 use Carp;
 
@@ -16,24 +15,21 @@ sub makeashorterlink ($;%)
     my $url = shift or croak 'No URL passed to makeashorterlink';
     my $ua = __PACKAGE__->ua();
     my ($nick,$pass) = @_;
-    my $snipurl = 'http://snipurl.com/lynx.php';
+    my $snipurl = 'http://snipurl.com/';
     my $resp = $ua->post($snipurl, [
 	link => $url,
 	alias => (defined $nick ? $nick : ''),
 	protected_key => (defined $pass ? $pass : ''),
 	]);
     return unless $resp->is_success;
-    if ($DEBUG) {
-	open my $fh => '>' => 'resp' or die $!;
-	print $fh $resp->as_string;
-    }
     if ($resp->content =~ m!
-	<a \s+ href=['"] ([^'"]+)  ['"][^>]*>
-	(\Qhttp://snurl.com/\E\w+)
+	<a \s+ href=['"] ([^'"]+) ['"][^>]*>
+	(\Qhttp://snipurl.com/\E\w+)
 	</a>
-	!x) {
+	!xm) {
 	return $1;
     }
+    return undef;
 }
 
 sub makealongerlink ($)

@@ -7,7 +7,7 @@ use warnings;
 
 use base qw( WWW::Shorten::generic );
 our @EXPORT = qw(makeashorterlink makealongerlink);
-our ($VERSION) = q$Revision: 1.7 $ =~ /^ Revision: \s+ (\S+) \s+ $/x;
+our $VERSION = '1.71';
 
 use Carp;
 
@@ -18,21 +18,16 @@ sub import
     my $class = shift;
     $style = shift;
     $style ||= 'MakeAShorterLink';
+    my $package = "${class}::${style}";
     eval {
-	my $package = "${class}::${style}";
-	$package =~ s/::/\//g;
-	require "$package.pm";
+	my $file = $package;
+	$file =~ s/::/\//g;
+	require "$file.pm";
     };
-    die $@ if $@;
-    my ($package) = caller;
-    my @fns = @_ ? @_ : @EXPORT;
-    foreach my $fn (@fns)
-    {
-	*{"${package}::${fn}"} = *{$fn};
-    }
+    croak $@ if $@;
+    $package->import( @_ );
 }
 
-# Preloaded methods go here.
 sub makeashorterlink ($;@)
 {
     my $url = shift or croak 'No URL passed to makeashorterlink';
@@ -56,10 +51,13 @@ WWW::Shorten - Abstract interface to URL shortening sites.
 
 =head1 SYNOPSIS
 
+  use WWW::Shorten 'EkDk';
+  use WWW::Shorten 'Fcol';
   use WWW::Shorten 'MakeAShorterLink';
   use WWW::Shorten 'NotLong';
   use WWW::Shorten 'QuickOnes';
   use WWW::Shorten 'Shorl';
+  use WWW::Shorten 'SmLnk';
   use WWW::Shorten 'SnipURL';
   use WWW::Shorten 'TinyURL';
 
@@ -73,6 +71,11 @@ WWW::Shorten - Abstract interface to URL shortening sites.
   $short_url = makeashorterlink($long_url);
 
   $long_url  = makealongerlink($short_url);
+
+  # If you don't like the function names:
+  use WWW::Shorten 'SnipURL', ':short';
+  $short_url = short_link( $long_url );
+  $long_url = long_link( $short_url );
 
 =head1 ABSTRACT
 
@@ -94,11 +97,15 @@ If anything goes wrong, then either function will return C<undef>.
 
 makeashorterlink, makealongerlink
 
+Or, if you specify C<:short> on the import line, you instead
+get C<short_link> and C<long_link>. If you explicitly want the
+default set, use C<:default>.
+
 =head1 THANKS
 
 Dave Cross for L<WWW::MakeAShorterLink>
 
-Alex Page for the original LWP hackig on which Dave based his code.
+Alex Page for the original LWP hacking on which Dave based his code.
 
 Simon Batistoni for giving the C<makealongerlink> idea to Dave.
 
@@ -108,6 +115,8 @@ Shashank Tripathi for providing both SnipURL.com and advice on the
 module.
 
 Kevin Gilbertson (Gilby) supplied information on the TinyURL API interface.
+
+Matt Felsen (mattf) wanted shorter function names.
 
 =head1 BUGS
 

@@ -9,8 +9,16 @@ For usage, see the doco. Either use perldoc or view it
 on the web at:
     <http://search.cpan.org/author/SPOON/WWW-Shorten/>
 
-Changes for 1.5.1 (29 Oct 2002)
-   - Had accidentally left some debugging code in SnipURL.pm
+Changes for 1.5.2 (1 Nov 2002)
+   - It's usually a good idea to include license files when you
+     mention them.
+   - New tests for name changing added.
+   - Versions of modules moved to x.yy and are not taken from CVS tags.
+   - Why? I'm now using perforce.
+   - Function name changing possible.
+   - Minor typo corrected.
+   - Added SmLnk.com
+   - Fixed SnipURL.pm - SnipURL.com had some changes done.
 
 For a complete list of changes, see the Changes file.
 

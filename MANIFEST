@@ -1,12 +1,14 @@
+Artistic
 Build.PL
-CREDITS
 Changes
+COPYING
+CREDITS
 INSTALL
 LICENSE
+Makefile.PL
 MANIFEST
 MANIFEST.SKIP
 META.yaml
-Makefile.PL
 README
 SIGNATURE
 TODO
@@ -38,3 +40,10 @@ t/ws_quickones.t
 t/ws_shorl.t
 t/ws_snipurl.t
 t/ws_tinyurl.t
+t/newnames.t
+t/ws_newnames.t
+t/00load_a.t
+t/00load_b.t
+lib/WWW/Shorten/SmLnk.pm
+t/smlnk.t
+t/ws_smlnk.t
