@@ -1,12 +1,12 @@
 This file contains message digests of all files listed in MANIFEST,
-signed via the Module::Signature module, version 0.41.
+signed via the Module::Signature module, version 0.44.
 
 To verify the content in this distribution, first make sure you have
 Module::Signature installed, then type:
 
     % cpansign -v
 
-It would check each file's integrity, as well as the signature's
+It will check each file's integrity, as well as the signature's
 validity.  If "==> Signature verified OK! <==" is not displayed,
 the distribution may already have been compromised, and you should
 not run its Makefile.PL or Build.PL.
@@ -19,26 +19,26 @@ SHA1 7a95fc8778fbce1f60d222e0d0d1dbb6c649461f Artistic
 SHA1 531e6b5c470d4726483fd68833391653eace0a92 COPYING
 SHA1 3c8a2a26c7df1de3266692762d6a3269204ed3d4 CREDITS
 SHA1 3ec0a4a68ccc6840bc51e4ac924d536233e6983b ChangeLog.SPOON
-SHA1 8f35d2312ac2deb446352a471ac9bbd67907eca7 Changes
+SHA1 42c2e4501e5c8e349f41acaf8cfb0f2e022d7b9d Changes
 SHA1 6eb11d09d3fc9035009a36e71295f354bbe7fbef INSTALL
 SHA1 63eb77518fc6daadc6ce09b209b391bf5c1bb975 LICENCE
 SHA1 76268cbd0c970d88a50c139e035b8f3b5c6ef21a MANIFEST
-SHA1 2fd114c55417e7a0e451f24a2b1ab08b65383fa7 MANIFEST.SKIP
-SHA1 c242c1cfb7a6f6e19e27e5d85c37c53179779e5b META.yml
-SHA1 7ad0aaa136aed81aa816cff5c46e57228752088b Makefile.PL
+SHA1 85f3b4f36b2f3983a8521138fd34d6655ffb80d5 MANIFEST.SKIP
+SHA1 b3b55f4a930c3945d2351bd75c273e8022f61153 META.yml
+SHA1 6c1dba76e3c10ead531cface86106986318e9478 Makefile.PL
 SHA1 a10cc52a61e4888491755b53298f1038edb82d22 README
 SHA1 208a9b4efba5e666b5c0d9c1a4abe11316196693 TODO
 SHA1 3f286e5da41cdd270871dfafc54928edffe8782a bin/shorten
 SHA1 6fcc0e25e8603adcc7f95e930c1f3089e281830e bin/shortenrc
-SHA1 867252314358dc287a5be9dfc4695720496aac39 lib/WWW/Shorten.pm
+SHA1 da0c83f5026c4217f2007ea2c4a29e906c34cf5e lib/WWW/Shorten.pm
 SHA1 edeba56c0508a23006660d2b7ebe53e3b21bf26e lib/WWW/Shorten/BabyURL.pm
 SHA1 223089ffc0fb834ba70842322d2092a31e689181 lib/WWW/Shorten/EkDk.pm
 SHA1 928e6030f2c90f237ae835776af851f8ed9da49c lib/WWW/Shorten/Linkz.pm
 SHA1 bf3d84c108bc341bcf2af716f24b10707e314bc5 lib/WWW/Shorten/MakeAShorterLink.pm
 SHA1 9b251d2ac9c2525dae3b70cc0aa156ce7747a532 lib/WWW/Shorten/Metamark.pm
 SHA1 ed7a40488d9a7560ca7908032980979715a40fe0 lib/WWW/Shorten/NotLong.pm
-SHA1 1907168e5cdf57d9bf79e8fa9505b1b4feca83bc lib/WWW/Shorten/OneShortLink.pm
-SHA1 7bd3ad1bf9239424cf1d5bec6a0060eb62a50766 lib/WWW/Shorten/Shorl.pm
+SHA1 d7134c1ebc5e4ca5b33fe261a83ef2d48ba15b62 lib/WWW/Shorten/OneShortLink.pm
+SHA1 9f8999889eea558c7cab2bf515112ece9d014afb lib/WWW/Shorten/Shorl.pm
 SHA1 baafaaeadf7a5ab6d4ae50739c5332f961566c34 lib/WWW/Shorten/ShortLink.pm
 SHA1 67f9f60d35400613bff6d4385beddcdf7c037746 lib/WWW/Shorten/SmLnk.pm
 SHA1 0fc1f749aa859bc4a54189c7317b70cff8fc8d2e lib/WWW/Shorten/SnipURL.pm
@@ -46,7 +46,7 @@ SHA1 16154168e0dccfb5448ec66d01d61d5faf7f9522 lib/WWW/Shorten/TinyClick.pm
 SHA1 545f87709f82afff23909653c215fc88dd9aaa76 lib/WWW/Shorten/TinyURL.pm
 SHA1 5e48fcd2cfb67335e4b8b7e18aa59b12cf331554 lib/WWW/Shorten/Tinylink.pm
 SHA1 be70f21b4a9c6621d9db6773cbfd95bf1de9be61 lib/WWW/Shorten/URLjr.pm
-SHA1 883c0ca6d753289c4efb7fe1b8bb50c3733e648e lib/WWW/Shorten/V3.pm
+SHA1 863441a6c1ee585b9776a4bd7345434f371a19ef lib/WWW/Shorten/V3.pm
 SHA1 74ca7117f8c69688204370622ab01294aae7b051 lib/WWW/Shorten/_dead.pm
 SHA1 da77d6e5c5adfe074a7ac595f4ec36a31065b981 lib/WWW/Shorten/generic.pm
 SHA1 4ca3eb6720094929ae855c26f722c47204d3e10f lib/WWW/Shorten/qURL.pm
@@ -64,22 +64,22 @@ SHA1 22ee6d8fc1e14613f26fd6452d795bba93bc2641 t/masl.t
 SHA1 9b5e936aae9f397b9e8058a48053f7753cd37410 t/metamark.t
 SHA1 307fb2458e794960f9846b0b777bb240ce70765f t/newnames.t
 SHA1 5c9b3a8c4fccf529c1d47628bd0df75c2ce53e6e t/notlong.t
-SHA1 e24ece343e631e1cb39ed40b466d267b8e2e2fcf t/oneshort.t
+SHA1 84b57bddeecf2788131fd9b4a4ac44ac15da833e t/oneshort.t
 SHA1 4b07e625bc11a418666c965def911600caae49c7 t/qurl.t
-SHA1 dd579ef14b20bc407498e04808320a599bd651af t/shorl.t
+SHA1 653110c00f267663f65d53b9afaabbe1edf08d19 t/shorl.t
 SHA1 bf0ef605bf5db6df02d729c16b608bdf0ec81115 t/shortlink.t
 SHA1 9e0d3b02c43839028dcf5bb39c9a3d193d540b5c t/smlnk.t
 SHA1 d7968ce3b6ecb4fc0c12649ebbc67832a14bbb82 t/snipurl.t
 SHA1 d570d3afa579c03b3dc9a95288cf52200043818b t/tinyclick.t
 SHA1 4c51543dc6b73f86fb291b8bf98546a9fd6b80e6 t/tinylink.t
-SHA1 2500724a5f6239f0bd541e5f01a30e7f7bd34267 t/tinyurl.t
+SHA1 2cb081cf2db5d48df7688a659d690cf4ebfaeddf t/tinyurl.t
 SHA1 8ad6bafc81f571f49afff203bb6c4dd8d73f8b6e t/urljr.t
-SHA1 750682fb496fea077aea2fb09d51752b851f06da t/v3.t
+SHA1 b8d5081aea2e04457cf3a9934e0b28516dfae28d t/v3.t
 SHA1 9beca9e0b9fd40ee34b7ffe4f01d3009652c3996 t/ws_masl.t
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.4 (GNU/Linux)
+Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBhAAjhlYrNpFq+8ERAuIuAJ4j5ugDszECH9B7xvI+RGa9Zwd1RQCfSNIc
-JtLreNdABTBbnBkWLGE57Uc=
-=7HC8
+iD8DBQFCjRM1hlYrNpFq+8ERAtk3AKCFKYywz8EFHDh5nTIdLJqi8zBstwCdHU5u
+4Cd5A/N4m3wgkgLoStdlXWE=
+=SoGH
 -----END PGP SIGNATURE-----

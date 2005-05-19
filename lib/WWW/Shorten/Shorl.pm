@@ -1,4 +1,4 @@
-# $Id: Shorl.pm,v 1.89 2004/10/30 12:52:01 dave Exp $
+# $Id: Shorl.pm,v 1.90 2005/05/19 21:35:46 dave Exp $
 
 =head1 NAME
 
@@ -30,7 +30,7 @@ use warnings;
 
 use base qw( WWW::Shorten::generic Exporter );
 our @EXPORT = qw(makeashorterlink makealongerlink);
-our $VERSION = sprintf "%d.%02d", '$Revision: 1.89 $ ' =~ /(\d+)\.(\d+)/;
+our $VERSION = sprintf "%d.%02d", '$Revision: 1.90 $ ' =~ /(\d+)\.(\d+)/;
 
 use Carp;
 
@@ -84,7 +84,7 @@ If anything goes wrong, then either function will return C<undef>.
 sub makealongerlink ($)
 {
     my $shorl_url = shift 
-	or croak 'No Shorl key / URL passed to makealongerlink';
+        or croak 'No Shorl key / URL passed to makealongerlink';
     my $ua = __PACKAGE__->ua();
 
     $shorl_url = "http://shorl.com/$shorl_url"
@@ -92,10 +92,9 @@ sub makealongerlink ($)
 
     my $resp = $ua->get($shorl_url);
 
-    return undef unless $resp->is_redirect;
-    my $url = $resp->header('Location');
+    return if $resp->is_error;
+    my ($url) = $resp->content =~ /URL=(.+)\"/;
     return $url;
-
 }
 
 1;

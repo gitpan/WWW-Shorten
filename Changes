@@ -1,3 +1,21 @@
+2005-05-19 23:02  dave
+
+	* MANIFEST.SKIP (1.90): Added stuff to MANIFEST.SKIP
+
+2005-05-19 22:37  dave
+
+	* lib/WWW/Shorten.pm (1.94): Removed a couple of dead services -
+	  1sl and v3
+
+2005-05-19 22:35  dave
+
+	* META.yml (1.89), Makefile.PL (1.90),
+	  lib/WWW/Shorten/OneShortLink.pm (1.90), lib/WWW/Shorten/Shorl.pm
+	  (1.90), lib/WWW/Shorten/V3.pm (1.91), t/oneshort.t (1.3),
+	  t/shorl.t (1.3), t/tinyurl.t (1.4), t/v3.t (1.3): Removed some
+	  dead services.  Fixed WWW::Shorten::Shorl.pm to deal with the new
+	  way that shorl works.
+
 2004-10-30 21:52  dave
 
 	* MANIFEST (1.89): Added new test files
@@ -26,9 +44,18 @@
 2004-10-25 22:03  dave
 
 	* lib/WWW/Shorten.pm (1.92): Removed unnecessary "no strict 'refs'"
+
+2004-10-25 21:57  dave
+
 	* SIGNATURE (1.90): SIGNATURE is generated - therefore not in CVS
+
+2004-10-25 21:55  dave
+
 	* t/: notlong.t (1.2), smlnk.t (1.2), tinyclick.t (1.2), tinyurl.t
 	  (1.2), urljr.t (1.2): Various test fixes
+
+2004-10-25 21:51  dave
+
 	* lib/WWW/Shorten/V3.pm (1.89): Fixed response regex
 
 2004-10-24 23:08  dave
@@ -42,25 +69,52 @@
 	  ChangeLog.SPOON (1.88), INSTALL (1.88), LICENCE (1.88), MANIFEST
 	  (1.88), MANIFEST.SKIP (1.88), META.yml (1.88), Makefile.PL
 	  (1.88), README (1.88), SIGNATURE (1.88): Correct CVS versions
+
+2004-10-24 18:31  dave
+
 	* lib/WWW/Shorten/: BabyURL.pm (1.88), Linkz.pm (1.88),
 	  MakeAShorterLink.pm (1.88), Metamark.pm (1.88), NotLong.pm
 	  (1.88), Shorl.pm (1.88), ShortLink.pm (1.88), SmLnk.pm (1.88),
 	  SnipURL.pm (1.88), TinyClick.pm (1.88), TinyURL.pm (1.88),
 	  Tinylink.pm (1.88), URLjr.pm (1.88), V3.pm (1.88), _dead.pm
 	  (1.88), generic.pm (1.88), qURL.pm (1.88): Correct CVS versions
+
+2004-10-24 18:29  dave
+
 	* lib/WWW/Shorten/EkDk.pm (1.88): Correct CVS Version
+
+2004-10-24 18:29  dave
+
 	* lib/WWW/Shorten/OneShortLink.pm (1.88): Correct CVS version
 
 2004-10-24 17:31  dave
 
 	* Makefile.PL (1.2), lib/WWW/Shorten.pm (1.91): Changed author in
 	  Makefile.PL.	Get $VERSION from CVS tag.
+
+2004-10-24 17:27  dave
+
 	* MANIFEST (1.2), lib/WWW/Shorten.pm (1.90): Add some CVS tags
+
+2004-10-24 17:19  dave
+
 	* Changes (1.2): Removed Changes from CVS
+
+2004-10-24 17:18  dave
+
 	* ChangeLog (1.2), ChangeLog.SPOON (1.1): Replaced ChangeLog with
 	  ChangeLog.SPOON
+
+2004-10-24 17:15  dave
+
 	* AUTHORS (1.2): Changed author info
+
+2004-10-24 17:14  dave
+
 	* lib/WWW/Shorten.pm (1.89): Changed author info.
+
+2004-10-24 17:09  dave
+
 	* COPYING (1.1), Changes (1.1), MANIFEST (1.1), META.yml (1.1),
 	  TODO (1.1), Artistic (1.1), ChangeLog (1.1), LICENCE (1.1),
 	  MANIFEST.SKIP (1.1), AUTHORS (1.1), CREDITS (1.1), INSTALL (1.1),
@@ -87,6 +141,9 @@
 	  t/tinyclick.t (1.1), t/tinylink.t (1.1), t/tinyurl.t (1.1),
 	  t/urljr.t (1.1), t/v3.t (1.1), t/ws_masl.t (1.1): Initial
 	  revision
+
+2004-10-24 17:09  dave
+
 	* COPYING (1.1.1.1), Changes (1.1.1.1), MANIFEST (1.1.1.1),
 	  META.yml (1.1.1.1), TODO (1.1.1.1), Artistic (1.1.1.1), ChangeLog
 	  (1.1.1.1), LICENCE (1.1.1.1), MANIFEST.SKIP (1.1.1.1), AUTHORS
