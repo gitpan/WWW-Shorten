@@ -1,5 +1,10 @@
+# $Id: ShortLink.pm,v 1.90 2005/09/03 14:46:06 dave Exp $
 package WWW::Shorten::ShortLink;
-our $VERSION = sprintf "%d.%02d", '$Revision: 1.89 $ ' =~ /(\d+)\.(\d+)/;
+
+use strict;
+use warnings;
+
+our $VERSION = sprintf "%d.%02d", '$Revision: 1.90 $ ' =~ /(\d+)\.(\d+)/;
 require WWW::Shorten::_dead;
 
 0;

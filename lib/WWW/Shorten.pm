@@ -1,4 +1,4 @@
-#$Id: Shorten.pm,v 1.95 2005/05/24 20:20:20 dave Exp $
+#$Id: Shorten.pm,v 1.97 2005/10/09 21:54:47 dave Exp $
 
 =head1 NAME
 
@@ -11,16 +11,16 @@ WWW::Shorten - Interface to URL shortening sites.
   use WWW::Shorten 'MakeAShorterLink';
   use WWW::Shorten 'Metamark';
   use WWW::Shorten 'NotLong';
+  use WWW::Shorten 'OneShortLink';
   use WWW::Shorten 'Shorl';
   use WWW::Shorten 'SnipURL';
   use WWW::Shorten 'TinyClick';
   use WWW::Shorten 'TinyLink';
   use WWW::Shorten 'TinyURL';
 
-  # These 7 are now inactive and will give an
+  # These 6 are now inactive and will give an
   # error if you try to use them.
   use WWW::Shorten 'EkDk';
-  use WWW::Shorten 'OneShortLink';
   use WWW::Shorten 'qURL';
   use WWW::Shorten 'ShortLink';
   use WWW::Shorten 'SmLnk';
@@ -67,9 +67,9 @@ use 5.006;
 use strict;
 use warnings;
 
-use base qw( WWW::Shorten::generic );
+use base qw(WWW::Shorten::generic);
 our @EXPORT = qw(makeashorterlink makealongerlink);
-our $VERSION = sprintf "%d.%02d", '$Revision: 1.95 $ ' =~ /(\d+)\.(\d+)/;
+our $VERSION = sprintf "%d.%02d", '$Revision: 1.97 $ ' =~ /(\d+)\.(\d+)/;
 
 use Carp;
 
@@ -128,12 +128,6 @@ to filter a file, converting long URLs to short ones.
 There is also a F<bin> directory in this distribution which contains a
 sample program.
 
-=head1 FURTHER INFORMATION
-
-http://dellah.org/shorten/ has a collection of related
-resources: articles, services, programs (both to use services
-and to run services). It's a Wiki --- feel free to edit it.
-
 =head1 RELATED MODULES
 
 =head2 Similar Aim
@@ -180,10 +174,8 @@ And especial thanks to all providers of these services.
 
 =head1 BUGS, REQUESTS, COMMENTS
 
-Support for this module is provided via the datetime@perl.org email
-list. See http://lists.perl.org/ for more details.
-
-Alternatively, log them via the CPAN RT system via the web or email:
+Support for this module is supplied using the CPAN RT system via the web
+or email:
 
     http://rt.cpan.org/NoAuth/ReportBug.html?Queue=WWW-Shorten
     ( shorter URL: http://xrl.us/rfb )
@@ -227,6 +219,12 @@ L<perl>, L<CGI::Shorten>.
 
 #
 # $Log: Shorten.pm,v $
+# Revision 1.97  2005/10/09 21:54:47  dave
+# Reinstated support for 1sl.net.
+#
+# Revision 1.96  2005/09/03 15:32:33  dave
+# Removed outdated or incorrect references in the Pod.
+#
 # Revision 1.95  2005/05/24 20:20:20  dave
 # Correct copyright signs in pod.
 # Skip lin.kz tests while it's broken.

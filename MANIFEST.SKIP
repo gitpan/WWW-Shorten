@@ -20,3 +20,5 @@
 ^cover_db/
 ^WWW-Shorten/
 \.tmp$
+~$
+^\.

@@ -1,10 +1,27 @@
+# $Id: generic.pm,v 1.91 2005/09/03 15:24:15 dave Exp $
+
+=head1 NAME
+
+WWW::Shorten::generic - Methods shared across all WWW::Shorten modules
+
+=head1 SYNOPSIS
+
+  use WWW::Shorten 'SomeSubclass';
+
+=head1 DESCRIPTION
+
+Contains methds that are shared across all WWW::Shorten implemenation
+modules.
+
+=cut
+
 package WWW::Shorten::generic;
 
 use 5.006;
 use strict;
 use warnings;
 
-our $VERSION = sprintf "%d.%02d", '$Revision: 1.89 $ ' =~ /(\d+)\.(\d+)/;
+our $VERSION = sprintf "%d.%02d", '$Revision: 1.91 $ ' =~ /(\d+)\.(\d+)/;
 
 use LWP;
 use Carp;
@@ -42,10 +59,19 @@ sub import
 
 my $ua;
 
+=head1 FUNCTIONS
+
+=head2 ua
+
+Returns the object's LWP::Useragent attribute. Creates a new one if one
+doesn't already exist.
+
+=cut
+
 sub ua
 {
     my $self = shift;
-    return $ua if defined $ua; 
+    return $ua if defined $ua;
     my $v = $self->VERSION();
     $ua = LWP::UserAgent->new(
 	env_proxy => 1,
