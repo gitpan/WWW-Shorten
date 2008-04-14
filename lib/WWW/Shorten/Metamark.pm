@@ -1,4 +1,4 @@
-# $Id: Metamark.pm,v 1.90 2005/09/03 15:23:57 dave Exp $
+# $Id: Metamark.pm 54 2007-04-15 15:25:09Z dave $
 
 =head1 NAME
 
@@ -29,7 +29,7 @@ use warnings;
 
 use base qw( WWW::Shorten::generic Exporter );
 our @EXPORT = qw(makeashorterlink makealongerlink);
-our $VERSION = sprintf "%d.%02d", '$Revision: 1.90 $ ' =~ /(\d+)\.(\d+)/;
+our $VERSION = '1.91';
 
 use Carp;
 

@@ -1,10 +1,10 @@
-# $Id: qURL.pm,v 1.90 2005/09/03 14:46:06 dave Exp $
+# $Id: qURL.pm 60 2007-04-15 19:05:34Z dave $
 package WWW::Shorten::qURL;
 
 use strict;
 use warnings;
 
-our $VERSION = sprintf "%d.%02d", '$Revision: 1.90 $ ' =~ /(\d+)\.(\d+)/;
+our $VERSION = '1.91';
 require WWW::Shorten::_dead;
 
 0;

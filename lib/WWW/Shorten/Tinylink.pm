@@ -1,4 +1,4 @@
-# $Id: Tinylink.pm,v 1.89 2004/10/30 12:52:01 dave Exp $
+# $Id: Tinylink.pm 60 2007-04-15 19:05:34Z dave $
 
 =head1 NAME
 
@@ -29,7 +29,7 @@ use warnings;
 
 use base qw( WWW::Shorten::generic Exporter );
 our @EXPORT = qw(makeashorterlink makealongerlink);
-our $VERSION = sprintf "%d.%02d", '$Revision: 1.89 $ ' =~ /(\d+)\.(\d+)/;
+our $VERSION = '1.90';
 
 use Carp;
 

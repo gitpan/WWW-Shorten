@@ -1,4 +1,4 @@
-# $Id: Shorl.pm,v 1.90 2005/05/19 21:35:46 dave Exp $
+# $Id: Shorl.pm 59 2007-04-15 16:25:51Z dave $
 
 =head1 NAME
 
@@ -30,7 +30,7 @@ use warnings;
 
 use base qw( WWW::Shorten::generic Exporter );
 our @EXPORT = qw(makeashorterlink makealongerlink);
-our $VERSION = sprintf "%d.%02d", '$Revision: 1.90 $ ' =~ /(\d+)\.(\d+)/;
+our $VERSION = '1.91';
 
 use Carp;
 
@@ -57,9 +57,9 @@ sub makeashorterlink ($)
     if ($resp->content =~ m!
 	\QShorl:\E
 	\s+
-	<a \s+ href=" /\w+  ">
+	<a \s+ href="http://shorl.com/\w+"\s+rel="nofollow">
 	(\Qhttp://shorl.com/\E\w+)
-	</a>
+	</a>.*
 	<br>
 	[\r\n\s]*
 	\QPassword:\E

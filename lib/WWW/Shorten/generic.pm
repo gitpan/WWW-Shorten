@@ -1,4 +1,4 @@
-# $Id: generic.pm,v 1.91 2005/09/03 15:24:15 dave Exp $
+# $Id: generic.pm 40 2007-02-16 22:31:15Z dave $
 
 =head1 NAME
 
@@ -21,7 +21,7 @@ use 5.006;
 use strict;
 use warnings;
 
-our $VERSION = sprintf "%d.%02d", '$Revision: 1.91 $ ' =~ /(\d+)\.(\d+)/;
+our $VERSION = 1.92;
 
 use LWP;
 use Carp;

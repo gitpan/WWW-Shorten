@@ -1,10 +1,10 @@
-# $Id: _dead.pm,v 1.91 2005/09/03 15:24:15 dave Exp $
+# $Id: _dead.pm 45 2007-04-15 14:47:30Z dave $
 package WWW::Shorten::_dead;
 
 use strict;
 use warnings;
 
-our $VERSION = sprintf "%d.%02d", '$Revision: 1.91 $ ' =~ /(\d+)\.(\d+)/;
+our $VERSION = '1.92';
 die <<'EOF';
 
 This WWW::Shorten service is inactive.

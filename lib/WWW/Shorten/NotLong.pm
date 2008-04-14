@@ -1,4 +1,4 @@
-# $Id: NotLong.pm,v 1.89 2004/10/30 12:52:01 dave Exp $
+# $Id: NotLong.pm 57 2007-04-15 16:12:17Z dave $
 
 =head1 NAME
 
@@ -31,7 +31,7 @@ use warnings;
 
 use base qw( WWW::Shorten::generic Exporter );
 our @EXPORT = qw(makeashorterlink makealongerlink);
-our $VERSION = sprintf "%d.%02d", '$Revision: 1.89 $ ' =~ /(\d+)\.(\d+)/;
+our $VERSION = '1.90';
 
 use Carp;
 
@@ -57,11 +57,11 @@ sub makeashorterlink ($;%)
     my $url = shift or croak 'No URL passed to makeashorterlink';
     my $ua = __PACKAGE__->ua();
     my %args = @_;
-    my $nickname = delete $args{'nickname'} || '';
+    my $nickname = delete $args{'nickname'} || 'ws-' . $$ . int rand 100;
     my $notlong = 'http://notlong.com/';
     my $resp = $ua->post($notlong, [
 	url => $url,
-	(length $nickname) ? (nickname => $nickname) : (),
+	nickname => $nickname,
 	]);
     return unless $resp->is_success;
     if ($resp->content =~ m!
@@ -73,7 +73,7 @@ sub makeashorterlink ($;%)
         .*?
 	Password:
 	\s+
-	(\w+)
+	([-\w]+)
 	!xs) {
 	return wantarray ? ($1, $2) : $1;
     }

@@ -1,4 +1,4 @@
-# $Id: SnipURL.pm,v 1.89 2004/10/30 12:52:01 dave Exp $
+# $Id: SnipURL.pm 65 2008-04-14 21:29:27Z dave $
 
 =head1 NAME
 
@@ -30,7 +30,7 @@ use warnings;
 
 use base qw( WWW::Shorten::generic Exporter );
 our @EXPORT = qw(makeashorterlink makealongerlink);
-our $VERSION = sprintf "%d.%02d", '$Revision: 1.89 $ ' =~ /(\d+)\.(\d+)/;
+our $VERSION = '1.91';
 
 use Carp;
 use URI;
@@ -49,22 +49,14 @@ sub makeashorterlink ($;%)
 {
     my $url = shift or croak 'No URL passed to makeashorterlink';
     my $ua = __PACKAGE__->ua();
-    my ($nick,$pass) = @_;
-    my $snipurl = 'http://snipurl.com/teindex.php';
-    my $resp = $ua->post($snipurl, [
-	link => $url,
-	alias => (defined $nick ? $nick : ''),
-	protected_key => (defined $pass ? $pass : ''),
-	]);
+    my ($nick, $pass) = @_;
+    my $snipurl = "http://snipurl.com/site/snip?r=simple&link=$url";
+    $snipurl .= "&snipnick=$nick" if defined $nick;
+    $snipurl .= "&snippk=$pass" if defined $pass;
+    my $resp = $ua->get($snipurl);
+
     return unless $resp->is_success;
-    if ($resp->content =~ m!
-	<a \s+ href=['"] ([^'"]+) ['"][^>]*>
-	(http://sn(?:ip)?url\.com/\w+)
-	</a>
-	!xm) {
-	return $1;
-    }
-    return undef;
+    return $resp->content;
 }
 
 =head2 makealongerlink
@@ -94,8 +86,7 @@ sub makealongerlink ($)
 
     my $content = $resp->content;
     return undef if $content eq 'ERROR';
-    my ($link) = $content =~ m! " ([^"]+) " !xi;
-    return $link;
+    return $content;
 }
 
 1;

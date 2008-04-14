@@ -1,10 +1,10 @@
-# $Id: V3.pm,v 1.92 2005/09/03 14:46:06 dave Exp $
+# $Id: V3.pm 60 2007-04-15 19:05:34Z dave $
 package WWW::Shorten::V3;
 
 use strict;
 use warnings;
 
-our $VERSION = sprintf "%d.%02d", '$Revision: 1.92 $ ' =~ /(\d+)\.(\d+)/;
+our $VERSION = '1.93';
 require WWW::Shorten::_dead;
 
 0;

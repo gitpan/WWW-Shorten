@@ -1,5 +1,5 @@
 # $Id: MakeAShorterLink.pm 48 2007-04-15 15:03:55Z dave $
-package WWW::Shorten::MakeAShorterLink;
+package WWW::Shorten::LinkToolbot;
 
 use strict;
 use warnings;
@@ -13,7 +13,7 @@ __END__
 
 =head1 NAME
 
-WWW::Shorten::MakeAShorterLink - Perl interface to makeashorterlink.com
+WWW::Shorten::LinkToolbot - Perl interface to link.toolbot.com
 
 =head1 SYNOPSIS
 
@@ -21,7 +21,7 @@ WWW::Shorten::MakeAShorterLink - Perl interface to makeashorterlink.com
 
 =head1 DESCRIPTION
 
-A Perl interface to the web site babyurl.com.
+A Perl interface to the web site link.toolbot.com.
 
 Unfortunately, this service became inactive at some point between 1.89
 and 1.90, so this module will merely give you an error if you try to use

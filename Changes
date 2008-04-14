@@ -1,52 +1,104 @@
-2005-10-09 22:54  dave
+2007-05-13  dave
 
-	* lib/WWW/Shorten.pm: Reinstated support for 1sl.net.
-	* lib/WWW/Shorten/OneShortLink.pm, t/oneshort.t: Reinstated suport
-	  for 1sl.net.
+	* [r63] t/00sig.t, t/98pod-coverage.t, t/99pod.t: Removed unneeded
+	  shebang lines
+	* [r62] MANIFEST: Removed unused test file
 
-2005-09-03 16:40  dave
+2007-04-15  dave
 
-	* MANIFEST.SKIP: Fixed previous fix :(
-	* MANIFEST.SKIP: Ignore hidden files
-	* lib/WWW/Shorten.pm: Removed outdated or incorrect references in
-	  the Pod.
-	* MANIFEST.SKIP: Ignore vi backup files
-	* t/98pod-coverage.t, MANIFEST: Added Pod coverage tests
-	* t/metamark.t: Changed the URL used for the test.
-	* lib/WWW/Shorten/: _dead.pm, generic.pm: Added a bit of Pod.
-	* lib/WWW/Shorten/Metamark.pm: Switched to using the REST API for
-	  makealongerlink.
+	* [r61] lib/WWW/Shorten/LinkToolbot.pm: Reformatted documentation
+	* [r60] lib/WWW/Shorten/EkDk.pm, lib/WWW/Shorten/Linkz.pm,
+	  lib/WWW/Shorten/OneShortLink.pm, lib/WWW/Shorten/ShortLink.pm,
+	  lib/WWW/Shorten/SmLnk.pm, lib/WWW/Shorten/SnipURL.pm,
+	  lib/WWW/Shorten/Tinylink.pm, lib/WWW/Shorten/URLjr.pm,
+	  lib/WWW/Shorten/V3.pm, lib/WWW/Shorten/qURL.pm: Switch to manual
+	  version number
+	* [r59] lib/WWW/Shorten/Shorl.pm: Fixed to mirror the way that
+	  shorl.com now works.
+	* [r58] lib/WWW/Shorten/Shorl.pm: Switched to manual version
+	  number.
+	* [r57] lib/WWW/Shorten/NotLong.pm, t/notlong.t: Updates to reflect
+	  changes in the way that notlong.pm works
+	* [r56] t/00noexp.t: test a service that actually works
+	* [r55] lib/WWW/Shorten/NotLong.pm: Switch to manual version number
+	* [r54] lib/WWW/Shorten/Metamark.pm: Switch to manual version
+	  number
+	* [r53] t/00load_a.t, t/00load_b.t: Change tests to use a still
+	  existing service
+	* [r52] lib/WWW/Shorten/TinyClick.pm, t/tinyclick.t: tinyclick.com
+	  is dead
+	* [r51] lib/WWW/Shorten/TinyURL.pm: Switched to manual version
+	* [r50] t/tinyurl.t: TinyURL now works in a slightly different way
+	* [r49] t/ws_masl.t: removed unnecessary test
+	* [r48] lib/WWW/Shorten/MakeAShorterLink.pm, t/masl.t:
+	  makeashorterlink.com is now dead!
+	* [r47] lib/WWW/Shorten/BabyURL.pm: Typo
+	* [r46] lib/WWW/Shorten/BabyURL.pm, t/babyurl.t: BabyURL is now
+	  dead
+	* [r45] lib/WWW/Shorten/_dead.pm: Switch to manual version numbers
+	* [r44] lib/WWW/Shorten.pm: Change to using manual version number.
+	* [r43] lib/WWW/Shorten.pm: Changed email address in docs
+	* [r42] lib/WWW/Shorten.pm: Fixed copyright line. Removed changelog
+	  from module file.
+	* [r41] Build.PL, Makefile.PL: Switched from Makefile.PL to
+	  Build.PL.
 
-2005-09-03 15:46  dave
+2007-02-16  dave
 
-	* lib/WWW/Shorten/: EkDk.pm, OneShortLink.pm, ShortLink.pm,
-	  SmLnk.pm, URLjr.pm, V3.pm, _dead.pm, generic.pm, qURL.pm: Added
-	  'use strict', 'use warnings' and cvs $Id$ tag to all modules
+	* [r40] MANIFEST, lib/WWW/Shorten/LinkToolbot.pm,
+	  lib/WWW/Shorten/generic.pm, t/linktoolbot.t: Added tests for
+	  LinkToolbot.pm and fixed module to pass them
+	* [r39] lib/WWW/Shorten/LinkToolbot.pm: Added
+	  WWW::Shorten::LinkToolbot
 
-2005-05-24 21:27  dave
+2005-10-09  dave
 
-	* t/00noexp.t: Added 00noexp.t
-	* lib/WWW/Shorten.pm, t/linkz.t: Correct copyright signs in pod.
+	* [r37] lib/WWW/Shorten.pm: Reinstated support for 1sl.net.
+	* [r36] lib/WWW/Shorten/OneShortLink.pm, t/oneshort.t: Reinstated
+	  suport for 1sl.net.
+
+2005-09-03  dave
+
+	* [r35] MANIFEST.SKIP: Fixed previous fix :(
+	* [r34] MANIFEST.SKIP: Ignore hidden files
+	* [r33] lib/WWW/Shorten.pm: Removed outdated or incorrect
+	  references in the Pod.
+	* [r32] MANIFEST.SKIP: Ignore vi backup files
+	* [r31] MANIFEST, t/98pod-coverage.t: Added Pod coverage tests
+	* [r30] t/metamark.t: Changed the URL used for the test.
+	* [r29] lib/WWW/Shorten/_dead.pm, lib/WWW/Shorten/generic.pm: Added
+	  a bit of Pod.
+	* [r28] lib/WWW/Shorten/Metamark.pm: Switched to using the REST API
+	  for makealongerlink.
+	* [r27] lib/WWW/Shorten/EkDk.pm, lib/WWW/Shorten/OneShortLink.pm,
+	  lib/WWW/Shorten/ShortLink.pm, lib/WWW/Shorten/SmLnk.pm,
+	  lib/WWW/Shorten/URLjr.pm, lib/WWW/Shorten/V3.pm,
+	  lib/WWW/Shorten/_dead.pm, lib/WWW/Shorten/generic.pm,
+	  lib/WWW/Shorten/qURL.pm: Added 'use strict', 'use warnings' and
+	  cvs $Id$ tag to all modules
+
+2005-05-24  dave
+
+	* [r26] t/00noexp.t: Added 00noexp.t
+	* [r25] lib/WWW/Shorten.pm, t/linkz.t: Correct copyright signs in
+	  pod.
 	  Skip lin.kz tests while it's broken.
 
-2005-05-19 23:02  dave
+2005-05-19  dave
 
-	* MANIFEST.SKIP: Added stuff to MANIFEST.SKIP
-	* lib/WWW/Shorten.pm: Removed a couple of dead services - 1sl and
-	  v3
-	* META.yml, Makefile.PL, lib/WWW/Shorten/OneShortLink.pm,
+	* [r24] MANIFEST.SKIP: Added stuff to MANIFEST.SKIP
+	* [r23] lib/WWW/Shorten.pm: Removed a couple of dead services - 1sl
+	  and v3
+	* [r22] META.yml, Makefile.PL, lib/WWW/Shorten/OneShortLink.pm,
 	  lib/WWW/Shorten/Shorl.pm, lib/WWW/Shorten/V3.pm, t/oneshort.t,
 	  t/shorl.t, t/tinyurl.t, t/v3.t: Removed some dead services.
 	  Fixed WWW::Shorten::Shorl.pm to deal with the new way that shorl
 	  works.
 
-2004-10-30 21:52  dave
+2004-10-30  dave
 
-	* MANIFEST: Added new test files
-
-2004-10-30 13:52  dave
-
-	* lib/WWW/Shorten.pm, lib/WWW/Shorten/BabyURL.pm,
+	* [r21] MANIFEST: Added new test files
+	* [r20] lib/WWW/Shorten.pm, lib/WWW/Shorten/BabyURL.pm,
 	  lib/WWW/Shorten/EkDk.pm, lib/WWW/Shorten/Linkz.pm,
 	  lib/WWW/Shorten/MakeAShorterLink.pm, lib/WWW/Shorten/Metamark.pm,
 	  lib/WWW/Shorten/NotLong.pm, lib/WWW/Shorten/OneShortLink.pm,
@@ -61,72 +113,62 @@
 	  t/tinylink.t, t/tinyurl.t, t/urljr.t, t/v3.t, t/ws_masl.t: Work
 	  on improving test coverage
 
-2004-10-25 22:03  dave
+2004-10-25  dave
 
-	* lib/WWW/Shorten.pm: Removed unnecessary "no strict 'refs'"
-	* SIGNATURE: SIGNATURE is generated - therefore not in CVS
-	* t/: notlong.t, smlnk.t, tinyclick.t, tinyurl.t, urljr.t: Various
-	  test fixes
-	* lib/WWW/Shorten/V3.pm: Fixed response regex
+	* [r19] lib/WWW/Shorten.pm: Removed unnecessary "no strict 'refs'"
+	* [r18] SIGNATURE: SIGNATURE is generated - therefore not in CVS
+	* [r17] t/notlong.t, t/smlnk.t, t/tinyclick.t, t/tinyurl.t,
+	  t/urljr.t: Various test fixes
+	* [r16] lib/WWW/Shorten/V3.pm: Fixed response regex
 
-2004-10-24 23:08  dave
+2004-10-24  dave
 
-	* MANIFEST.SKIP, Makefile.PL, SIGNATURE: New version with fixed
-	  SIGNATURE
-
-2004-10-24 18:35  dave
-
-	* AUTHORS, Artistic, COPYING, CREDITS, ChangeLog.SPOON, INSTALL,
-	  LICENCE, MANIFEST, MANIFEST.SKIP, META.yml, Makefile.PL, README,
-	  SIGNATURE: Correct CVS versions
-	* lib/WWW/Shorten/: BabyURL.pm, Linkz.pm, MakeAShorterLink.pm,
-	  Metamark.pm, NotLong.pm, Shorl.pm, ShortLink.pm, SmLnk.pm,
-	  SnipURL.pm, TinyClick.pm, TinyURL.pm, Tinylink.pm, URLjr.pm,
-	  V3.pm, _dead.pm, generic.pm, qURL.pm: Correct CVS versions
-	* lib/WWW/Shorten/EkDk.pm: Correct CVS Version
-	* lib/WWW/Shorten/OneShortLink.pm: Correct CVS version
-	* Makefile.PL, lib/WWW/Shorten.pm: Changed author in Makefile.PL.
+	* [r15] MANIFEST.SKIP, Makefile.PL, SIGNATURE: New version with
+	  fixed SIGNATURE
+	* [r14] AUTHORS, Artistic, COPYING, CREDITS, ChangeLog.SPOON,
+	  INSTALL, LICENCE, MANIFEST, MANIFEST.SKIP, META.yml, Makefile.PL,
+	  README, SIGNATURE, lib/WWW/Shorten/BabyURL.pm,
+	  lib/WWW/Shorten/Linkz.pm, lib/WWW/Shorten/MakeAShorterLink.pm,
+	  lib/WWW/Shorten/Metamark.pm, lib/WWW/Shorten/NotLong.pm,
+	  lib/WWW/Shorten/Shorl.pm, lib/WWW/Shorten/ShortLink.pm,
+	  lib/WWW/Shorten/SmLnk.pm, lib/WWW/Shorten/SnipURL.pm,
+	  lib/WWW/Shorten/TinyClick.pm, lib/WWW/Shorten/TinyURL.pm,
+	  lib/WWW/Shorten/Tinylink.pm, lib/WWW/Shorten/URLjr.pm,
+	  lib/WWW/Shorten/V3.pm, lib/WWW/Shorten/_dead.pm,
+	  lib/WWW/Shorten/generic.pm, lib/WWW/Shorten/qURL.pm: Correct CVS
+	  versions
+	* [r13] lib/WWW/Shorten/EkDk.pm: Correct CVS Version
+	* [r12] lib/WWW/Shorten/OneShortLink.pm: Correct CVS version
+	* [r11] Makefile.PL, lib/WWW/Shorten.pm: Changed author in
+	  Makefile.PL.
 	  Get $VERSION from CVS tag.
-	* MANIFEST, lib/WWW/Shorten.pm: Add some CVS tags
-	* Changes: Removed Changes from CVS
-	* ChangeLog, ChangeLog.SPOON: Replaced ChangeLog with
+	* [r10] MANIFEST, lib/WWW/Shorten.pm: Add some CVS tags
+	* [r9] Changes: Removed Changes from CVS
+	* [r8] ChangeLog, ChangeLog.SPOON: Replaced ChangeLog with
 	  ChangeLog.SPOON
-	* AUTHORS: Changed author info
-	* lib/WWW/Shorten.pm: Changed author info.
-	* COPYING, Changes, MANIFEST, META.yml, TODO, Artistic, ChangeLog,
-	  LICENCE, MANIFEST.SKIP, AUTHORS, CREDITS, INSTALL, Makefile.PL,
-	  README, SIGNATURE, lib/WWW/Shorten.pm, lib/WWW/Shorten/EkDk.pm,
-	  lib/WWW/Shorten/Metamark.pm, lib/WWW/Shorten/OneShortLink.pm,
-	  lib/WWW/Shorten/SmLnk.pm, lib/WWW/Shorten/TinyURL.pm,
-	  lib/WWW/Shorten/URLjr.pm, lib/WWW/Shorten/V3.pm,
-	  lib/WWW/Shorten/generic.pm, lib/WWW/Shorten/qURL.pm, bin/shorten,
-	  bin/shortenrc, lib/WWW/Shorten/BabyURL.pm,
+	* [r7] AUTHORS: Changed author info
+	* [r6] lib/WWW/Shorten.pm: Changed author info.
+	* [r2] AUTHORS, Artistic, COPYING, CREDITS, ChangeLog, Changes,
+	  INSTALL, LICENCE, MANIFEST, MANIFEST.SKIP, META.yml, Makefile.PL,
+	  README, SIGNATURE, TODO, bin, bin/shorten, bin/shortenrc, lib,
+	  lib/WWW, lib/WWW/Shorten, lib/WWW/Shorten.pm,
+	  lib/WWW/Shorten/BabyURL.pm, lib/WWW/Shorten/EkDk.pm,
 	  lib/WWW/Shorten/Linkz.pm, lib/WWW/Shorten/MakeAShorterLink.pm,
-	  lib/WWW/Shorten/NotLong.pm, lib/WWW/Shorten/Shorl.pm,
-	  lib/WWW/Shorten/ShortLink.pm, lib/WWW/Shorten/SnipURL.pm,
-	  lib/WWW/Shorten/TinyClick.pm, lib/WWW/Shorten/Tinylink.pm,
-	  lib/WWW/Shorten/_dead.pm, t/00load.t, t/00load_a.t, t/00load_b.t,
-	  t/00sig.t, t/01version.t, t/99pod.t, t/babyurl.t, t/ekdk.t,
-	  t/linkz.t, t/masl.t, t/metamark.t, t/newnames.t, t/notlong.t,
-	  t/oneshort.t, t/qurl.t, t/shorl.t, t/shortlink.t, t/smlnk.t,
-	  t/snipurl.t, t/tinyclick.t, t/tinylink.t, t/tinyurl.t, t/urljr.t,
-	  t/v3.t, t/ws_masl.t: Initial revision
-	* COPYING, Changes, MANIFEST, META.yml, TODO, Artistic, ChangeLog,
-	  LICENCE, MANIFEST.SKIP, AUTHORS, CREDITS, INSTALL, Makefile.PL,
-	  README, SIGNATURE, lib/WWW/Shorten.pm, lib/WWW/Shorten/EkDk.pm,
-	  lib/WWW/Shorten/Metamark.pm, lib/WWW/Shorten/OneShortLink.pm,
-	  lib/WWW/Shorten/SmLnk.pm, lib/WWW/Shorten/TinyURL.pm,
+	  lib/WWW/Shorten/Metamark.pm, lib/WWW/Shorten/NotLong.pm,
+	  lib/WWW/Shorten/OneShortLink.pm, lib/WWW/Shorten/Shorl.pm,
+	  lib/WWW/Shorten/ShortLink.pm, lib/WWW/Shorten/SmLnk.pm,
+	  lib/WWW/Shorten/SnipURL.pm, lib/WWW/Shorten/TinyClick.pm,
+	  lib/WWW/Shorten/TinyURL.pm, lib/WWW/Shorten/Tinylink.pm,
 	  lib/WWW/Shorten/URLjr.pm, lib/WWW/Shorten/V3.pm,
-	  lib/WWW/Shorten/generic.pm, lib/WWW/Shorten/qURL.pm, bin/shorten,
-	  bin/shortenrc, lib/WWW/Shorten/BabyURL.pm,
-	  lib/WWW/Shorten/Linkz.pm, lib/WWW/Shorten/MakeAShorterLink.pm,
-	  lib/WWW/Shorten/NotLong.pm, lib/WWW/Shorten/Shorl.pm,
-	  lib/WWW/Shorten/ShortLink.pm, lib/WWW/Shorten/SnipURL.pm,
-	  lib/WWW/Shorten/TinyClick.pm, lib/WWW/Shorten/Tinylink.pm,
-	  lib/WWW/Shorten/_dead.pm, t/00load.t, t/00load_a.t, t/00load_b.t,
-	  t/00sig.t, t/01version.t, t/99pod.t, t/babyurl.t, t/ekdk.t,
-	  t/linkz.t, t/masl.t, t/metamark.t, t/newnames.t, t/notlong.t,
-	  t/oneshort.t, t/qurl.t, t/shorl.t, t/shortlink.t, t/smlnk.t,
-	  t/snipurl.t, t/tinyclick.t, t/tinylink.t, t/tinyurl.t, t/urljr.t,
-	  t/v3.t, t/ws_masl.t: WWW::Shorten
+	  lib/WWW/Shorten/_dead.pm, lib/WWW/Shorten/generic.pm,
+	  lib/WWW/Shorten/qURL.pm, t, t/00load.t, t/00load_a.t,
+	  t/00load_b.t, t/00sig.t, t/01version.t, t/99pod.t, t/babyurl.t,
+	  t/ekdk.t, t/linkz.t, t/masl.t, t/metamark.t, t/newnames.t,
+	  t/notlong.t, t/oneshort.t, t/qurl.t, t/shorl.t, t/shortlink.t,
+	  t/smlnk.t, t/snipurl.t, t/tinyclick.t, t/tinylink.t, t/tinyurl.t,
+	  t/urljr.t, t/v3.t, t/ws_masl.t: Initial revision
+
+2004-10-24  
+
+	* [r1] .: New repository initialized by cvs2svn.
 

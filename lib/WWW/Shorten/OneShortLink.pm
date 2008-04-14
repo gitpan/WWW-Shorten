@@ -1,4 +1,4 @@
-# $Id: OneShortLink.pm,v 1.92 2005/10/09 21:52:00 dave Exp $
+# $Id: OneShortLink.pm 60 2007-04-15 19:05:34Z dave $
 
 =head1 NAME
 
@@ -29,7 +29,7 @@ use warnings;
 
 use base qw( WWW::Shorten::generic Exporter );
 our @EXPORT = qw(makeashorterlink makealongerlink);
-our $VERSION = sprintf "%d.%02d", '$Revision: 1.92 $ ' =~ /(\d+)\.(\d+)/;
+our $VERSION = '1.93';
 
 use Carp;
 
