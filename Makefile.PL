@@ -2,19 +2,18 @@
 use ExtUtils::MakeMaker;
 WriteMakefile
 (
+          'PL_FILES' => {},
+          'INSTALLDIRS' => 'site',
           'NAME' => 'WWW::Shorten',
+          'EXE_FILES' => [
+                           'bin/shorten'
+                         ],
           'VERSION_FROM' => 'lib/WWW/Shorten.pm',
           'PREREQ_PM' => {
-                           'LWP' => '5.75',
-                           'LWP::UserAgent' => '2.023',
                            'Test::More' => '0.47',
-                           'URI' => '1.27'
-                         },
-          'INSTALLDIRS' => 'site',
-          'EXE_FILES' => [
-                           '/home/dave/src/WWW-Shorten/bin/shorten',
-                           '/home/dave/src/WWW-Shorten/bin/shortenrc'
-                         ],
-          'PL_FILES' => {}
+                           'URI' => '1.27',
+                           'LWP::UserAgent' => '2.023',
+                           'LWP' => '5.75'
+                         }
         )
 ;
