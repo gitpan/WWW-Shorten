@@ -1,3 +1,15 @@
+2008-04-20  dave
+
+	* [r73] Build.PL:
+	  Increment version number
+	* [r72] t/snipurl.t:
+	  Fixed test so it doesn't include a hard-coded code.
+
+2008-04-19  dave
+
+	* [r71] Build.PL:
+	  Fixes script_files.
+
 2008-04-17  dave
 
 	* [r70] Build.PL:
