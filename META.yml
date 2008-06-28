@@ -1,6 +1,6 @@
 ---
 name: WWW-Shorten
-version: 1.100
+version: 2.00
 author:
   - 'Iain Truskett <spoon@cpan.org>'
   - 'Based on WWW::MakeAShorterLink by Dave Cross <dave@mag-sol.com>'
@@ -61,9 +61,6 @@ provides:
   WWW::Shorten::TinyURL:
     file: lib/WWW/Shorten/TinyURL.pm
     version: 1.90
-  WWW::Shorten::Tinylink:
-    file: lib/WWW/Shorten/Tinylink.pm
-    version: 1.90
   WWW::Shorten::URLjr:
     file: lib/WWW/Shorten/URLjr.pm
     version: 1.91
@@ -76,7 +73,7 @@ provides:
   WWW::Shorten::qURL:
     file: lib/WWW/Shorten/qURL.pm
     version: 1.91
-generated_by: Module::Build version 0.2808
+generated_by: Module::Build version 0.280801
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.2.html
   version: 1.2
