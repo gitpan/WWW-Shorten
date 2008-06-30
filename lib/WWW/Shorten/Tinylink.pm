@@ -1,4 +1,4 @@
-# $Id: Tinylink.pm 60 2007-04-15 19:05:34Z dave $
+# $Id: Tinylink.pm 76 2008-06-30 11:30:27Z dave $
 
 use strict;
 use warnings;
@@ -23,7 +23,7 @@ A Perl interface to the web site Tinylink.com. Tinylink.com simply
 maintains a database of long URLs, each of which has a unique
 identifier.
 
-Unfortunately, at some point in the middle of 2088, Tinylink.com stopped
+Unfortunately, at some point in the middle of 2008, Tinylink.com stopped
 returning useable URLs and therefore this module is now deprecated.
 
 =cut

@@ -1,3 +1,20 @@
+2008-06-30  dave
+
+	* [r78] Build.PL:
+	  Increment version
+	* [r77] MANIFEST:
+	  Removed SIGNATURE from MANIFEST (as Module::Build adds it
+	  automatically).
+	* [r76] lib/WWW/Shorten/Tinylink.pm:
+	  Typo
+
+2008-06-29  dave
+
+	* [r74] Build.PL, lib/WWW/Shorten/Tinylink.pm, t/tinylink.t:
+	  Marked tinylink.com as dead (it's not - but it's returning
+	  nonsense).
+	  Bumped to version 2.00.
+
 2008-04-20  dave
 
 	* [r73] Build.PL:
