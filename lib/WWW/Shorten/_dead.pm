@@ -1,4 +1,4 @@
-# $Id: _dead.pm 45 2007-04-15 14:47:30Z dave $
+# $Id$
 package WWW::Shorten::_dead;
 
 use strict;

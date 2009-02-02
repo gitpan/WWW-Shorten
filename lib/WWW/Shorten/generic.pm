@@ -1,4 +1,4 @@
-# $Id: generic.pm 40 2007-02-16 22:31:15Z dave $
+# $Id$
 
 =head1 NAME
 

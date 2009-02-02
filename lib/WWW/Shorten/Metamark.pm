@@ -1,4 +1,4 @@
-# $Id: Metamark.pm 54 2007-04-15 15:25:09Z dave $
+# $Id$
 
 =head1 NAME
 

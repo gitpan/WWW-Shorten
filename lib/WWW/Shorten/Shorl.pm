@@ -1,4 +1,4 @@
-# $Id: Shorl.pm 59 2007-04-15 16:25:51Z dave $
+# $Id$
 
 =head1 NAME
 

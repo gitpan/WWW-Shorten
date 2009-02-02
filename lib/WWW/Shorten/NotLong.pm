@@ -1,4 +1,4 @@
-# $Id: NotLong.pm 57 2007-04-15 16:12:17Z dave $
+# $Id$
 
 =head1 NAME
 

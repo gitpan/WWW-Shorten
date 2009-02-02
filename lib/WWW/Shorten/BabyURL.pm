@@ -1,4 +1,4 @@
-# $Id: BabyURL.pm 47 2007-04-15 15:03:13Z dave $
+# $Id$
 package WWW::Shorten::BabyURL;
 
 use strict;

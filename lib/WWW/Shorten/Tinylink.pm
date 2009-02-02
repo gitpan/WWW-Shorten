@@ -1,4 +1,4 @@
-# $Id: Tinylink.pm 76 2008-06-30 11:30:27Z dave $
+# $Id$
 
 use strict;
 use warnings;

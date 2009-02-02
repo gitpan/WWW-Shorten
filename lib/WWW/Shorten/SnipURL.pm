@@ -1,4 +1,4 @@
-# $Id: SnipURL.pm 65 2008-04-14 21:29:27Z dave $
+# $Id$
 
 =head1 NAME
 

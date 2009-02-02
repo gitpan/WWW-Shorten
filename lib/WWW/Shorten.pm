@@ -1,4 +1,4 @@
-#$Id: Shorten.pm 44 2007-04-15 14:20:35Z dave $
+#$Id$
 
 =head1 NAME
 

@@ -1,4 +1,4 @@
-# $Id: TinyURL.pm 51 2007-04-15 15:12:11Z dave $
+# $Id$
 
 =head1 NAME
 

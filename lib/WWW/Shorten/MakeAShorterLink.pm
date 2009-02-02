@@ -1,4 +1,4 @@
-# $Id: MakeAShorterLink.pm 48 2007-04-15 15:03:55Z dave $
+# $Id$
 package WWW::Shorten::MakeAShorterLink;
 
 use strict;

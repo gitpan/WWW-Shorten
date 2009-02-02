@@ -1,4 +1,4 @@
-# $Id: URLjr.pm 60 2007-04-15 19:05:34Z dave $
+# $Id$
 package WWW::Shorten::URLjr;
 
 use strict;

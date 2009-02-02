@@ -1,4 +1,4 @@
-# $Id: TinyClick.pm 52 2007-04-15 15:19:34Z dave $
+# $Id$
 package WWW::Shorten::TinyClick;
 
 use strict;
