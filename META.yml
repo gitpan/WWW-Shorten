@@ -1,6 +1,6 @@
 ---
 name: WWW-Shorten
-version: 2.02
+version: 2.03
 author:
   - 'Iain Truskett <spoon@cpan.org>'
   - 'Based on WWW::MakeAShorterLink by Dave Cross <dave@mag-sol.com>'

@@ -62,4 +62,3 @@ t/tinyurl.t
 t/urljr.t
 t/v3.t
 TODO
-SIGNATURE    Added here by Module::Build

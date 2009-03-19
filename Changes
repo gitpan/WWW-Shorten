@@ -1,3 +1,27 @@
+2009-03-19  Dave Cross  <dave@dave.org.uk>
+
+	* Build.PL: Remove signing
+
+	* commit 419bb82c70ba9b1a89fd0cbb400eb3491365c8d1
+
+2009-03-19  Dave Cross  <dave@dave.org.uk>
+
+	* t/shorl.t: Fixed typo
+
+	* commit e79a2979eb1182ba91b6b795bcab7504f5b229cf
+
+2009-03-19  Dave Cross  <dave@dave.org.uk>
+
+	* Build.PL: Bump version number.
+
+	* commit 4ff0cab5349a8d811be19dc14348db74c6173445
+
+2009-03-19  Dave Cross  <dave@dave.org.uk>
+
+	* t/tinyurl.t: Fixed TinyURL tests.
+
+	* commit c8a91370779b108b1f778b06ca3b0b31844e132b
+
 2009-02-02  Dave Cross  <dave@dave.org.uk>
 
 	* Build.PL: Increment version number
