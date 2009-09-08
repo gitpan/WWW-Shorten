@@ -1,60 +1,109 @@
-2009-03-19  Dave Cross  <dave@dave.org.uk>
+2009-09-08 11:54  Dave Cross  <dave@dave.org.uk>
+
+	* MANIFEST: Removed snipurl.t from MANIFEST.
+
+	* commit 9e922c52959f12174da96d8096887f8de5259139
+
+2009-09-08 10:34  Dave Cross  <dave@dave.org.uk>
+
+	* Build.PL, MANIFEST, lib/WWW/Shorten/SnipURL.pm, t/snipurl.t:
+	Removed WWW::Shorten::SnipURL (API changed, separate dist will
+	follow).  Bumped version to 2.04.
+
+	* commit 1d97a1daac655d87a3b340e85ee49ec088cd7c55
+
+2009-04-11 16:44  Dave Cross  <dave@dave.org.uk>
+
+	* Merge branch 'master' of git@github.com:davorg/www-shorten
+
+	* commit 30994cb881d64f5c70085ccde66c9e2f19615f9a
+
+2009-04-11 16:39  Dave Cross  <dave@dave.org.uk>
+
+	* lib/WWW/Shorten.pm: Start using $DEFAULT_SERVICE variable.
+
+	* commit f696b4c6f7cbb1a7f2d7033d581cdbe6e518d05d
+
+2009-04-11 16:39  Dave Cross  <dave@dave.org.uk>
+
+	* MANIFEST: Removed files from MANIFEST
+
+	* commit 2fb6642f6539b6d2351e5f0a9149be6e358a2e1a
+
+2009-04-11 12:51  Dave Cross  <dave@dave.org.uk>
+
+	* lib/WWW/Shorten.pm: Documenation improvements.
+
+	* commit 3a1f4cef3abcc338294078dede575e6ab63f4ebe
+
+2009-04-11 12:34  Dave Cross  <dave@dave.org.uk>
+
+	* lib/WWW/Shorten/BabyURL.pm, lib/WWW/Shorten/EkDk.pm,
+	lib/WWW/Shorten/ShortLink.pm, lib/WWW/Shorten/SmLnk.pm,
+	lib/WWW/Shorten/URLjr.pm, lib/WWW/Shorten/V3.pm,
+	lib/WWW/Shorten/qURL.pm, t/babyurl.t, t/ekdk.t, t/qurl.t,
+	t/shortlink.t, t/smlnk.t, t/urljr.t, t/v3.t: Removed a number
+	of modules that supported services that are no longer around.
+
+	* commit d2ef9599cb5b68e751dceee4b1aac22a49a165f9
+
+2009-03-19 10:38  Dave Cross  <dave@dave.org.uk>
 
 	* Build.PL: Remove signing
 
 	* commit 419bb82c70ba9b1a89fd0cbb400eb3491365c8d1
 
-2009-03-19  Dave Cross  <dave@dave.org.uk>
+2009-03-19 10:35  Dave Cross  <dave@dave.org.uk>
 
 	* t/shorl.t: Fixed typo
 
 	* commit e79a2979eb1182ba91b6b795bcab7504f5b229cf
 
-2009-03-19  Dave Cross  <dave@dave.org.uk>
+2009-03-19 10:32  Dave Cross  <dave@dave.org.uk>
 
 	* Build.PL: Bump version number.
 
 	* commit 4ff0cab5349a8d811be19dc14348db74c6173445
 
-2009-03-19  Dave Cross  <dave@dave.org.uk>
+2009-03-19 10:31  Dave Cross  <dave@dave.org.uk>
 
 	* t/tinyurl.t: Fixed TinyURL tests.
 
 	* commit c8a91370779b108b1f778b06ca3b0b31844e132b
 
-2009-02-02  Dave Cross  <dave@dave.org.uk>
+2009-02-02 15:28  Dave Cross  <dave@dave.org.uk>
 
 	* Build.PL: Increment version number
 
 	* commit cec12e1776a8b317937ba86c81ff5491eeaba787
 
-2009-01-26  Dave Cross  <dave@dave.org.uk>
+2009-01-26 13:27  Dave Cross  <dave@dave.org.uk>
 
 	* Build.PL: Changed require perl 5.6.0 to require perl 5.006 -
 	to deal with older Perl installations.
 
 	* commit e7fd9581ef90e1237b33e154237b303a33b37d27
 
-2008-06-30  Dave Cross  <dave@dave.org.uk>
+2008-06-30 16:03  Dave Cross  <dave@dave.org.uk>
 
 	* Build.PL: Increment version
 
 	* commit eb437d70fba5bb2e555908dd036c03b551d7e208
 
-2008-06-30  Dave Cross  <dave@dave.org.uk>
+2008-06-30 16:01  Dave Cross  <dave@dave.org.uk>
 
 	* MANIFEST: Removed SIGNATURE from MANIFEST (as Module::Build
 	adds it automatically).
 
 	* commit 7c992930722a779b96f62ba41969f8f4885792d8
 
-2008-06-30  Dave Cross  <dave@dave.org.uk>
+2008-06-30 11:30  Dave Cross  <dave@dave.org.uk>
 
 	* lib/WWW/Shorten/Tinylink.pm: Typo
 
 	* commit cd33b84f8f9d59511810fb6c9c7f0d4910fdf825
 
-2008-06-29  Dave Cross  <dave@dave.org.uk>
+2008-06-29 09:58  Dave Cross  <dave@dave.org.uk>
 
 	* Build.PL, lib/WWW/Shorten/Tinylink.pm, t/tinylink.t: Marked
 	tinylink.com as dead (it's not - but it's returning nonsense).
@@ -62,89 +111,89 @@
 
 	* commit c633cad32e861d92e58fd03f44ce3a92561610a5
 
-2008-04-20  Dave Cross  <dave@dave.org.uk>
+2008-04-20 09:55  Dave Cross  <dave@dave.org.uk>
 
 	* Build.PL: Increment version number
 
 	* commit a36a37b7e6e7939e11d97bc052cffc05ab483f83
 
-2008-04-20  Dave Cross  <dave@dave.org.uk>
+2008-04-20 09:54  Dave Cross  <dave@dave.org.uk>
 
 	* t/snipurl.t: Fixed test so it doesn't include a hard-coded code.
 
 	* commit 53858471eca267d4138dcab7b19318f86fda2e02
 
-2008-04-19  Dave Cross  <dave@dave.org.uk>
+2008-04-19 08:28  Dave Cross  <dave@dave.org.uk>
 
 	* Build.PL: Fixes script_files.
 
 	* commit d4c13842651ad1328fdaa79076f912f9b6eed26f
 
-2008-04-17  Dave Cross  <dave@dave.org.uk>
+2008-04-17 05:43  Dave Cross  <dave@dave.org.uk>
 
 	* Build.PL: Increment version number for release
 
 	* commit 78bc9a8e714eadee3b32b00d57f0cbc526fd8b91
 
-2008-04-17  Dave Cross  <dave@dave.org.uk>
+2008-04-17 05:43  Dave Cross  <dave@dave.org.uk>
 
 	* Build.PL, MANIFEST, bin/shortenrc: Remove shortenrc.
 	Add script_files to Build.PL
 
 	* commit 04c6f048ed3f7648d7c482bcec38d2ccd918e501
 
-2008-04-14  Dave Cross  <dave@dave.org.uk>
+2008-04-14 21:50  Dave Cross  <dave@dave.org.uk>
 
 	* Build.PL, MANIFEST: Various packaging fixes
 
 	* commit df7a06ef9e2e216ae9063b14e026c4a3ae151e58
 
-2008-04-14  Dave Cross  <dave@dave.org.uk>
+2008-04-14 21:47  Dave Cross  <dave@dave.org.uk>
 
 	* t/shorl.t, t/snipurl.t: Various test fixes
 
 	* commit 4331e7bf877149f212303a6c4e63ff69312c2f06
 
-2008-04-14  Dave Cross  <dave@dave.org.uk>
+2008-04-14 21:40  Dave Cross  <dave@dave.org.uk>
 
 	* lib/WWW/Shorten/LinkToolbot.pm, t/linktoolbot.t:
 	link.toolbot.com is now dead.
 
 	* commit 6867f373ee0061f518571379667dc866d74a1ac1
 
-2008-04-14  Dave Cross  <dave@dave.org.uk>
+2008-04-14 21:29  Dave Cross  <dave@dave.org.uk>
 
 	* lib/WWW/Shorten/SnipURL.pm: Switch to using the snipurl api.
 
 	* commit 27499ae8fa282fd380b13b9d67887e09bbfdbfde
 
-2008-04-14  Dave Cross  <dave@dave.org.uk>
+2008-04-14 21:15  Dave Cross  <dave@dave.org.uk>
 
 	* lib/WWW/Shorten/SnipURL.pm: Fixes to reflect changes in the
 	way snipurl.com works.
 
 	* commit 2fd95cb826d65a09f90eb96c02e2576cfcb9876f
 
-2007-05-13  Dave Cross  <dave@dave.org.uk>
+2007-05-13 14:28  Dave Cross  <dave@dave.org.uk>
 
 	* t/00sig.t, t/98pod-coverage.t, t/99pod.t: Removed unneeded
 	shebang lines
 
 	* commit e0a7ff0e33438ae84f5a0cac7f36e8ad12f620ba
 
-2007-05-13  Dave Cross  <dave@dave.org.uk>
+2007-05-13 14:26  Dave Cross  <dave@dave.org.uk>
 
 	* MANIFEST: Removed unused test file
 
 	* commit fa763d57a9e3b0e4c616612be3ee2fd9c802e476
 
-2007-04-15  Dave Cross  <dave@dave.org.uk>
+2007-04-15 19:29  Dave Cross  <dave@dave.org.uk>
 
 	* lib/WWW/Shorten/LinkToolbot.pm: Reformatted documentation
 
 	* commit c7b06623cec0ecd248b14413a9e8894a16c61d9a
 
-2007-04-15  Dave Cross  <dave@dave.org.uk>
+2007-04-15 19:05  Dave Cross  <dave@dave.org.uk>
 
 	* lib/WWW/Shorten/EkDk.pm, lib/WWW/Shorten/Linkz.pm,
 	lib/WWW/Shorten/OneShortLink.pm, lib/WWW/Shorten/ShortLink.pm,
@@ -155,127 +204,127 @@
 
 	* commit 0246c2896575812e5e80fbb000b7a97d96f25c6b
 
-2007-04-15  Dave Cross  <dave@dave.org.uk>
+2007-04-15 16:25  Dave Cross  <dave@dave.org.uk>
 
 	* lib/WWW/Shorten/Shorl.pm: Fixed to mirror the way that shorl.com
 	now works.
 
 	* commit e8558da910670929ef219bd55d17f05f6ecbd6c7
 
-2007-04-15  Dave Cross  <dave@dave.org.uk>
+2007-04-15 16:15  Dave Cross  <dave@dave.org.uk>
 
 	* lib/WWW/Shorten/Shorl.pm: Switched to manual version number.
 
 	* commit 2ed93a61a5b6556e15710ca80c64cf0174aba707
 
-2007-04-15  Dave Cross  <dave@dave.org.uk>
+2007-04-15 16:12  Dave Cross  <dave@dave.org.uk>
 
 	* lib/WWW/Shorten/NotLong.pm, t/notlong.t: Updates to reflect
 	changes in the way that notlong.pm works
 
 	* commit 317f9bbdc2352630407e7779ffacd005cc22609c
 
-2007-04-15  Dave Cross  <dave@dave.org.uk>
+2007-04-15 16:11  Dave Cross  <dave@dave.org.uk>
 
 	* t/00noexp.t: test a service that actually works
 
 	* commit d7a0249cc3129a948c0cdf1cf32662e2a7a8ef31
 
-2007-04-15  Dave Cross  <dave@dave.org.uk>
+2007-04-15 15:38  Dave Cross  <dave@dave.org.uk>
 
 	* lib/WWW/Shorten/NotLong.pm: Switch to manual version number
 
 	* commit ce459bbd2843982ee9779c608c05a5cf67ab1aa3
 
-2007-04-15  Dave Cross  <dave@dave.org.uk>
+2007-04-15 15:25  Dave Cross  <dave@dave.org.uk>
 
 	* lib/WWW/Shorten/Metamark.pm: Switch to manual version number
 
 	* commit 1f518a36cd865c0a7f8d931c91189b683534eb6d
 
-2007-04-15  Dave Cross  <dave@dave.org.uk>
+2007-04-15 15:22  Dave Cross  <dave@dave.org.uk>
 
 	* t/00load_a.t, t/00load_b.t: Change tests to use a still
 	existing service
 
 	* commit 26f32d84737251353a38df71d9f502842609258a
 
-2007-04-15  Dave Cross  <dave@dave.org.uk>
+2007-04-15 15:19  Dave Cross  <dave@dave.org.uk>
 
 	* lib/WWW/Shorten/TinyClick.pm, t/tinyclick.t: tinyclick.com
 	is dead
 
 	* commit 076eae810588b9a01b508196a4b142cab7d3c2b4
 
-2007-04-15  Dave Cross  <dave@dave.org.uk>
+2007-04-15 15:12  Dave Cross  <dave@dave.org.uk>
 
 	* lib/WWW/Shorten/TinyURL.pm: Switched to manual version
 
 	* commit 812274dbb47dd2f461875c1edb737d7f700b8de7
 
-2007-04-15  Dave Cross  <dave@dave.org.uk>
+2007-04-15 15:09  Dave Cross  <dave@dave.org.uk>
 
 	* t/tinyurl.t: TinyURL now works in a slightly different way
 
 	* commit 20da4449f767c5e1d9c320e40832b002520a4106
 
-2007-04-15  Dave Cross  <dave@dave.org.uk>
+2007-04-15 15:06  Dave Cross  <dave@dave.org.uk>
 
 	* t/ws_masl.t: removed unnecessary test
 
 	* commit 0494479f5d1d399f13e04177835cd0ec6fc7e09f
 
-2007-04-15  Dave Cross  <dave@dave.org.uk>
+2007-04-15 15:03  Dave Cross  <dave@dave.org.uk>
 
 	* lib/WWW/Shorten/MakeAShorterLink.pm, t/masl.t:
 	makeashorterlink.com is now dead!
 
 	* commit a0e0e3866e8528117500c7b0d9c7ff3b5cbafc75
 
-2007-04-15  Dave Cross  <dave@dave.org.uk>
+2007-04-15 15:03  Dave Cross  <dave@dave.org.uk>
 
 	* lib/WWW/Shorten/BabyURL.pm: Typo
 
 	* commit 294776a4abdf2841b085e8d2576b5090e8b72319
 
-2007-04-15  Dave Cross  <dave@dave.org.uk>
+2007-04-15 14:48  Dave Cross  <dave@dave.org.uk>
 
 	* lib/WWW/Shorten/BabyURL.pm, t/babyurl.t: BabyURL is now dead
 
 	* commit 4d49735c042790f17e23863327cde8296263ce74
 
-2007-04-15  Dave Cross  <dave@dave.org.uk>
+2007-04-15 14:47  Dave Cross  <dave@dave.org.uk>
 
 	* lib/WWW/Shorten/_dead.pm: Switch to manual version numbers
 
 	* commit bd87df177c8c02c34bf7d45229623d4c4b6d5e2d
 
-2007-04-15  Dave Cross  <dave@dave.org.uk>
+2007-04-15 14:20  Dave Cross  <dave@dave.org.uk>
 
 	* lib/WWW/Shorten.pm: Change to using manual version number.
 
 	* commit f38ee68f9732dc41f62103290ee83e23bf4d6bd5
 
-2007-04-15  Dave Cross  <dave@dave.org.uk>
+2007-04-15 14:19  Dave Cross  <dave@dave.org.uk>
 
 	* lib/WWW/Shorten.pm: Changed email address in docs
 
 	* commit 568c63a06c883053a1fe359fef17fe3d82432539
 
-2007-04-15  Dave Cross  <dave@dave.org.uk>
+2007-04-15 14:18  Dave Cross  <dave@dave.org.uk>
 
 	* lib/WWW/Shorten.pm: Fixed copyright line. Removed changelog
 	from module file.
 
 	* commit 1a4b8876dcde907cfd3b5bc99b7442d84975761c
 
-2007-04-15  Dave Cross  <dave@dave.org.uk>
+2007-04-15 14:17  Dave Cross  <dave@dave.org.uk>
 
 	* Build.PL, Makefile.PL: Switched from Makefile.PL to Build.PL.
 
 	* commit 0e19e652e5ca84fb143fbb4aa3f2b128f2b8d185
 
-2007-02-16  Dave Cross  <dave@dave.org.uk>
+2007-02-16 22:31  Dave Cross  <dave@dave.org.uk>
 
 	* MANIFEST, lib/WWW/Shorten/LinkToolbot.pm,
 	lib/WWW/Shorten/generic.pm, t/linktoolbot.t: Added tests for
@@ -283,77 +332,77 @@
 
 	* commit adce4231e66ecbdc7f275e87110c41c6ba4d7c2f
 
-2007-02-16  Dave Cross  <dave@dave.org.uk>
+2007-02-16 22:02  Dave Cross  <dave@dave.org.uk>
 
 	* lib/WWW/Shorten/LinkToolbot.pm: Added WWW::Shorten::LinkToolbot
 
 	* commit 6f0451c983fc643b9bbb0e6586a2517343622e97
 
-2005-10-09  Dave Cross  <dave@dave.org.uk>
+2005-10-09 21:54  Dave Cross  <dave@dave.org.uk>
 
 	* lib/WWW/Shorten.pm: Reinstated support for 1sl.net.
 
 	* commit 320bb4ccf4769e150c18630b3767337cd9b98fec
 
-2005-10-09  Dave Cross  <dave@dave.org.uk>
+2005-10-09 21:52  Dave Cross  <dave@dave.org.uk>
 
 	* lib/WWW/Shorten/OneShortLink.pm, t/oneshort.t: Reinstated
 	suport for 1sl.net.
 
 	* commit a91eae404abef502c39636c877400da3e54f93f4
 
-2005-09-03  Dave Cross  <dave@dave.org.uk>
+2005-09-03 15:40  Dave Cross  <dave@dave.org.uk>
 
 	* MANIFEST.SKIP: Fixed previous fix :(
 
 	* commit 58bc80ffbd8ec2a75ab3ea34317f02f455bad57b
 
-2005-09-03  Dave Cross  <dave@dave.org.uk>
+2005-09-03 15:35  Dave Cross  <dave@dave.org.uk>
 
 	* MANIFEST.SKIP: Ignore hidden files
 
 	* commit e98a7f22c4618d1fd2654c8f64bf769df5354d28
 
-2005-09-03  Dave Cross  <dave@dave.org.uk>
+2005-09-03 15:32  Dave Cross  <dave@dave.org.uk>
 
 	* lib/WWW/Shorten.pm: Removed outdated or incorrect references
 	in the Pod.
 
 	* commit e09c711adbdacf47d8317e40df737a47b9e0ac53
 
-2005-09-03  Dave Cross  <dave@dave.org.uk>
+2005-09-03 15:32  Dave Cross  <dave@dave.org.uk>
 
 	* MANIFEST.SKIP: Ignore vi backup files
 
 	* commit ec67abdc5153dedbc29df6ebd55ad8f7bf1f6d1e
 
-2005-09-03  Dave Cross  <dave@dave.org.uk>
+2005-09-03 15:31  Dave Cross  <dave@dave.org.uk>
 
 	* MANIFEST, t/98pod-coverage.t: Added Pod coverage tests
 
 	* commit bbf1e69b2658b79bd66edbfcb71f5f054e429740
 
-2005-09-03  Dave Cross  <dave@dave.org.uk>
+2005-09-03 15:24  Dave Cross  <dave@dave.org.uk>
 
 	* t/metamark.t: Changed the URL used for the test.
 
 	* commit c21778cd8b1cfb00b37a0b550075b9fc90ace9ca
 
-2005-09-03  Dave Cross  <dave@dave.org.uk>
+2005-09-03 15:24  Dave Cross  <dave@dave.org.uk>
 
 	* lib/WWW/Shorten/_dead.pm, lib/WWW/Shorten/generic.pm: Added
 	a bit of Pod.
 
 	* commit 4626b5cecb9d406f51e404afbe4075ef9faa5ff0
 
-2005-09-03  Dave Cross  <dave@dave.org.uk>
+2005-09-03 15:23  Dave Cross  <dave@dave.org.uk>
 
 	* lib/WWW/Shorten/Metamark.pm: Switched to using the REST API
 	for makealongerlink.
 
 	* commit f495fccc3d2aa2156c215f3db98abc96d2e72242
 
-2005-09-03  Dave Cross  <dave@dave.org.uk>
+2005-09-03 14:46  Dave Cross  <dave@dave.org.uk>
 
 	* lib/WWW/Shorten/EkDk.pm, lib/WWW/Shorten/OneShortLink.pm,
 	lib/WWW/Shorten/ShortLink.pm, lib/WWW/Shorten/SmLnk.pm,
@@ -364,33 +413,33 @@
 
 	* commit e1ce37093aacf00bac645a474641560b9a171516
 
-2005-05-24  Dave Cross  <dave@dave.org.uk>
+2005-05-24 20:27  Dave Cross  <dave@dave.org.uk>
 
 	* t/00noexp.t: Added 00noexp.t
 
 	* commit de2c4aa8fa245a5d52561535207886f06064f126
 
-2005-05-24  Dave Cross  <dave@dave.org.uk>
+2005-05-24 20:20  Dave Cross  <dave@dave.org.uk>
 
 	* lib/WWW/Shorten.pm, t/linkz.t: Correct copyright signs in pod.
 	Skip lin.kz tests while it's broken.
 
 	* commit 963a84e5572b9ade1655ec8a5ac2dbb284998525
 
-2005-05-19  Dave Cross  <dave@dave.org.uk>
+2005-05-19 22:02  Dave Cross  <dave@dave.org.uk>
 
 	* MANIFEST.SKIP: Added stuff to MANIFEST.SKIP
 
 	* commit 6cabc1396fa2343e183ee6d7764e372cc3674ee1
 
-2005-05-19  Dave Cross  <dave@dave.org.uk>
+2005-05-19 21:37  Dave Cross  <dave@dave.org.uk>
 
 	* lib/WWW/Shorten.pm: Removed a couple of dead services - 1sl
 	and v3
 
 	* commit 263a33e7ef2265c9e9d9082007f217a49b45fc38
 
-2005-05-19  Dave Cross  <dave@dave.org.uk>
+2005-05-19 21:35  Dave Cross  <dave@dave.org.uk>
 
 	* META.yml, Makefile.PL, lib/WWW/Shorten/OneShortLink.pm,
 	lib/WWW/Shorten/Shorl.pm, lib/WWW/Shorten/V3.pm, t/oneshort.t,
@@ -400,13 +449,13 @@
 
 	* commit dd1dc02e9e58ecbebd0d9b1a696ee69b04cc76f5
 
-2004-10-30  Dave Cross  <dave@dave.org.uk>
+2004-10-30 20:52  Dave Cross  <dave@dave.org.uk>
 
 	* MANIFEST: Added new test files
 
 	* commit 7c05b3a9e7fbf42acf513dd1f33fbcc24cbfbc4e
 
-2004-10-30  Dave Cross  <dave@dave.org.uk>
+2004-10-30 12:52  Dave Cross  <dave@dave.org.uk>
 
 	* lib/WWW/Shorten.pm, lib/WWW/Shorten/BabyURL.pm,
 	lib/WWW/Shorten/EkDk.pm, lib/WWW/Shorten/Linkz.pm,
@@ -425,41 +474,41 @@
 
 	* commit 5a954afa1aca95ba24fde60e8659326df405adfb
 
-2004-10-25  Dave Cross  <dave@dave.org.uk>
+2004-10-25 21:03  Dave Cross  <dave@dave.org.uk>
 
 	* lib/WWW/Shorten.pm: Removed unnecessary "no strict 'refs'"
 
 	* commit 2c31ea991563c16c74c886f1a1922f11d8fcd422
 
-2004-10-25  Dave Cross  <dave@dave.org.uk>
+2004-10-25 20:57  Dave Cross  <dave@dave.org.uk>
 
 	* SIGNATURE: SIGNATURE is generated - therefore not in CVS
 
 	* commit 925534c60ec89e12f5e73dbb797bc80418a386e0
 
-2004-10-25  Dave Cross  <dave@dave.org.uk>
+2004-10-25 20:55  Dave Cross  <dave@dave.org.uk>
 
 	* t/notlong.t, t/smlnk.t, t/tinyclick.t, t/tinyurl.t, t/urljr.t:
 	Various test fixes
 
 	* commit 87b9ea4582b2a223f7dd304fb209df401c6aaca4
 
-2004-10-25  Dave Cross  <dave@dave.org.uk>
+2004-10-25 20:51  Dave Cross  <dave@dave.org.uk>
 
 	* lib/WWW/Shorten/V3.pm: Fixed response regex
 
 	* commit 4b663013122972fb6f45a80ac5e56b8424be66ee
 
-2004-10-24  Dave Cross  <dave@dave.org.uk>
+2004-10-24 22:08  Dave Cross  <dave@dave.org.uk>
 
 	* MANIFEST.SKIP, Makefile.PL, SIGNATURE: New version with fixed
 	SIGNATURE
 
 	* commit 9a663c2c8417d62a78bdb7a6663b4122c49c11ac
 
-2004-10-24  Dave Cross  <dave@dave.org.uk>
+2004-10-24 17:35  Dave Cross  <dave@dave.org.uk>
 
-	* : Correct CVS versions
+	* Correct CVS versions
 
 	* commit e367e2184823ba195d15d900f2000a6a0a521042
 
