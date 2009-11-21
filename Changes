@@ -1,4 +1,12 @@
+2009-11-21  Dave Cross <dave@angel.mag-sol.com>
+
+  * lib/WWW/Shorten/NotLong.pm, lib/WWW/Shorten/OneShortLink.pm, t/notlong.t,
+  t/oneshort.t: Removed support for NotLong and OneShortLink (separate
+  distributions to follow soon). Bumper to version 2.06.
+
 2009-09-18  Dave Cross <dave@dave.org.uk>
+
+  * Build.PL: Bump to version 2.05 for release.
 
   * lib/WWW/Shorten.pm, t/newnames.t: Finish removing all references to
   SnipURL.pm.
