@@ -1,3 +1,20 @@
+2010-01-20  Dave Cross <dave@dacross.(none)>
+
+  * Build.PL: Removed version number so it's picked up from lib/WWW/Shorten.pm
+
+2009-12-19  Dave Cross <dave@dave.org.uk>
+
+  * Build.PL, MANIFEST: Bumped version number. Removed shorl files from
+  MANIFEST.
+
+  * MANIFEST, lib/WWW/Shorten/Shorl.pm, t/shorl.t: Removed support for shorl.pm
+  (now in WWW::Shorten::Shorl distribution).
+
+2009-12-15  yappo <yappo@shibuya.pl>
+
+  * lib/WWW/Shorten/Shorl.pm: shorl.com was change the request method ( POST to
+  GET )
+
 2009-11-21  Dave Cross <dave@angel.mag-sol.com>
 
   * lib/WWW/Shorten/NotLong.pm, lib/WWW/Shorten/OneShortLink.pm, t/notlong.t,

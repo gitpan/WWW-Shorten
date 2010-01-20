@@ -1,13 +1,11 @@
 ---
 name: WWW-Shorten
-version: 2.06
+version: 3.00
 author:
   - 'Original Iain Truskett <spoon@cpan.org>'
   - 'Based on WWW::MakeAShorterLink by Dave Cross <dave@mag-sol.com>'
 abstract: Interface to URL shortening sites.
 license: perl
-resources:
-  license: ~
 requires:
   LWP: 5.75
   LWP::UserAgent: 2.023
@@ -15,6 +13,10 @@ requires:
   perl: 5.006
 build_requires:
   Test::More: 0.47
+generated_by: Module::Build version 0.32
+meta-spec:
+  url: http://module-build.sourceforge.net/META-spec-v1.2.html
+  version: 1.2
 provides:
   WWW::Shorten:
     file: lib/WWW/Shorten.pm
@@ -31,9 +33,6 @@ provides:
   WWW::Shorten::Metamark:
     file: lib/WWW/Shorten/Metamark.pm
     version: 1.91
-  WWW::Shorten::Shorl:
-    file: lib/WWW/Shorten/Shorl.pm
-    version: 1.91
   WWW::Shorten::TinyClick:
     file: lib/WWW/Shorten/TinyClick.pm
     version: 1.90
@@ -43,7 +42,5 @@ provides:
   WWW::Shorten::generic:
     file: lib/WWW/Shorten/generic.pm
     version: 1.92
-generated_by: Module::Build version 0.32
-meta-spec:
-  url: http://module-build.sourceforge.net/META-spec-v1.2.html
-  version: 1.2
+resources:
+  license: ~
