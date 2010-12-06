@@ -1,3 +1,17 @@
+2010-12-06  Dave Cross <dave@dave.org.uk>
+
+  * lib/WWW/Shorten.pm: Bump version number for release.
+
+  * bin/shorten: Be far more intelligent about the code that allows the user to
+  choose which service to use.
+
+  * MANIFEST.SKIP: Added MYMETA.yml to MANIFEST.SKIP.
+
+  * bin/shorten: Default to using a service that we currently support.
+
+  * Build.PL, lib/WWW/Shorten.pm: Added Config::Auto to list of dependencies
+  (it's used by the shorten program). Bumped version for release.
+
 2010-01-20  Dave Cross <dave@dacross.(none)>
 
   * Build.PL: Removed version number so it's picked up from lib/WWW/Shorten.pm
