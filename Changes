@@ -1,4 +1,21 @@
+2012-04-06  Dave Cross <dave@dave.org.uk>
+
+  * Artistic, Build.PL, COPYING, LICENCE, MANIFEST, lib/WWW/Shorten.pm,
+  lib/WWW/Shorten/UserAgent.pm: Licensing clean-up.
+
+  * MANIFEST: Added META.json to MANIFEST.
+
+2012-03-01  Dave Cross <dave@dave.org.uk>
+
+  * lib/WWW/Shorten/UserAgent.pm: Added documentation.
+
+  * MANIFEST, lib/WWW/Shorten/UserAgent.pm, lib/WWW/Shorten/generic.pm: Added a
+  WWW::Shorten::UserAgent object which dies if it receives an HTTP error
+  response.
+
 2010-12-06  Dave Cross <dave@dave.org.uk>
+
+  * bin/shorten: Better examples of using bin/shorten
 
   * lib/WWW/Shorten.pm: Bump version number for release.
 

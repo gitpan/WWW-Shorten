@@ -3,7 +3,6 @@ AUTHORS
 bin/shorten
 ChangeLog.SPOON
 Changes
-COPYING
 CREDITS
 INSTALL
 lib/WWW/Shorten.pm
@@ -16,6 +15,7 @@ lib/WWW/Shorten/Metamark.pm
 lib/WWW/Shorten/TinyClick.pm
 lib/WWW/Shorten/Tinylink.pm
 lib/WWW/Shorten/TinyURL.pm
+lib/WWW/Shorten/UserAgent.pm
 LICENCE
 Makefile.PL
 Build.PL
@@ -40,3 +40,4 @@ t/tinyclick.t
 t/tinylink.t
 t/tinyurl.t
 TODO
+META.json
