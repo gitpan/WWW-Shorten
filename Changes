@@ -1,226 +1,308 @@
-2013-08-22 Dave Cross <dave@dave.org.uk> - RELEASE_3.04
-========================================================
+2010-12-06  Dave Cross <dave@dave.org.uk>
 
- Dave Cross <dave@dave.org.uk> (17):
-  * Finish removing all references to SnipURL.pm.
-  * Bump to version 2.05 for release.
-  * Removed support for shorl.pm (now in WWW::Shorten::Shorl distribution).
-  * Bumped version number. Removed shorl files from MANIFEST.
-  * Added Config::Auto to list of dependencies (it's used by the shorten
-    program). Bumped version for release.
-  * Default to using a service that we currently support.
-  * Added MYMETA.yml to MANIFEST.SKIP.
-  * Be far more intelligent about the code that allows the user to choose
-    which service to use.
-  * Bump version number for release.
-  * Better examples of using bin/shorten
-  * Added a WWW::Shorten::UserAgent object which dies if it receives an HTTP
-    error response.
-  * Added documentation.
-  * Added META.json to MANIFEST.
-  * Licensing clean-up.
-  * Removed prototypes (and the ampersands in the tests that circumvented
-    them)
-  * Bump version number for release.
-  * Moved Pod tests into xt. (Pod coverage currently fails on some files. See
-    https://rt.cpan.org/Ticket/Display.html?id=87634 for details.)
- 
- Dave Cross <dave@angel.mag-sol.com> (1):
-  * Removed support for NotLong and OneShortLink (separate distributions to
-    follow soon). Bumper to version 2.06.
- 
- Dave Cross <dave@dacross.(none)> (1):
-  * Removed version number so it's picked up from lib/WWW/Shorten.pm
- 
- yappo <yappo@shibuya.pl> (1):
-  * shorl.com was change the request method ( POST to GET )
- 
+  * bin/shorten: Better examples of using bin/shorten
 
-2012-04-06 Dave Cross <dave@dave.org.uk> - RELEASE_3.03
-========================================================
+  * lib/WWW/Shorten.pm: Bump version number for release.
 
- Dave Cross <dave@dave.org.uk> (20):
-  * Removed a number of modules that supported services that are no longer
-    around.
-  * Documenation improvements.
-  * Removed files from MANIFEST
-  * Start using $DEFAULT_SERVICE variable.
-  * Removed WWW::Shorten::SnipURL (API changed, separate dist will follow).
-    Bumped version to 2.04.
-  * Removed snipurl.t from MANIFEST.
-  * Finish removing all references to SnipURL.pm.
-  * Bump to version 2.05 for release.
-  * Removed support for shorl.pm (now in WWW::Shorten::Shorl distribution).
-  * Bumped version number. Removed shorl files from MANIFEST.
-  * Added Config::Auto to list of dependencies (it's used by the shorten
-    program). Bumped version for release.
-  * Default to using a service that we currently support.
-  * Added MYMETA.yml to MANIFEST.SKIP.
-  * Be far more intelligent about the code that allows the user to choose
-    which service to use.
-  * Bump version number for release.
-  * Better examples of using bin/shorten
-  * Added a WWW::Shorten::UserAgent object which dies if it receives an HTTP
-    error response.
-  * Added documentation.
-  * Added META.json to MANIFEST.
-  * Licensing clean-up.
- 
- Dave Cross <dave@angel.mag-sol.com> (1):
-  * Removed support for NotLong and OneShortLink (separate distributions to
-    follow soon). Bumper to version 2.06.
- 
- Dave Cross <dave@dacross.(none)> (1):
-  * Removed version number so it's picked up from lib/WWW/Shorten.pm
- 
- yappo <yappo@shibuya.pl> (1):
-  * shorl.com was change the request method ( POST to GET )
- 
+  * bin/shorten: Be far more intelligent about the code that allows the user to
+  choose which service to use.
 
-2010-12-06 Dave Cross <dave@dave.org.uk> - RELEASE_3.02
-========================================================
+  * MANIFEST.SKIP: Added MYMETA.yml to MANIFEST.SKIP.
 
- Dave Cross <dave@dave.org.uk> (24):
-  * Typo
-  * Removed SIGNATURE from MANIFEST (as Module::Build adds it automatically).
-  * Increment version
-  * Changed require perl 5.6.0 to require perl 5.006 - to deal with older
-    Perl installations.
-  * Increment version number
-  * Fixed TinyURL tests.
-  * Bump version number.
-  * Fixed typo
-  * Remove signing
-  * Removed a number of modules that supported services that are no longer
-    around.
-  * Documenation improvements.
-  * Removed files from MANIFEST
-  * Start using $DEFAULT_SERVICE variable.
-  * Removed WWW::Shorten::SnipURL (API changed, separate dist will follow).
-    Bumped version to 2.04.
-  * Removed snipurl.t from MANIFEST.
-  * Finish removing all references to SnipURL.pm.
-  * Bump to version 2.05 for release.
-  * Removed support for shorl.pm (now in WWW::Shorten::Shorl distribution).
-  * Bumped version number. Removed shorl files from MANIFEST.
-  * Added Config::Auto to list of dependencies (it's used by the shorten
-    program). Bumped version for release.
-  * Default to using a service that we currently support.
-  * Added MYMETA.yml to MANIFEST.SKIP.
-  * Be far more intelligent about the code that allows the user to choose
-    which service to use.
-  * Bump version number for release.
- 
- Dave Cross <dave@angel.mag-sol.com> (1):
-  * Removed support for NotLong and OneShortLink (separate distributions to
-    follow soon). Bumper to version 2.06.
- 
- Dave Cross <dave@dacross.(none)> (1):
-  * Removed version number so it's picked up from lib/WWW/Shorten.pm
- 
- yappo <yappo@shibuya.pl> (1):
-  * shorl.com was change the request method ( POST to GET )
- 
+  * bin/shorten: Default to using a service that we currently support.
 
+  * Build.PL, lib/WWW/Shorten.pm: Added Config::Auto to list of dependencies
+  (it's used by the shorten program). Bumped version for release.
 
-2010-01-20 Dave Cross <dave@dacross.(none)> - RELEASE_3.00
-===========================================================
+2010-01-20  Dave Cross <dave@dacross.(none)>
 
- Dave Cross <dave@dave.org.uk> (55):
-  * Added WWW::Shorten::LinkToolbot
-  * Added tests for LinkToolbot.pm and fixed module to pass them
-  * Switched from Makefile.PL to Build.PL.
-  * Fixed copyright line. Removed changelog from module file.
-  * Changed email address in docs
-  * Change to using manual version number.
-  * Switch to manual version numbers
-  * BabyURL is now dead
-  * Typo
-  * makeashorterlink.com is now dead!
-  * removed unnecessary test
-  * TinyURL now works in a slightly different way
-  * Switched to manual version
-  * tinyclick.com is dead
-  * Change tests to use a still existing service
-  * Switch to manual version number
-  * Switch to manual version number
-  * test a service that actually works
-  * Updates to reflect changes in the way that notlong.pm works
-  * Switched to manual version number.
-  * Fixed to mirror the way that shorl.com now works.
-  * Switch to manual version number
-  * Reformatted documentation
-  * Removed unused test file
-  * Removed unneeded shebang lines
-  * Fixes to reflect changes in the way snipurl.com works.
-  * Switch to using the snipurl api.
-  * link.toolbot.com is now dead.
-  * Various test fixes
-  * Various packaging fixes
-  * Remove shortenrc. Add script_files to Build.PL
-  * Increment version number for release
-  * Fixes script_files.
-  * Fixed test so it doesn't include a hard-coded code.
-  * Increment version number
-  * Marked tinylink.com as dead (it's not - but it's returning nonsense).
-    Bumped to version 2.00.
-  * Typo
-  * Removed SIGNATURE from MANIFEST (as Module::Build adds it automatically).
-  * Increment version
-  * Changed require perl 5.6.0 to require perl 5.006 - to deal with older
-    Perl installations.
-  * Increment version number
-  * Fixed TinyURL tests.
-  * Bump version number.
-  * Fixed typo
-  * Remove signing
-  * Removed a number of modules that supported services that are no longer
-    around.
-  * Documenation improvements.
-  * Removed files from MANIFEST
-  * Start using $DEFAULT_SERVICE variable.
-  * Removed WWW::Shorten::SnipURL (API changed, separate dist will follow).
-    Bumped version to 2.04.
-  * Removed snipurl.t from MANIFEST.
-  * Finish removing all references to SnipURL.pm.
-  * Bump to version 2.05 for release.
-  * Removed support for shorl.pm (now in WWW::Shorten::Shorl distribution).
-  * Bumped version number. Removed shorl files from MANIFEST.
- 
- Dave Cross <dave@angel.mag-sol.com> (1):
-  * Removed support for NotLong and OneShortLink (separate distributions to
-    follow soon). Bumper to version 2.06.
- 
- Dave Cross <dave@dacross.(none)> (1):
-  * Removed version number so it's picked up from lib/WWW/Shorten.pm
- 
- yappo <yappo@shibuya.pl> (1):
-  * shorl.com was change the request method ( POST to GET )
+  * Build.PL: Removed version number so it's picked up from lib/WWW/Shorten.pm
 
-2009-12-19 Dave Cross <dave@dave.org.uk> - RELEASE_2.06
-========================================================
+2009-12-19  Dave Cross <dave@dave.org.uk>
 
- * no changes since the previous version.
+  * Build.PL, MANIFEST: Bumped version number. Removed shorl files from
+  MANIFEST.
 
-2009-09-08 Dave Cross <dave@dave.org.uk> - RELEASE_2.04
-========================================================
+  * MANIFEST, lib/WWW/Shorten/Shorl.pm, t/shorl.t: Removed support for shorl.pm
+  (now in WWW::Shorten::Shorl distribution).
 
- * no changes since the previous version.
+2009-12-15  yappo <yappo@shibuya.pl>
 
-2009-03-19 Dave Cross <dave@dave.org.uk> - RELEASE_2.03
-========================================================
+  * lib/WWW/Shorten/Shorl.pm: shorl.com was change the request method ( POST to
+  GET )
 
- * no changes since the previous version.
+2009-11-21  Dave Cross <dave@angel.mag-sol.com>
 
-2008-06-29 Dave Cross <dave@dave.org.uk> - RELEASE_2_00
-========================================================
+  * lib/WWW/Shorten/NotLong.pm, lib/WWW/Shorten/OneShortLink.pm, t/notlong.t,
+  t/oneshort.t: Removed support for NotLong and OneShortLink (separate
+  distributions to follow soon). Bumper to version 2.06.
 
- Dave Cross <dave@dave.org.uk> (1):
-  * Release 2.00
+2009-09-18  Dave Cross <dave@dave.org.uk>
 
-2005-10-09 (no author) <(no author)> - RELEASE_1_97
-====================================================
+  * Build.PL: Bump to version 2.05 for release.
 
- (no author) <(no author)> (1):
-  * This commit was manufactured by cvs2svn to create tag 'RELEASE_1_97'.
+  * lib/WWW/Shorten.pm, t/newnames.t: Finish removing all references to
+  SnipURL.pm.
 
+2009-09-08  Dave Cross <dave@dave.org.uk>
+
+  * MANIFEST: Removed snipurl.t from MANIFEST.
+
+  * Build.PL, MANIFEST, lib/WWW/Shorten/SnipURL.pm, t/snipurl.t: Removed
+  WWW::Shorten::SnipURL (API changed, separate dist will follow). Bumped
+  version to 2.04.
+
+2009-04-11  Dave Cross <dave@dave.org.uk>
+
+  * lib/WWW/Shorten.pm: Start using $DEFAULT_SERVICE variable.
+
+  * MANIFEST: Removed files from MANIFEST
+
+  * lib/WWW/Shorten.pm: Documenation improvements.
+
+  * lib/WWW/Shorten/BabyURL.pm, lib/WWW/Shorten/EkDk.pm,
+  lib/WWW/Shorten/ShortLink.pm, lib/WWW/Shorten/SmLnk.pm,
+  lib/WWW/Shorten/URLjr.pm, lib/WWW/Shorten/V3.pm, lib/WWW/Shorten/qURL.pm,
+  t/babyurl.t, t/ekdk.t, t/qurl.t, t/shortlink.t, t/smlnk.t, t/urljr.t, t/v3.t:
+  Removed a number of modules that supported services that are no longer
+  around.
+
+2009-03-19  Dave Cross <dave@dave.org.uk>
+
+  * Build.PL: Remove signing
+
+  * t/shorl.t: Fixed typo
+
+  * Build.PL: Bump version number.
+
+  * t/tinyurl.t: Fixed TinyURL tests.
+
+2009-02-02  Dave Cross <dave@dave.org.uk>
+
+  * Build.PL: Increment version number
+
+2009-01-26  Dave Cross <dave@dave.org.uk>
+
+  * Build.PL: Changed require perl 5.6.0 to require perl 5.006 - to deal with
+  older Perl installations.
+
+2008-06-30  Dave Cross <dave@dave.org.uk>
+
+  * Build.PL: Increment version
+
+  * MANIFEST: Removed SIGNATURE from MANIFEST (as Module::Build adds it
+  automatically).
+
+  * lib/WWW/Shorten/Tinylink.pm: Typo
+
+2008-06-29  Dave Cross <dave@dave.org.uk>
+
+  * Build.PL, lib/WWW/Shorten/Tinylink.pm, t/tinylink.t: Marked tinylink.com as
+  dead (it's not - but it's returning nonsense). Bumped to version 2.00.
+
+2008-04-20  Dave Cross <dave@dave.org.uk>
+
+  * Build.PL: Increment version number
+
+  * t/snipurl.t: Fixed test so it doesn't include a hard-coded code.
+
+2008-04-19  Dave Cross <dave@dave.org.uk>
+
+  * Build.PL: Fixes script_files.
+
+2008-04-17  Dave Cross <dave@dave.org.uk>
+
+  * Build.PL: Increment version number for release
+
+  * Build.PL, MANIFEST, bin/shortenrc: Remove shortenrc. Add script_files to
+  Build.PL
+
+2008-04-14  Dave Cross <dave@dave.org.uk>
+
+  * Build.PL, MANIFEST: Various packaging fixes
+
+  * t/shorl.t, t/snipurl.t: Various test fixes
+
+  * lib/WWW/Shorten/LinkToolbot.pm, t/linktoolbot.t: link.toolbot.com is now
+  dead.
+
+  * lib/WWW/Shorten/SnipURL.pm: Switch to using the snipurl api.
+
+  * lib/WWW/Shorten/SnipURL.pm: Fixes to reflect changes in the way snipurl.com
+  works.
+
+2007-05-13  Dave Cross <dave@dave.org.uk>
+
+  * t/00sig.t, t/98pod-coverage.t, t/99pod.t: Removed unneeded shebang lines
+
+  * MANIFEST: Removed unused test file
+
+2007-04-15  Dave Cross <dave@dave.org.uk>
+
+  * lib/WWW/Shorten/LinkToolbot.pm: Reformatted documentation
+
+  * lib/WWW/Shorten/EkDk.pm, lib/WWW/Shorten/Linkz.pm,
+  lib/WWW/Shorten/OneShortLink.pm, lib/WWW/Shorten/ShortLink.pm,
+  lib/WWW/Shorten/SmLnk.pm, lib/WWW/Shorten/SnipURL.pm,
+  lib/WWW/Shorten/Tinylink.pm, lib/WWW/Shorten/URLjr.pm, lib/WWW/Shorten/V3.pm,
+  lib/WWW/Shorten/qURL.pm: Switch to manual version number
+
+  * lib/WWW/Shorten/Shorl.pm: Fixed to mirror the way that shorl.com now works.
+
+  * lib/WWW/Shorten/Shorl.pm: Switched to manual version number.
+
+  * lib/WWW/Shorten/NotLong.pm, t/notlong.t: Updates to reflect changes in the
+  way that notlong.pm works
+
+  * t/00noexp.t: test a service that actually works
+
+  * lib/WWW/Shorten/NotLong.pm: Switch to manual version number
+
+  * lib/WWW/Shorten/Metamark.pm: Switch to manual version number
+
+  * t/00load_a.t, t/00load_b.t: Change tests to use a still existing service
+
+  * lib/WWW/Shorten/TinyClick.pm, t/tinyclick.t: tinyclick.com is dead
+
+  * lib/WWW/Shorten/TinyURL.pm: Switched to manual version
+
+  * t/tinyurl.t: TinyURL now works in a slightly different way
+
+  * t/ws_masl.t: removed unnecessary test
+
+  * lib/WWW/Shorten/MakeAShorterLink.pm, t/masl.t: makeashorterlink.com is now
+  dead!
+
+  * lib/WWW/Shorten/BabyURL.pm: Typo
+
+  * lib/WWW/Shorten/BabyURL.pm, t/babyurl.t: BabyURL is now dead
+
+  * lib/WWW/Shorten/_dead.pm: Switch to manual version numbers
+
+  * lib/WWW/Shorten.pm: Change to using manual version number.
+
+  * lib/WWW/Shorten.pm: Changed email address in docs
+
+  * lib/WWW/Shorten.pm: Fixed copyright line. Removed changelog from module
+  file.
+
+  * Build.PL, Makefile.PL: Switched from Makefile.PL to Build.PL.
+
+2007-02-16  Dave Cross <dave@dave.org.uk>
+
+  * MANIFEST, lib/WWW/Shorten/LinkToolbot.pm, lib/WWW/Shorten/generic.pm,
+  t/linktoolbot.t: Added tests for LinkToolbot.pm and fixed module to pass them
+
+  * lib/WWW/Shorten/LinkToolbot.pm: Added WWW::Shorten::LinkToolbot
+
+2005-10-09  Dave Cross <dave@dave.org.uk>
+
+  * lib/WWW/Shorten.pm: Reinstated support for 1sl.net.
+
+  * lib/WWW/Shorten/OneShortLink.pm, t/oneshort.t: Reinstated suport for
+  1sl.net.
+
+2005-09-03  Dave Cross <dave@dave.org.uk>
+
+  * MANIFEST.SKIP: Fixed previous fix :(
+
+  * MANIFEST.SKIP: Ignore hidden files
+
+  * lib/WWW/Shorten.pm: Removed outdated or incorrect references in the Pod.
+
+  * MANIFEST.SKIP: Ignore vi backup files
+
+  * MANIFEST, t/98pod-coverage.t: Added Pod coverage tests
+
+  * t/metamark.t: Changed the URL used for the test.
+
+  * lib/WWW/Shorten/_dead.pm, lib/WWW/Shorten/generic.pm: Added a bit of Pod.
+
+  * lib/WWW/Shorten/Metamark.pm: Switched to using the REST API for
+  makealongerlink.
+
+  * lib/WWW/Shorten/EkDk.pm, lib/WWW/Shorten/OneShortLink.pm,
+  lib/WWW/Shorten/ShortLink.pm, lib/WWW/Shorten/SmLnk.pm,
+  lib/WWW/Shorten/URLjr.pm, lib/WWW/Shorten/V3.pm, lib/WWW/Shorten/_dead.pm,
+  lib/WWW/Shorten/generic.pm, lib/WWW/Shorten/qURL.pm: Added 'use strict', 'use
+  warnings' and cvs $Id$ tag to all modules
+
+2005-05-24  Dave Cross <dave@dave.org.uk>
+
+  * t/00noexp.t: Added 00noexp.t
+
+  * lib/WWW/Shorten.pm, t/linkz.t: Correct copyright signs in pod. Skip lin.kz
+  tests while it's broken.
+
+2005-05-19  Dave Cross <dave@dave.org.uk>
+
+  * MANIFEST.SKIP: Added stuff to MANIFEST.SKIP
+
+  * lib/WWW/Shorten.pm: Removed a couple of dead services - 1sl and v3
+
+  * META.yml, Makefile.PL, lib/WWW/Shorten/OneShortLink.pm,
+  lib/WWW/Shorten/Shorl.pm, lib/WWW/Shorten/V3.pm, t/oneshort.t, t/shorl.t,
+  t/tinyurl.t, t/v3.t: Removed some dead services. Fixed WWW::Shorten::Shorl.pm
+  to deal with the new way that shorl works.
+
+2004-10-30  Dave Cross <dave@dave.org.uk>
+
+  * MANIFEST: Added new test files
+
+  * lib/WWW/Shorten.pm, lib/WWW/Shorten/BabyURL.pm, lib/WWW/Shorten/EkDk.pm,
+  lib/WWW/Shorten/Linkz.pm, lib/WWW/Shorten/MakeAShorterLink.pm,
+  lib/WWW/Shorten/Metamark.pm, lib/WWW/Shorten/NotLong.pm,
+  lib/WWW/Shorten/OneShortLink.pm, lib/WWW/Shorten/Shorl.pm,
+  lib/WWW/Shorten/ShortLink.pm, lib/WWW/Shorten/SmLnk.pm,
+  lib/WWW/Shorten/SnipURL.pm, lib/WWW/Shorten/TinyClick.pm,
+  lib/WWW/Shorten/TinyURL.pm, lib/WWW/Shorten/Tinylink.pm,
+  lib/WWW/Shorten/URLjr.pm, lib/WWW/Shorten/V3.pm, lib/WWW/Shorten/_dead.pm,
+  lib/WWW/Shorten/generic.pm, lib/WWW/Shorten/qURL.pm, t/babyurl.t, t/linkz.t,
+  t/masl.t, t/metamark.t, t/newnames.t, t/notlong.t, t/oneshort.t, t/shorl.t,
+  t/smlnk.t, t/snipurl.t, t/tinyclick.t, t/tinylink.t, t/tinyurl.t, t/urljr.t,
+  t/v3.t, t/ws_masl.t: Work on improving test coverage
+
+2004-10-25  Dave Cross <dave@dave.org.uk>
+
+  * lib/WWW/Shorten.pm: Removed unnecessary "no strict 'refs'"
+
+  * SIGNATURE: SIGNATURE is generated - therefore not in CVS
+
+  * t/notlong.t, t/smlnk.t, t/tinyclick.t, t/tinyurl.t, t/urljr.t: Various test
+  fixes
+
+  * lib/WWW/Shorten/V3.pm: Fixed response regex
+
+2004-10-24  Dave Cross <dave@dave.org.uk>
+
+  * MANIFEST.SKIP, Makefile.PL, SIGNATURE: New version with fixed SIGNATURE
+
+  * Makefile.PL, lib/WWW/Shorten.pm: Changed author in Makefile.PL. Get
+  $VERSION from CVS tag.
+
+  * MANIFEST, lib/WWW/Shorten.pm: Add some CVS tags
+
+  * Changes: Removed Changes from CVS
+
+  * ChangeLog, ChangeLog.SPOON: Replaced ChangeLog with ChangeLog.SPOON
+
+  * AUTHORS: Changed author info
+
+  * lib/WWW/Shorten.pm: Changed author info.
+
+  * AUTHORS, Artistic, COPYING, CREDITS, ChangeLog, Changes, INSTALL, LICENCE,
+  MANIFEST, MANIFEST.SKIP, META.yml, Makefile.PL, README, SIGNATURE, TODO,
+  bin/shorten, bin/shortenrc, lib/WWW/Shorten.pm, lib/WWW/Shorten/BabyURL.pm,
+  lib/WWW/Shorten/EkDk.pm, lib/WWW/Shorten/Linkz.pm,
+  lib/WWW/Shorten/MakeAShorterLink.pm, lib/WWW/Shorten/Metamark.pm,
+  lib/WWW/Shorten/NotLong.pm, lib/WWW/Shorten/OneShortLink.pm,
+  lib/WWW/Shorten/Shorl.pm, lib/WWW/Shorten/ShortLink.pm,
+  lib/WWW/Shorten/SmLnk.pm, lib/WWW/Shorten/SnipURL.pm,
+  lib/WWW/Shorten/TinyClick.pm, lib/WWW/Shorten/TinyURL.pm,
+  lib/WWW/Shorten/Tinylink.pm, lib/WWW/Shorten/URLjr.pm, lib/WWW/Shorten/V3.pm,
+  lib/WWW/Shorten/_dead.pm, lib/WWW/Shorten/generic.pm,
+  lib/WWW/Shorten/qURL.pm, t/00load.t, t/00load_a.t, t/00load_b.t, t/00sig.t,
+  t/01version.t, t/99pod.t, t/babyurl.t, t/ekdk.t, t/linkz.t, t/masl.t,
+  t/metamark.t, t/newnames.t, t/notlong.t, t/oneshort.t, t/qurl.t, t/shorl.t,
+  t/shortlink.t, t/smlnk.t, t/snipurl.t, t/tinyclick.t, t/tinylink.t,
+  t/tinyurl.t, t/urljr.t, t/v3.t, t/ws_masl.t: Initial revision
